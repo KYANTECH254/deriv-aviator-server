@@ -1,0 +1,101 @@
+2024-11-20 15:13:13.674 UTC [4765] LOG:  starting PostgreSQL 16.4 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 13.3.0, 64-bit
+2024-11-20 15:13:13.674 UTC [4765] LOG:  listening on IPv6 address "::1", port 5432
+2024-11-20 15:13:13.674 UTC [4765] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-11-20 15:13:13.675 UTC [4765] FATAL:  could not create lock file "/run/postgresql/.s.PGSQL.5432.lock": No such file or directory
+2024-11-20 15:13:13.677 UTC [4765] LOG:  database system is shut down
+2024-11-20 15:13:31.888 UTC [4815] LOG:  starting PostgreSQL 16.4 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 13.3.0, 64-bit
+2024-11-20 15:13:31.888 UTC [4815] LOG:  listening on IPv6 address "::1", port 5432
+2024-11-20 15:13:31.888 UTC [4815] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-11-20 15:13:31.890 UTC [4815] FATAL:  could not create lock file "/run/postgresql/.s.PGSQL.5432.lock": No such file or directory
+2024-11-20 15:13:31.891 UTC [4815] LOG:  database system is shut down
+2024-11-20 15:16:18.179 UTC [4997] LOG:  starting PostgreSQL 16.4 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 13.3.0, 64-bit
+2024-11-20 15:16:18.180 UTC [4997] LOG:  listening on IPv6 address "::1", port 5432
+2024-11-20 15:16:18.180 UTC [4997] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-11-20 15:16:18.181 UTC [4997] FATAL:  could not create lock file "/run/postgresql/.s.PGSQL.5432.lock": No such file or directory
+2024-11-20 15:16:18.183 UTC [4997] LOG:  database system is shut down
+2024-11-20 15:37:52.428 UTC [8605] LOG:  starting PostgreSQL 16.4 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 13.3.0, 64-bit
+2024-11-20 15:37:52.428 UTC [8605] LOG:  listening on IPv6 address "::1", port 5432
+2024-11-20 15:37:52.428 UTC [8605] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-11-20 15:37:52.433 UTC [8605] LOG:  listening on Unix socket "/home/cloudide/postgresql-run/.s.PGSQL.5432"
+2024-11-20 15:37:52.440 UTC [8608] LOG:  database system was shut down at 2024-11-20 15:11:04 UTC
+2024-11-20 15:37:52.445 UTC [8605] LOG:  database system is ready to accept connections
+2024-11-20 15:38:32.352 UTC [8774] FATAL:  role "postgres" does not exist
+2024-11-20 15:39:23.385 UTC [8837] FATAL:  database "cloudide" does not exist
+2024-11-20 15:39:56.213 UTC [8893] FATAL:  database "cloudide" does not exist
+2024-11-20 15:40:45.789 UTC [9013] FATAL:  role "postgres" does not exist
+2024-11-20 15:41:48.672 UTC [9058] FATAL:  database "cloudide" does not exist
+2024-11-20 15:42:52.539 UTC [8606] LOG:  checkpoint starting: time
+2024-11-20 15:42:56.664 UTC [8606] LOG:  checkpoint complete: wrote 44 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.112 s, sync=0.004 s, total=4.126 s; sync files=11, longest=0.003 s, average=0.001 s; distance=260 kB, estimate=260 kB; lsn=0/1530C38, redo lsn=0/1530C00
+2024-11-20 15:47:52.763 UTC [8606] LOG:  checkpoint starting: time
+2024-11-20 15:49:25.654 UTC [8606] LOG:  checkpoint complete: wrote 930 buffers (5.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=92.879 s, sync=0.003 s, total=92.891 s; sync files=300, longest=0.002 s, average=0.001 s; distance=4278 kB, estimate=4278 kB; lsn=0/195E618, redo lsn=0/195E5E0
+2024-11-20 15:57:52.853 UTC [8606] LOG:  checkpoint starting: time
+2024-11-20 15:57:53.269 UTC [8606] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.403 s, sync=0.004 s, total=0.417 s; sync files=5, longest=0.003 s, average=0.001 s; distance=3 kB, estimate=3850 kB; lsn=0/195F4B8, redo lsn=0/195F480
+2024-11-20 16:02:52.369 UTC [8606] LOG:  checkpoint starting: time
+2024-11-20 16:02:52.476 UTC [8606] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.102 s, sync=0.002 s, total=0.108 s; sync files=2, longest=0.001 s, average=0.001 s; distance=2 kB, estimate=3466 kB; lsn=0/1960048, redo lsn=0/195FFF8
+2024-11-20 16:06:48.455 UTC [11584] ERROR:  relation "_prisma_migrations" does not exist at character 126
+2024-11-20 16:06:48.455 UTC [11584] STATEMENT:  SELECT "id", "checksum", "finished_at", "migration_name", "logs", "rolled_back_at", "started_at", "applied_steps_count" FROM "_prisma_migrations" ORDER BY "started_at" ASC
+2024-11-20 16:06:48.690 UTC [8606] LOG:  checkpoint starting: immediate force wait
+2024-11-20 16:06:48.735 UTC [8606] LOG:  checkpoint complete: wrote 9 buffers (0.1%); 1 WAL file(s) added, 0 removed, 0 recycled; write=0.004 s, sync=0.003 s, total=0.046 s; sync files=7, longest=0.002 s, average=0.001 s; distance=4279 kB, estimate=4279 kB; lsn=0/1D8DEA8, redo lsn=0/1D8DE70
+2024-11-20 16:06:48.903 UTC [8606] LOG:  checkpoint starting: immediate force wait
+2024-11-20 16:06:48.912 UTC [8606] LOG:  checkpoint complete: wrote 10 buffers (0.1%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.002 s, sync=0.002 s, total=0.009 s; sync files=8, longest=0.002 s, average=0.001 s; distance=4295 kB, estimate=4295 kB; lsn=0/21BFC60, redo lsn=0/21BFC28
+2024-11-20 16:06:49.057 UTC [8606] LOG:  checkpoint starting: immediate force wait
+2024-11-20 16:06:49.066 UTC [8606] LOG:  checkpoint complete: wrote 52 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.002 s, total=0.010 s; sync files=44, longest=0.001 s, average=0.001 s; distance=4443 kB, estimate=4443 kB; lsn=0/26169E0, redo lsn=0/26169A8
+2024-11-20 16:06:49.297 UTC [8606] LOG:  checkpoint starting: immediate force wait
+2024-11-20 16:06:49.305 UTC [8606] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.002 s, total=0.008 s; sync files=7, longest=0.002 s, average=0.001 s; distance=4280 kB, estimate=4427 kB; lsn=0/2A44D28, redo lsn=0/2A44CF0
+2024-11-20 16:11:49.405 UTC [8606] LOG:  checkpoint starting: time
+2024-11-20 16:11:56.927 UTC [8606] LOG:  checkpoint complete: wrote 76 buffers (0.5%); 0 WAL file(s) added, 0 removed, 0 recycled; write=7.516 s, sync=0.002 s, total=7.523 s; sync files=70, longest=0.001 s, average=0.001 s; distance=289 kB, estimate=4013 kB; lsn=0/2A8D428, redo lsn=0/2A8D3F0
+2024-11-20 16:55:49.454 UTC [8606] LOG:  checkpoint starting: immediate force wait
+2024-11-20 16:55:49.464 UTC [8606] LOG:  checkpoint complete: wrote 9 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.004 s, sync=0.002 s, total=0.010 s; sync files=9, longest=0.002 s, average=0.001 s; distance=4414 kB, estimate=4414 kB; lsn=0/2EDCEA8, redo lsn=0/2EDCE70
+2024-11-20 16:55:49.786 UTC [8606] LOG:  checkpoint starting: immediate force wait
+2024-11-20 16:55:49.797 UTC [8606] LOG:  checkpoint complete: wrote 27 buffers (0.2%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.004 s, sync=0.002 s, total=0.011 s; sync files=19, longest=0.002 s, average=0.001 s; distance=4423 kB, estimate=4423 kB; lsn=0/332EB18, redo lsn=0/332EAE0
+2024-11-20 16:55:50.072 UTC [8606] LOG:  checkpoint starting: immediate force wait
+2024-11-20 16:55:50.082 UTC [8606] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.004 s, sync=0.002 s, total=0.010 s; sync files=7, longest=0.002 s, average=0.001 s; distance=4409 kB, estimate=4421 kB; lsn=0/377D290, redo lsn=0/377D258
+2024-11-20 16:55:50.359 UTC [8606] LOG:  checkpoint starting: immediate force wait
+2024-11-20 16:55:50.369 UTC [8606] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.004 s, sync=0.002 s, total=0.010 s; sync files=7, longest=0.002 s, average=0.001 s; distance=4411 kB, estimate=4420 kB; lsn=0/3BCBED8, redo lsn=0/3BCBEA0
+2024-11-20 17:00:50.469 UTC [8606] LOG:  checkpoint starting: time
+2024-11-20 17:00:51.178 UTC [8606] LOG:  checkpoint complete: wrote 8 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.703 s, sync=0.002 s, total=0.709 s; sync files=7, longest=0.002 s, average=0.001 s; distance=22 kB, estimate=3980 kB; lsn=0/3BD17F0, redo lsn=0/3BD17B8
+2024-11-20 17:15:36.896 UTC [8606] LOG:  checkpoint starting: immediate force wait
+2024-11-20 17:15:36.907 UTC [8606] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.004 s, sync=0.002 s, total=0.012 s; sync files=7, longest=0.002 s, average=0.001 s; distance=4412 kB, estimate=4412 kB; lsn=0/4020900, redo lsn=0/40208C8
+2024-11-20 17:15:37.130 UTC [8606] LOG:  checkpoint starting: immediate force wait
+2024-11-20 17:15:37.140 UTC [8606] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.004 s, sync=0.002 s, total=0.010 s; sync files=7, longest=0.002 s, average=0.001 s; distance=4413 kB, estimate=4413 kB; lsn=0/446FEF8, redo lsn=0/446FEC0
+2024-11-20 17:15:37.418 UTC [8606] LOG:  checkpoint starting: immediate force wait
+2024-11-20 17:15:37.428 UTC [8606] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.004 s, sync=0.002 s, total=0.011 s; sync files=7, longest=0.002 s, average=0.001 s; distance=4414 kB, estimate=4414 kB; lsn=0/48BF9C8, redo lsn=0/48BF990
+2024-11-20 17:15:37.704 UTC [8606] LOG:  checkpoint starting: immediate force wait
+2024-11-20 17:15:37.714 UTC [8606] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.004 s, sync=0.002 s, total=0.010 s; sync files=7, longest=0.002 s, average=0.001 s; distance=4415 kB, estimate=4415 kB; lsn=0/4D0F968, redo lsn=0/4D0F930
+2024-11-20 17:20:37.813 UTC [8606] LOG:  checkpoint starting: time
+2024-11-20 17:20:38.827 UTC [8606] LOG:  checkpoint complete: wrote 11 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.004 s, sync=0.002 s, total=1.014 s; sync files=9, longest=0.002 s, average=0.001 s; distance=20 kB, estimate=3976 kB; lsn=0/4D14C40, redo lsn=0/4D14C08
+2024-11-20 17:50:02.276 UTC [63337] LOG:  invalid length of startup packet
+2024-11-20 19:54:56.224 UTC [8606] LOG:  checkpoint starting: immediate force wait
+2024-11-20 19:54:56.243 UTC [8606] LOG:  checkpoint complete: wrote 8 buffers (0.0%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.004 s, sync=0.004 s, total=0.019 s; sync files=8, longest=0.003 s, average=0.001 s; distance=4409 kB, estimate=4409 kB; lsn=0/5163078, redo lsn=0/5163040
+2024-11-20 19:54:56.570 UTC [8606] LOG:  checkpoint starting: immediate force wait
+2024-11-20 19:54:56.585 UTC [8606] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.004 s, total=0.015 s; sync files=7, longest=0.003 s, average=0.001 s; distance=4410 kB, estimate=4410 kB; lsn=0/55B19A0, redo lsn=0/55B1968
+2024-11-20 19:54:56.873 UTC [8606] LOG:  checkpoint starting: immediate force wait
+2024-11-20 19:54:56.888 UTC [8606] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.004 s, total=0.016 s; sync files=7, longest=0.003 s, average=0.001 s; distance=4411 kB, estimate=4411 kB; lsn=0/5A007A0, redo lsn=0/5A00768
+2024-11-20 19:54:57.170 UTC [8606] LOG:  checkpoint starting: immediate force wait
+2024-11-20 19:54:57.183 UTC [8606] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.004 s, total=0.014 s; sync files=7, longest=0.003 s, average=0.001 s; distance=4415 kB, estimate=4415 kB; lsn=0/5E505F0, redo lsn=0/5E505B8
+2024-11-20 19:59:31.266 UTC [8606] LOG:  checkpoint starting: immediate force wait
+2024-11-20 19:59:31.278 UTC [8606] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.004 s, sync=0.002 s, total=0.012 s; sync files=7, longest=0.002 s, average=0.001 s; distance=4288 kB, estimate=4402 kB; lsn=0/6280850, redo lsn=0/6280818
+2024-11-20 19:59:31.453 UTC [8606] LOG:  checkpoint starting: immediate force wait
+2024-11-20 19:59:31.465 UTC [8606] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.005 s, sync=0.002 s, total=0.013 s; sync files=7, longest=0.002 s, average=0.001 s; distance=4288 kB, estimate=4391 kB; lsn=0/66B0BA0, redo lsn=0/66B0B68
+2024-11-20 19:59:36.899 UTC [74796] ERROR:  table "_prisma_migrations" does not exist
+2024-11-20 19:59:36.899 UTC [74796] STATEMENT:  DROP TABLE _prisma_migrations
+2024-11-20 19:59:37.130 UTC [8606] LOG:  checkpoint starting: immediate force wait
+2024-11-20 19:59:37.142 UTC [8606] LOG:  checkpoint complete: wrote 67 buffers (0.4%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.006 s, sync=0.002 s, total=0.013 s; sync files=48, longest=0.001 s, average=0.001 s; distance=4599 kB, estimate=4599 kB; lsn=0/6B2EA70, redo lsn=0/6B2EA38
+2024-11-20 19:59:37.147 UTC [74850] FATAL:  database 17220 does not exist
+2024-11-20 19:59:37.372 UTC [8606] LOG:  checkpoint starting: immediate force wait
+2024-11-20 19:59:37.381 UTC [8606] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.002 s, total=0.009 s; sync files=7, longest=0.002 s, average=0.001 s; distance=4289 kB, estimate=4568 kB; lsn=0/6F5F178, redo lsn=0/6F5F140
+2024-11-20 20:04:37.477 UTC [8606] LOG:  checkpoint starting: time
+2024-11-20 20:04:46.500 UTC [8606] LOG:  checkpoint complete: wrote 91 buffers (0.6%); 0 WAL file(s) added, 0 removed, 0 recycled; write=9.017 s, sync=0.002 s, total=9.023 s; sync files=72, longest=0.002 s, average=0.001 s; distance=427 kB, estimate=4154 kB; lsn=0/6FCA078, redo lsn=0/6FCA040
+2024-11-20 20:27:15.315 UTC [82242] LOG:  invalid length of startup packet
+2024-11-20 20:27:16.545 UTC [82257] LOG:  invalid length of startup packet
+2024-11-20 20:27:21.341 UTC [82277] LOG:  invalid length of startup packet
+2024-11-20 20:27:21.660 UTC [82278] LOG:  invalid length of startup packet
+2024-11-20 20:27:22.575 UTC [82284] LOG:  invalid length of startup packet
+2024-11-20 20:44:38.281 UTC [8606] LOG:  checkpoint starting: time
+2024-11-20 20:44:38.895 UTC [8606] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.602 s, sync=0.003 s, total=0.614 s; sync files=4, longest=0.003 s, average=0.001 s; distance=21 kB, estimate=3741 kB; lsn=0/6FCF808, redo lsn=0/6FCF7D0
+2024-11-20 21:06:08.248 UTC [84171] ERROR:  database "aviator_deriv" does not exist
+2024-11-20 21:06:08.248 UTC [84171] STATEMENT:  GRANT ALL PRIVILEGES ON DATABASE aviator_deriv TO kyan;
+2024-11-20 21:09:39.373 UTC [8606] LOG:  checkpoint starting: time
+2024-11-20 21:09:39.789 UTC [8606] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.403 s, sync=0.004 s, total=0.416 s; sync files=5, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=3368 kB; lsn=0/6FD2528, redo lsn=0/6FD24F0
+2024-11-20 21:14:39.889 UTC [8606] LOG:  checkpoint starting: time
+2024-11-20 21:14:41.006 UTC [8606] LOG:  checkpoint complete: wrote 12 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.105 s, sync=0.003 s, total=1.118 s; sync files=8, longest=0.002 s, average=0.001 s; distance=1 kB, estimate=3031 kB; lsn=0/6FD2AB8, redo lsn=0/6FD2A80
