@@ -1,20 +1,30 @@
 const Redis = require('ioredis');
-const redisClient = new Redis(); // Publisher instance
-const { Server } = require('socket.io');
+const redisClient = new Redis(); 
 
 function initFrontendSocketServer(socket) {
-    // Poll every 500 ms for the multiplier value and emit it
-    setInterval(async () => {
+    const pollInterval = setInterval(async () => {
         try {
+            const crashState = await redisClient.get('multiplierCrashed');
+
+            // If crashedState is true, stop handling any further ticks
+            if (crashState === 'true') {
+                socket.emit('crashed', { crashed: crashState });
+                console.log('Multiplier is in crashed state. Waiting for reset...');
+                return; 
+            }
+
+            // If not crashed, fetch the multiplier value and emit it
             const multiplier = await redisClient.get('multiplier');
             if (multiplier) {
-                socket.emit('multiplier', { multiplier: parseFloat(multiplier) || 1.0 });
-                console.log('Multiplier value emitted:', multiplier);
+                const formattedMultiplier = parseFloat(multiplier).toFixed(2); // Fix precision to 2 decimal places
+                socket.emit('multiplier', { multiplier: formattedMultiplier });
+                socket.emit('crashed', { crashed: crashState });
+                console.log('Multiplier value emitted:', formattedMultiplier);
             }
         } catch (err) {
             console.error('Error fetching multiplier from Redis:', err);
         }
-    }, 1500);
+    }, 1000); // Polling every 500ms
 }
 
 module.exports = initFrontendSocketServer;

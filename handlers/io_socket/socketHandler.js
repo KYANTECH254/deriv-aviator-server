@@ -15,6 +15,19 @@ function generateRandomMessageId() {
     return Math.random().toString(36).substring(2, 7);
 }
 
+// async function deleteAllFromModel() {
+//     try {
+//         await prisma.multiplier.deleteMany(); // Replace 'yourModelName' with your actual model name
+//         console.log('All data deleted successfully.');
+//     } catch (error) {
+//         console.error('Error deleting data:', error);
+//     } finally {
+//         await prisma.$disconnect(); // Disconnect the client after operation
+//     }
+// }
+
+// deleteAllFromModel();
+
 // Function to verify user by auth_token
 const verifyUser = async (authToken) => {
     try {

@@ -1,7 +1,7 @@
 const WebSocket = require('ws');
 const Redis = require('ioredis');
 const redisClient = new Redis();
-const initialMultiplier = 1.0;
+const initialMultiplier = 1.00;
 const priceChangeThreshold = 0.615;
 const prisma = require('../../services/db');
 
@@ -12,15 +12,19 @@ function initializeDerivWebSocket() {
         console.log('Connected to Deriv WebSocket API');
 
         // Send authorization message
-        derivWs.send(JSON.stringify({
-            authorize: process.env.TOKEN,
-        }));
+        derivWs.send(
+            JSON.stringify({
+                authorize: process.env.TOKEN,
+            })
+        );
 
         // Subscribe to Volatility 100 index ticks
-        derivWs.send(JSON.stringify({
-            subscribe: 1,
-            ticks: "R_100",
-        }));
+        derivWs.send(
+            JSON.stringify({
+                subscribe: 1,
+                ticks: 'R_100',
+            })
+        );
 
         // Keep the connection alive
         setInterval(() => {
@@ -42,70 +46,79 @@ function initializeDerivWebSocket() {
     });
 
     async function handleTickData(message) {
-        if (message.tick && message.tick.symbol === "R_100") {
+        if (message.tick && message.tick.symbol === 'R_100') {
             const newPrice = message.tick.quote;
 
-            redisClient.get('previousPrice', async (err, previousPrice) => {
-                if (err) {
-                    console.error('Error fetching previous price from Redis:', err);
-                    return;
-                }
+            // Fetch the crash state from Redis
+            const crashState = await redisClient.get('multiplierCrashed');
 
-                const priceChange = newPrice - parseFloat(previousPrice);
+            // If a crash is in progress, do nothing
+            // if (crashState === 'true') {
+            //     return;
+            // }
 
-                if (Math.abs(priceChange) <= priceChangeThreshold) {
-                    redisClient.get('multiplier', (err, multiplier) => {
-                        const newMultiplier = parseFloat(multiplier) + 0.05;
-                        redisClient.set('multiplier', newMultiplier);
-                        redisClient.set('previousPrice', newPrice);
-                        redisClient.set('multiplierCrashed', 'false'); // Reset crash state
+            // Fetch or initialize the previous price
+            let previousPrice = await redisClient.get('previousPrice');
+            if (!previousPrice) {
+                // Set the initial previous price for the first tick
+                await redisClient.set('previousPrice', newPrice);
+                previousPrice = newPrice;
+            }
 
-                        console.log(`Multiplier updated to: ${newMultiplier}`);
+            const priceChange = newPrice - parseFloat(previousPrice);
+
+            if (Math.abs(priceChange) <= priceChangeThreshold) {
+                // Update multiplier if price change is within threshold
+                const multiplier = parseFloat(await redisClient.get('multiplier')) || parseFloat(initialMultiplier);
+                const newMultiplier = (Math.round((multiplier + 0.05) * 100) / 100).toFixed(2);
+
+                await redisClient.set('multiplier', newMultiplier);
+                await redisClient.set('previousPrice', newPrice); 
+                // console.log(Updated multiplier: ${newMultiplier});
+                
+            } else {
+                // Handle crash
+                console.log('Multiplier crashed. Resetting and starting a new round.');
+                await redisClient.set('multiplierCrashed', 'true');
+
+                const currentMultiplier = parseFloat(await redisClient.get('multiplier')) || parseFloat(initialMultiplier);
+
+                // Update or create a round in the database
+                const previousRound = await prisma.multiplier.findFirst({ orderBy: { createdAt: 'desc' } });
+                if (previousRound) {
+                    await prisma.multiplier.update({
+                        where: { id: previousRound.id },
+                        data: { value: currentMultiplier.toFixed(2) },
                     });
+                    console.log('Previous round updated with multiplier value after crash.');
                 } else {
-                    // Set the crash state to true when a crash occurs
-                    redisClient.set('multiplierCrashed', 'true');
-
-                    // Fetch the most recent round if it exists
-                    const previousRound = await prisma.multiplier.findFirst({
-                        orderBy: { createdAt: 'desc' },
-                    });
-
-                    // If previous round exists, update it with the current multiplier value
-                    if (previousRound) {
-                        await prisma.multiplier.update({
-                            where: { id: previousRound.id },
-                            data: { value: redisClient.get('multiplier') || initialMultiplier },
-                        });
-
-                        console.log('Previous round updated with multiplier value after crash.');
-                    } else {
-                        // If no previous round, create a new round record
-                        await prisma.multiplier.create({
-                            data: {
-                                value: redisClient.get('multiplier') || initialMultiplier,
-                                appId: 'R_100', // You can change this appId or use any relevant identifier
-                            }
-                        });
-
-                        console.log('New round created after crash.');
-                    }
-
-                    // Create a new round with no multiplier value and store it in the DB
                     await prisma.multiplier.create({
                         data: {
-                            value: null, // Leave value blank for the next round
-                            appId: 'R_100', // You can change this appId or use any relevant identifier
-                        }
+                            value: currentMultiplier.toFixed(2),
+                            appId: process.env.DERIV_ID,
+                        },
                     });
-
-                    // Reset multiplier and previous price after crash
-                    redisClient.set('multiplier', initialMultiplier);
-                    redisClient.set('previousPrice', newPrice);
-
-                    console.log('Multiplier crashed. Resetting to initial value and creating new round.');
+                    console.log('New round created after crash.');
                 }
-            });
+
+                // Create a new round for the next game
+                await prisma.multiplier.create({
+                    data: {
+                        value: '',
+                        appId: `${process.env.DERIV_ID}`,
+                    },
+                });
+
+                // Reset multiplier but wait for the first valid tick to reset `previousPrice`
+                await redisClient.set('multiplier', initialMultiplier);
+                await redisClient.del('previousPrice'); // Clear previousPrice temporarily
+
+                console.log('Waiting 7 seconds before restarting...');
+                setTimeout(async () => {
+                    await redisClient.set('multiplierCrashed', 'false');
+                    console.log('Crash handled. Restarting process.');
+                }, 7000); // Wait for 7 seconds
+            }
         }
     }
 }
