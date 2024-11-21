@@ -12,7 +12,7 @@ const getCookie = (cookieHeader, cookieName) => {
 };
 
 function generateRandomMessageId() {
-    return Math.random().toString(36).substring(2, 7); 
+    return Math.random().toString(36).substring(2, 7);
 }
 
 // Function to verify user by auth_token
@@ -347,15 +347,15 @@ const initSocketServer = (httpServer) => {
         console.log('New client connected');
 
         userCount++;
-        io.emit('userCount', userCount);  
+        io.emit('userCount', userCount);
 
-        const requestedUrl = socket.handshake.headers.referer;  
+        const requestedUrl = socket.handshake.headers.referer;
+        console.log('Referrer URL:', requestedUrl);
+        if (requestedUrl === 'https://api-aviator.topwebtools.online/') {
 
-        if (requestedUrl) {
-            if (requestedUrl === 'https://api-aviator.topwebtools.online/')
             console.log('Status access allowed based on URL');
             socket.emit('info', 'Connected as guest');
-            
+
             socket.on('origin', data => {
                 console.log('Origin:', data);
             });
@@ -365,7 +365,7 @@ const initSocketServer = (httpServer) => {
                 userCount--;
                 io.emit('userCount', userCount);
             });
-            return; 
+            return;
         }
 
         // If not a guest, check for token authentication
