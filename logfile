@@ -123,3 +123,17 @@
 2024-11-20 23:33:05.270 UTC [93719] LOG:  checkpoint starting: shutdown immediate
 2024-11-20 23:33:05.279 UTC [93719] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.013 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=0 kB; lsn=0/6FD2FF8, redo lsn=0/6FD2FF8
 2024-11-20 23:33:05.283 UTC [93716] LOG:  database system is shut down
+2024-11-21 09:18:10.212 UTC [2088] LOG:  starting PostgreSQL 16.4 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 13.3.0, 64-bit
+2024-11-21 09:18:10.213 UTC [2088] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2024-11-21 09:18:10.213 UTC [2088] LOG:  listening on IPv6 address "::", port 5432
+2024-11-21 09:18:10.220 UTC [2088] LOG:  listening on Unix socket "/home/cloudide/postgresql-run/.s.PGSQL.5432"
+2024-11-21 09:18:10.233 UTC [2093] LOG:  database system was interrupted; last known up at 2024-11-21 05:39:03 UTC
+2024-11-21 09:18:10.263 UTC [2093] LOG:  database system was not properly shut down; automatic recovery in progress
+2024-11-21 09:18:10.272 UTC [2093] LOG:  redo starts at 0/9AFED40
+2024-11-21 09:18:10.272 UTC [2093] LOG:  invalid record length at 0/9AFEE28: expected at least 24, got 0
+2024-11-21 09:18:10.272 UTC [2093] LOG:  redo done at 0/9AFEDF0 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2024-11-21 09:18:10.279 UTC [2091] LOG:  checkpoint starting: end-of-recovery immediate wait
+2024-11-21 09:18:10.296 UTC [2091] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.004 s, sync=0.002 s, total=0.020 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/9AFEE28, redo lsn=0/9AFEE28
+2024-11-21 09:18:10.301 UTC [2088] LOG:  database system is ready to accept connections
+2024-11-21 09:18:28.202 UTC [2516] FATAL:  lock file "postmaster.pid" already exists
+2024-11-21 09:18:28.202 UTC [2516] HINT:  Is another postmaster (PID 2088) running in data directory "/home/cloudide/pgdata"?

@@ -9,7 +9,7 @@ exports.AuthorizeApplicationCredentials = async (req, res) => {
     console.log(req.body);
     return res.status(200).json({
       success: false,
-      message: 'Invalid Credentials provided 1!',
+      message: 'Invalid Credentials provided!',
     });
   }
 
@@ -28,38 +28,49 @@ exports.AuthorizeApplicationCredentials = async (req, res) => {
     console.error("Error extracting domain from referrer:", error);
     return res.status(200).json({
       success: false,
-      message: 'Invalid Credentials provided 2!',
+      message: 'Invalid Credentials provided!',
     });
   }
 
   if (!a || !p || !d || !pl || !domain) {
     console.log(req.body);
-    return res.status(200).json({ success: false, message: 'Invalid Credentials provided 3!' });
+    return res.status(200).json({ success: false, message: 'Invalid Credentials provided!' });
   }
 
   if (!validateParams(a, p)) {
-    return res.status(200).json({ success: false, message: 'Invalid Credentials provided 4!' });
+    return res.status(200).json({ success: false, message: 'Invalid Credentials provided!' });
   }
 
   try {
     const appRecord = await db.app.findFirst({
-      where: { apiKey: a, platformId: p, platform: pl, deriv_id: d },
+      where: { apiKey: a, platformId: p, platform: pl },
     });
 
     if (!appRecord) {
-      return res.status(200).json({ success: false, message: 'Invalid Credentials provided 5!' });
+      return res.status(200).json({ success: false, message: 'Invalid Credentials provided!' });
     }
 
     const dbOrigins = appRecord.origin.split(',');
-
     if (dbOrigins.length === 1) {
       if (dbOrigins[0] !== domain) {
-        return res.status(200).json({ success: false, message: 'Invalid Credentials provided 6!' });
+        return res.status(200).json({ success: false, message: 'Invalid Credentials provided!' });
       }
     } else {
       const isValidDomain = dbOrigins.some((dbDomain) => dbDomain.trim() === domain);
       if (!isValidDomain) {
-        return res.status(200).json({ success: false, message: 'Invalid Credentials provided 7!' });
+        return res.status(200).json({ success: false, message: 'Invalid Credentials provided!' });
+      }
+    }
+
+    const dbDerivIds = appRecord.deriv_id.split(',');
+    if (dbDerivIds.length === 1) {
+      if (dbDerivIds[0] !== d) {
+        return res.status(200).json({ success: false, message: 'Invalid Credentials provided!' });
+      }
+    } else {
+      const isValidDerivId = dbDerivIds.some((dbDerivId) => dbDerivId.trim() === d);
+      if (!isValidDerivId) {
+        return res.status(200).json({ success: false, message: 'Invalid Credentials provided!' });
       }
     }
 
@@ -69,4 +80,5 @@ exports.AuthorizeApplicationCredentials = async (req, res) => {
     return res.status(200).json({ success: false, message: 'An error occurred!' });
   }
 };
+
 

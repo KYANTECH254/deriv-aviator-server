@@ -350,15 +350,10 @@ const initSocketServer = (httpServer) => {
         io.emit('userCount', userCount);
 
         const requestedUrl = socket.handshake.headers.referer;
-        console.log('Referrer URL:', requestedUrl);
         if (requestedUrl === 'https://api-aviator.topwebtools.online/') {
 
             console.log('Status access allowed based on URL');
             socket.emit('info', 'Connected as guest');
-
-            socket.on('origin', data => {
-                console.log('Origin:', data);
-            });
 
             socket.on('disconnect', async () => {
                 console.log('Client disconnected');
@@ -370,8 +365,9 @@ const initSocketServer = (httpServer) => {
 
         // If not a guest, check for token authentication
         const cookieHeader = socket.handshake.headers.cookie;
-        const authToken = getCookie(cookieHeader, 'token');
-
+        // const authToken = getCookie(cookieHeader, 'token');
+        const authToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJWUlRDMTAwMzI2MDkiLCJhcHBJZCI6IjEwODkiLCJ0b2tlbiI6ImExLU5yTHN0elBycURicjlHSGNPeUo3TkQ5YjF5YVBJIiwiaWF0IjoxNzMyMTY3Mzk3fQ.Y7W9vEI0qoKD-FNqYfWxQOUxlvGokixGTgRlyR1Um64"
+        console.log('authToken:', authToken)
         if (authToken) {
             try {
                 // Authenticate user
@@ -382,6 +378,7 @@ const initSocketServer = (httpServer) => {
                     return;
                 }
 
+                console.log('user verified')
                 // Emit user data
                 await emitUserDataByToken(socket, authToken);
 

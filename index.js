@@ -4,13 +4,14 @@ const fs = require('fs');
 const cors = require('cors');
 const apiRoutes = require('./routes/apiRoutes');
 const { initSocketServer } = require('./socket');
+// const { initwssWebSocketServer } = require('./ws_socket');
 const bodyParser = require('body-parser');
 
 // Create an Express application
 const app = express();
 
 // Enable CORS
-app.use(cors()); // Consider restricting origins in production
+app.use(cors());
 app.use(bodyParser.json());
 
 // Routes
@@ -39,6 +40,7 @@ const server = app.listen(PORT, () => {
 
 // Initialize Socket.IO on the server
 const io = initSocketServer(server);
+// const wss = initwssWebSocketServer(server);
 
 // Centralized error handling
 app.use((err, req, res, next) => {
