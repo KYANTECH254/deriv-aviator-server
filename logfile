@@ -99,3 +99,27 @@
 2024-11-20 21:09:39.789 UTC [8606] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.403 s, sync=0.004 s, total=0.416 s; sync files=5, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=3368 kB; lsn=0/6FD2528, redo lsn=0/6FD24F0
 2024-11-20 21:14:39.889 UTC [8606] LOG:  checkpoint starting: time
 2024-11-20 21:14:41.006 UTC [8606] LOG:  checkpoint complete: wrote 12 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.105 s, sync=0.003 s, total=1.118 s; sync files=8, longest=0.002 s, average=0.001 s; distance=1 kB, estimate=3031 kB; lsn=0/6FD2AB8, redo lsn=0/6FD2A80
+2024-11-20 21:31:08.404 UTC [87879] LOG:  invalid length of startup packet
+2024-11-20 21:31:09.393 UTC [87881] LOG:  invalid length of startup packet
+2024-11-20 21:54:47.528 UTC [88720] LOG:  invalid length of startup packet
+2024-11-20 22:06:51.705 UTC [89101] LOG:  invalid length of startup packet
+2024-11-20 22:41:30.511 UTC [8605] LOG:  received smart shutdown request
+2024-11-20 22:41:30.520 UTC [8605] LOG:  background worker "logical replication launcher" (PID 8611) exited with exit code 1
+2024-11-20 22:41:30.520 UTC [8606] LOG:  shutting down
+2024-11-20 22:41:30.523 UTC [8606] LOG:  checkpoint starting: shutdown immediate
+2024-11-20 22:41:30.533 UTC [8606] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.013 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=2728 kB; lsn=0/6FD2B68, redo lsn=0/6FD2B68
+2024-11-20 22:41:30.542 UTC [8605] LOG:  database system is shut down
+2024-11-20 22:54:07.572 UTC [93716] LOG:  starting PostgreSQL 16.4 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 13.3.0, 64-bit
+2024-11-20 22:54:07.572 UTC [93716] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2024-11-20 22:54:07.572 UTC [93716] LOG:  listening on IPv6 address "::", port 5432
+2024-11-20 22:54:07.578 UTC [93716] LOG:  listening on Unix socket "/home/cloudide/postgresql-run/.s.PGSQL.5432"
+2024-11-20 22:54:07.650 UTC [93721] LOG:  database system was shut down at 2024-11-20 22:54:03 UTC
+2024-11-20 22:54:07.656 UTC [93716] LOG:  database system is ready to accept connections
+2024-11-20 22:59:07.749 UTC [93719] LOG:  checkpoint starting: time
+2024-11-20 22:59:07.764 UTC [93719] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.004 s, sync=0.002 s, total=0.016 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/6FD2F48, redo lsn=0/6FD2F10
+2024-11-20 23:33:05.262 UTC [93716] LOG:  received smart shutdown request
+2024-11-20 23:33:05.267 UTC [93716] LOG:  background worker "logical replication launcher" (PID 93727) exited with exit code 1
+2024-11-20 23:33:05.267 UTC [93719] LOG:  shutting down
+2024-11-20 23:33:05.270 UTC [93719] LOG:  checkpoint starting: shutdown immediate
+2024-11-20 23:33:05.279 UTC [93719] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.013 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=0 kB; lsn=0/6FD2FF8, redo lsn=0/6FD2FF8
+2024-11-20 23:33:05.283 UTC [93716] LOG:  database system is shut down

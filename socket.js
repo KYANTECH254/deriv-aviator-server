@@ -1,7 +1,7 @@
 const { Server } = require('socket.io');
 const { PrismaClient } = require('@prisma/client');
 const Redis = require('ioredis');
-
+const cors = require('cors');
 const prisma = new PrismaClient();
 const redis = new Redis();
 
@@ -12,7 +12,7 @@ const getCookie = (cookieHeader, cookieName) => {
 };
 
 function generateRandomMessageId() {
-    return Math.random().toString(36).substring(2, 7); // Generates a random string of 5 characters
+    return Math.random().toString(36).substring(2, 7); 
 }
 
 // Function to verify user by auth_token
@@ -109,7 +109,6 @@ const placeBet = async (socket) => {
         }
     });
 }
-
 // Function to emit user data (e.g., username) to the client
 const emitUserDataByToken = async (socket, authToken) => {
     try {
@@ -339,8 +338,9 @@ const initSocketServer = (httpServer) => {
     const io = new Server(httpServer, {
         cors: {
             origin: '*',
-            methods: ['*']
-        }
+            methods: ["GET", "POST"],
+        },
+        allowEIO3: true
     });
 
     io.on('connection', async (socket) => {
@@ -351,11 +351,11 @@ const initSocketServer = (httpServer) => {
 
         const requestedUrl = socket.handshake.headers.referer;  
 
-        if (requestedUrl && requestedUrl.includes('/status')) {
-            // If the URL contains '/guest', allow access without a token
+        if (requestedUrl) {
+            if (requestedUrl === 'https://api-aviator.topwebtools.online/')
             console.log('Status access allowed based on URL');
             socket.emit('info', 'Connected as guest');
-
+            
             socket.on('origin', data => {
                 console.log('Origin:', data);
             });
