@@ -3,8 +3,8 @@ const path = require('path');
 const fs = require('fs');
 const cors = require('cors');
 const apiRoutes = require('./routes/apiRoutes');
-const { initSocketServer } = require('./socket');
-// const { initwssWebSocketServer } = require('./ws_socket');
+const { initSocketServer } = require('./handlers/io_socket/socketHandler');
+const initializeDerivWebSocket = require('./handlers/ws_socket/derivHandler');
 const bodyParser = require('body-parser');
 
 // Create an Express application
@@ -23,12 +23,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Serve index.html for all other routes
 app.get('*', async (req, res) => {
     const indexPath = path.join(__dirname, 'public', 'index.html');
+    const ErrorPath = path.join(__dirname, 'public', '404.html');
 
     try {
         await fs.promises.access(indexPath, fs.constants.F_OK);
-        res.sendFile(indexPath); // Serve the index.html file
+        res.sendFile(indexPath);
     } catch (error) {
-        res.status(404).send('<html><body><h1>404 - File not found</h1></body></html>');
+        res.sendFile(indexPath); 
     }
 });
 
@@ -38,9 +39,8 @@ const server = app.listen(PORT, () => {
     console.log(`> Server running at PORT:${PORT}`);
 });
 
-// Initialize Socket.IO on the server
+const wss = initializeDerivWebSocket();
 const io = initSocketServer(server);
-// const wss = initwssWebSocketServer(server);
 
 // Centralized error handling
 app.use((err, req, res, next) => {

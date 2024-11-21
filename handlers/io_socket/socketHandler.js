@@ -1,9 +1,9 @@
 const { Server } = require('socket.io');
-const { PrismaClient } = require('@prisma/client');
+const prisma = require('../../services/db');
 const Redis = require('ioredis');
 const cors = require('cors');
-const prisma = new PrismaClient();
 const redis = new Redis();
+const initFrontendSocketServer = require('./frontendHandler');
 
 // Utility function to get the cookie from the request headers
 const getCookie = (cookieHeader, cookieName) => {
@@ -393,6 +393,9 @@ const initSocketServer = (httpServer) => {
 
                 // Emit bets data
                 await emitAllBetsData(socket, authToken)
+
+                // Emit multiplier
+                initFrontendSocketServer(socket);
 
                 // Handle chat interactions
                 handleChat(socket, authToken);

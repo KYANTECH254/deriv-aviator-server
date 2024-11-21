@@ -137,3 +137,28 @@
 2024-11-21 09:18:10.301 UTC [2088] LOG:  database system is ready to accept connections
 2024-11-21 09:18:28.202 UTC [2516] FATAL:  lock file "postmaster.pid" already exists
 2024-11-21 09:18:28.202 UTC [2516] HINT:  Is another postmaster (PID 2088) running in data directory "/home/cloudide/pgdata"?
+2024-11-21 15:07:26.760 UTC [1490] LOG:  starting PostgreSQL 16.4 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 13.3.0, 64-bit
+2024-11-21 15:07:26.761 UTC [1490] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2024-11-21 15:07:26.761 UTC [1490] LOG:  listening on IPv6 address "::", port 5432
+2024-11-21 15:07:26.767 UTC [1490] LOG:  listening on Unix socket "/home/cloudide/postgresql-run/.s.PGSQL.5432"
+2024-11-21 15:07:26.780 UTC [1495] LOG:  database system was interrupted; last known up at 2024-11-21 09:18:10 UTC
+2024-11-21 15:07:26.810 UTC [1495] LOG:  database system was not properly shut down; automatic recovery in progress
+2024-11-21 15:07:26.818 UTC [1495] LOG:  redo starts at 0/9AFEEA0
+2024-11-21 15:07:26.818 UTC [1495] LOG:  invalid record length at 0/9AFEED8: expected at least 24, got 0
+2024-11-21 15:07:26.819 UTC [1495] LOG:  redo done at 0/9AFEEA0 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2024-11-21 15:07:26.825 UTC [1493] LOG:  checkpoint starting: end-of-recovery immediate wait
+2024-11-21 15:07:26.842 UTC [1493] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.004 s, sync=0.002 s, total=0.020 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/9AFEED8, redo lsn=0/9AFEED8
+2024-11-21 15:07:26.846 UTC [1490] LOG:  database system is ready to accept connections
+2024-11-21 15:22:27.144 UTC [1493] LOG:  checkpoint starting: time
+2024-11-21 15:22:27.260 UTC [1493] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.103 s, sync=0.004 s, total=0.117 s; sync files=2, longest=0.003 s, average=0.002 s; distance=1 kB, estimate=1 kB; lsn=0/9AFF380, redo lsn=0/9AFF348
+2024-11-21 17:42:19.709 UTC [45640] LOG:  could not receive data from client: Connection reset by peer
+2024-11-21 18:24:05.627 UTC [1493] LOG:  checkpoint starting: immediate force wait
+2024-11-21 18:24:05.644 UTC [1493] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.004 s, sync=0.004 s, total=0.018 s; sync files=7, longest=0.003 s, average=0.001 s; distance=4422 kB, estimate=4422 kB; lsn=0/9F50DE8, redo lsn=0/9F50DB0
+2024-11-21 18:24:06.053 UTC [1493] LOG:  checkpoint starting: immediate force wait
+2024-11-21 18:24:06.072 UTC [1493] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.004 s, sync=0.004 s, total=0.019 s; sync files=7, longest=0.003 s, average=0.001 s; distance=4423 kB, estimate=4423 kB; lsn=0/A3A2D38, redo lsn=0/A3A2D00
+2024-11-21 18:24:06.363 UTC [1493] LOG:  checkpoint starting: immediate force wait
+2024-11-21 18:24:06.378 UTC [1493] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.004 s, sync=0.004 s, total=0.015 s; sync files=7, longest=0.003 s, average=0.001 s; distance=4425 kB, estimate=4425 kB; lsn=0/A7F5140, redo lsn=0/A7F5108
+2024-11-21 18:24:08.000 UTC [1493] LOG:  checkpoint starting: immediate force wait
+2024-11-21 18:24:08.014 UTC [1493] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.003 s, total=0.014 s; sync files=7, longest=0.003 s, average=0.001 s; distance=4426 kB, estimate=4426 kB; lsn=0/AC47A28, redo lsn=0/AC479F0
+2024-11-21 18:29:07.113 UTC [1493] LOG:  checkpoint starting: time
+2024-11-21 18:29:08.131 UTC [1493] LOG:  checkpoint complete: wrote 11 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.005 s, sync=0.003 s, total=1.018 s; sync files=11, longest=0.002 s, average=0.001 s; distance=34 kB, estimate=3987 kB; lsn=0/AC50268, redo lsn=0/AC50230

@@ -44,7 +44,7 @@ model User {
 
 model Multiplier {
   id        Int      @id @default(autoincrement())
-  value     String
+  value     String?
   appId     String
   createdAt DateTime @default(now())
   updatedAt DateTime @default(now()) @updatedAt
