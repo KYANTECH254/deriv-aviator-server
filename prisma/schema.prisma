@@ -11,7 +11,7 @@ model App {
   id          Int      @id @default(autoincrement())
   apiKey      String   @unique
   platformId  String   @unique
-  platform    String   @default("aviator")
+  platform    String   @default("deriv")
   deriv_id    String   @unique
   name        String
   origin      String

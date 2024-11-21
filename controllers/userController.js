@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
-const db = require('../services/db'); // Make sure you have a db connection setup
-const { generateUsername } = require('../utils/validation'); // Add username generator utility if not already created
+const db = require('../services/db'); 
+const { generateUsername } = require('../utils/validation');
 
 exports.QueryUserData = async (req, res) => {
   const { code, derivId, token, currency } = req.body;
