@@ -2,7 +2,6 @@ const WebSocket = require('ws');
 const Redis = require('ioredis');
 const redisClient = new Redis();
 const initialMultiplier = 1.00;
-const priceChangeThreshold = 0.615;
 const prisma = require('../../services/db');
 
 function initializeDerivWebSocket() {
@@ -53,11 +52,11 @@ function initializeDerivWebSocket() {
             const crashState = await redisClient.get('multiplierCrashed');
 
             // If a crash is in progress, do nothing
-            // if (crashState === 'true') {
-            //     return;
-            // }
+            if (crashState === 'true') {
+                return;
+            }
+            // await redisClient.set('multiplierCrashed', 'false');
 
-            // Fetch or initialize the previous price
             let previousPrice = await redisClient.get('previousPrice');
             if (!previousPrice) {
                 // Set the initial previous price for the first tick
@@ -65,17 +64,54 @@ function initializeDerivWebSocket() {
                 previousPrice = newPrice;
             }
 
-            const priceChange = newPrice - parseFloat(previousPrice);
+            const previousPriceFloat = parseFloat(previousPrice);
 
-            if (Math.abs(priceChange) <= priceChangeThreshold) {
-                // Update multiplier if price change is within threshold
+            // Calculate the price change percentage
+            const priceChangePercentage = ((newPrice - previousPriceFloat) / previousPriceFloat) * 100;
+
+            // Define the price change threshold for multiplier update (±0.04863%)
+            const priceChangeThreshold = 0.04863; // ± 0.04863% threshold
+
+            if (Math.abs(priceChangePercentage) <= priceChangeThreshold) {
                 const multiplier = parseFloat(await redisClient.get('multiplier')) || parseFloat(initialMultiplier);
-                const newMultiplier = (Math.round((multiplier + 0.05) * 100) / 100).toFixed(2);
 
-                await redisClient.set('multiplier', newMultiplier);
-                await redisClient.set('previousPrice', newPrice); 
-                // console.log(Updated multiplier: ${newMultiplier});
-                
+                // Prevent further processing if multiplier is less than 1
+                if (multiplier < 1.00) return;
+
+                const animateMultiplier = async (currentMultiplier, targetMultiplier, updateMultiplierCallback) => {
+                    const incrementStep = 0.01; // Small step to simulate smooth animation
+                    const steps = Math.round((targetMultiplier - currentMultiplier) / incrementStep); // Total steps needed
+                    const intervalTime = 50; // Time between each step to animate faster
+                    let stepCount = 0;
+
+                    return new Promise((resolve) => {
+                        const animationInterval = setInterval(async () => {
+                            if (stepCount < steps) {
+                                // Increase the multiplier by incrementStep towards the target multiplier
+                                currentMultiplier = Math.round((currentMultiplier + incrementStep) * 100) / 100; // Round to 2 decimals
+                                await updateMultiplierCallback(currentMultiplier); // Update the multiplier in Redis
+                                stepCount++;
+                            } else {
+                                clearInterval(animationInterval); // Stop the animation after completing the steps
+                                resolve(); // Notify completion
+                            }
+                        }, intervalTime);
+                    });
+                };
+
+                // Calculate the new multiplier by multiplying the current multiplier by 1.05
+                const targetMultiplier = multiplier * 1.05;
+
+                // Animate the multiplier to reach the target multiplier smoothly
+                await animateMultiplier(multiplier, targetMultiplier, async (updatedMultiplier) => {
+                    await redisClient.set('multiplier', updatedMultiplier.toFixed(2)); // Update Redis with the new multiplier
+                });
+
+                // Update the previous price with the latest price
+                await redisClient.set('previousPrice', newPrice);
+
+                console.log('Multiplier updated:', targetMultiplier.toFixed(2));
+
             } else {
                 // Handle crash
                 console.log('Multiplier crashed. Resetting and starting a new round.');
@@ -111,7 +147,8 @@ function initializeDerivWebSocket() {
 
                 // Reset multiplier but wait for the first valid tick to reset `previousPrice`
                 await redisClient.set('multiplier', initialMultiplier);
-                await redisClient.del('previousPrice'); // Clear previousPrice temporarily
+                await redisClient.del('previousPrice'); 
+                await redisClient.set('maxMultiplier',currentMultiplier.toFixed(2));
 
                 console.log('Waiting 7 seconds before restarting...');
                 setTimeout(async () => {
