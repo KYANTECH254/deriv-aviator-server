@@ -324,3 +324,11 @@
 2024-11-22 01:59:17.770 UTC [1493] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.603 s, sync=0.003 s, total=0.616 s; sync files=6, longest=0.002 s, average=0.001 s; distance=31 kB, estimate=31 kB; lsn=0/ADD7D58, redo lsn=0/ADD7D20
 2024-11-22 02:04:17.834 UTC [1493] LOG:  checkpoint starting: time
 2024-11-22 02:04:18.149 UTC [1493] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.003 s, total=0.315 s; sync files=4, longest=0.002 s, average=0.001 s; distance=10 kB, estimate=29 kB; lsn=0/ADDA708, redo lsn=0/ADDA6D0
+2024-11-22 02:18:59.848 UTC [224298] FATAL:  lock file "postmaster.pid" already exists
+2024-11-22 02:18:59.848 UTC [224298] HINT:  Is another postmaster (PID 1490) running in data directory "/home/cloudide/pgdata"?
+2024-11-22 02:19:17.447 UTC [1493] LOG:  checkpoint starting: time
+2024-11-22 02:19:17.763 UTC [1493] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.003 s, total=0.316 s; sync files=4, longest=0.002 s, average=0.001 s; distance=8 kB, estimate=27 kB; lsn=0/ADDC850, redo lsn=0/ADDC818
+2024-11-22 02:19:21.297 UTC [224521] FATAL:  lock file "postmaster.pid" already exists
+2024-11-22 02:19:21.297 UTC [224521] HINT:  Is another postmaster (PID 1490) running in data directory "/home/cloudide/pgdata"?
+2024-11-22 02:19:58.322 UTC [225160] FATAL:  lock file "postmaster.pid" already exists
+2024-11-22 02:19:58.322 UTC [225160] HINT:  Is another postmaster (PID 1490) running in data directory "/home/cloudide/pgdata"?
