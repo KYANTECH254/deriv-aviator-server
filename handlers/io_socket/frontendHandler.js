@@ -9,7 +9,7 @@ function initFrontendSocketServer(socket) {
 
             // If crashedState is true, stop handling any further ticks
             if (crashState === 'true') {
-                socket.emit('maxMultiplier', { value: crashState });
+                socket.emit('maxMultiplier', { value: value });
                 socket.emit('crashed', { crashed: crashState });
                 console.log('Multiplier is in crashed state. Waiting for reset...');
                 return; 

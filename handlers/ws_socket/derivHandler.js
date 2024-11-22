@@ -50,12 +50,17 @@ function initializeDerivWebSocket() {
 
             // Fetch the crash state from Redis
             const crashState = await redisClient.get('multiplierCrashed');
+            console.log(crashState)
 
             // If a crash is in progress, do nothing
             if (crashState === 'true') {
+                console.log('Waiting 7 seconds before restarting...');
+                setTimeout(async () => {
+                    await redisClient.set('multiplierCrashed', 'false');
+                    console.log('Crash handled. Restarting process.');
+                }, 7000);
                 return;
             }
-            // await redisClient.set('multiplierCrashed', 'false');
 
             let previousPrice = await redisClient.get('previousPrice');
             if (!previousPrice) {
@@ -77,7 +82,6 @@ function initializeDerivWebSocket() {
 
                 // Prevent further processing if multiplier is less than 1
                 if (multiplier < 1.00) return;
-
                 const animateMultiplier = async (currentMultiplier, targetMultiplier, updateMultiplierCallback) => {
                     const incrementStep = 0.01; // Small step to simulate smooth animation
                     const steps = Math.round((targetMultiplier - currentMultiplier) / incrementStep); // Total steps needed
@@ -147,14 +151,8 @@ function initializeDerivWebSocket() {
 
                 // Reset multiplier but wait for the first valid tick to reset `previousPrice`
                 await redisClient.set('multiplier', initialMultiplier);
-                await redisClient.del('previousPrice'); 
-                await redisClient.set('maxMultiplier',currentMultiplier.toFixed(2));
-
-                console.log('Waiting 7 seconds before restarting...');
-                setTimeout(async () => {
-                    await redisClient.set('multiplierCrashed', 'false');
-                    console.log('Crash handled. Restarting process.');
-                }, 7000); // Wait for 7 seconds
+                await redisClient.del('previousPrice');
+                await redisClient.set('maxMultiplier', currentMultiplier.toFixed(2));
             }
         }
     }
