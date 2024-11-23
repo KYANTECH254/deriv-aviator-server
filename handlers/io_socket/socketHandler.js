@@ -148,10 +148,12 @@ const emitMultiplierData = async (socket, authToken) => {
             socket.emit('error', 'Invalid or missing authentication token');
             return;
         }
-
-        const multipliers = await prisma.multiplier.findMany();
-        socket.emit('multiplier_data', multipliers);
-        console.log('Emitted multiplier data');
+        setInterval(async () => {
+            const multipliers = await prisma.multiplier.findMany();
+            socket.emit('multiplier_data', multipliers);
+            // console.log('Emitted multiplier data');
+        }, 2000);
+    
     } catch (error) {
         console.error('Error fetching multiplier data:', error);
         socket.emit('error', 'Failed to fetch multiplier data');
@@ -368,16 +370,16 @@ const initSocketServer = (httpServer) => {
         if (requestedUrl && requestedUrl.includes('https://api-deriv-aviator.topwebtools.online')) {
             console.log('Status access allowed based on URL');
             socket.emit('info', 'Connected as guest');
-        
+
             socket.on('disconnect', async () => {
                 console.log('Client disconnected');
                 userCount--;
                 io.emit('userCount', userCount);
             });
-        
+
             return; // Early exit, preventing further code execution
         }
-        
+
 
         // If not a guest, check for token authentication
         const cookieHeader = socket.handshake.headers.cookie;
@@ -430,9 +432,8 @@ const initSocketServer = (httpServer) => {
             userCount--;
             io.emit('userCount', userCount);
         });
-
-        return io;
     });
+    return io;
 };
 
 module.exports = { initSocketServer };

@@ -33,6 +33,14 @@ app.get('*', async (req, res) => {
     }
 });
 
+process.on('uncaughtException', (err) => {
+    console.error('Uncaught Exception:', err);
+});
+
+process.on('unhandledRejection', (reason, promise) => {
+    console.error('Unhandled Rejection:', reason);
+});
+
 // Initialize the WebSocket server
 const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT, () => {
