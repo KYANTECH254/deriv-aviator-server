@@ -11,6 +11,7 @@ function initFrontendSocketServer(socket) {
             if (crashState === 'true') {
                 socket.emit('maxMultiplier', { value: value });
                 socket.emit('crashed', { crashed: crashState });
+                console.log("Max multiplier emitted:", value)
                 console.log('Multiplier is in crashed state. Waiting for reset...');
                 return; 
             }

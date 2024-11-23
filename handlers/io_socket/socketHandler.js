@@ -363,23 +363,26 @@ const initSocketServer = (httpServer) => {
         io.emit('userCount', userCount);
 
         const requestedUrl = socket.handshake.headers.referer;
-        if (requestedUrl === 'https://api-aviator.topwebtools.online/') {
+        console.log("Url:", requestedUrl);
 
+        if (requestedUrl && requestedUrl.includes('https://api-deriv-aviator.topwebtools.online')) {
             console.log('Status access allowed based on URL');
             socket.emit('info', 'Connected as guest');
-
+        
             socket.on('disconnect', async () => {
                 console.log('Client disconnected');
                 userCount--;
                 io.emit('userCount', userCount);
             });
-            return;
+        
+            return; // Early exit, preventing further code execution
         }
+        
 
         // If not a guest, check for token authentication
         const cookieHeader = socket.handshake.headers.cookie;
         // const authToken = getCookie(cookieHeader, 'token');
-        const authToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJWUlRDMTAwMzI2MDkiLCJhcHBJZCI6IjEwODkiLCJ0b2tlbiI6ImExLU5yTHN0elBycURicjlHSGNPeUo3TkQ5YjF5YVBJIiwiaWF0IjoxNzMyMTY3Mzk3fQ.Y7W9vEI0qoKD-FNqYfWxQOUxlvGokixGTgRlyR1Um64"
+        const authToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJWUlRDMTAwMzI2MDkiLCJhcHBJZCI6IjEwODkiLCJ0b2tlbiI6ImExLU5yTHN0elBycURicjlHSGNPeUo3TkQ5YjF5YVBJIiwiaWF0IjoxNzMyMzAwMDE2fQ.u3ky2FJKUsSQ5tDncQBIFcxklJwFZmMyDnkkz1Wq2Ok"
         console.log('authToken:', authToken)
         if (authToken) {
             try {

@@ -120,9 +120,9 @@ function initializeDerivWebSocket() {
                 // Handle crash
                 console.log('Multiplier crashed. Resetting and starting a new round.');
                 await redisClient.set('multiplierCrashed', 'true');
-
                 const currentMultiplier = parseFloat(await redisClient.get('multiplier')) || parseFloat(initialMultiplier);
-
+                await redisClient.set('maxMultiplier', currentMultiplier.toFixed(2));
+                console.log("Saved maxMultiplier:", currentMultiplier.toFixed(2), "to database")
                 // Update or create a round in the database
                 const previousRound = await prisma.multiplier.findFirst({ orderBy: { createdAt: 'desc' } });
                 if (previousRound) {
@@ -148,11 +148,10 @@ function initializeDerivWebSocket() {
                         appId: `${process.env.DERIV_ID}`,
                     },
                 });
-
                 // Reset multiplier but wait for the first valid tick to reset `previousPrice`
                 await redisClient.set('multiplier', initialMultiplier);
                 await redisClient.del('previousPrice');
-                await redisClient.set('maxMultiplier', currentMultiplier.toFixed(2));
+               
             }
         }
     }

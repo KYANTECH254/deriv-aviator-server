@@ -38,7 +38,7 @@ CREATE TABLE "User" (
 -- CreateTable
 CREATE TABLE "Multiplier" (
     "id" SERIAL NOT NULL,
-    "value" TEXT NOT NULL,
+    "value" TEXT,
     "appId" TEXT NOT NULL,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,

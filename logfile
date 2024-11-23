@@ -1,54 +1,65 @@
-2024-11-22 12:30:02.261 UTC [1405] LOG:  starting PostgreSQL 16.4 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 13.3.0, 64-bit
-2024-11-22 12:30:02.261 UTC [1405] LOG:  listening on IPv4 address "0.0.0.0", port 5432
-2024-11-22 12:30:02.261 UTC [1405] LOG:  listening on IPv6 address "::", port 5432
-2024-11-22 12:30:02.267 UTC [1405] LOG:  listening on Unix socket "/home/cloudide/postgresql-run/.s.PGSQL.5432"
-2024-11-22 12:30:02.278 UTC [1408] LOG:  database system was interrupted; last known up at 2024-11-22 02:19:17 UTC
-2024-11-22 12:30:02.306 UTC [1408] LOG:  database system was not properly shut down; automatic recovery in progress
-2024-11-22 12:30:02.312 UTC [1408] LOG:  redo starts at 0/ADDC818
-2024-11-22 12:30:02.312 UTC [1408] LOG:  invalid record length at 0/ADDC900: expected at least 24, got 0
-2024-11-22 12:30:02.313 UTC [1408] LOG:  redo done at 0/ADDC8C8 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
-2024-11-22 12:30:02.319 UTC [1406] LOG:  checkpoint starting: end-of-recovery immediate wait
-2024-11-22 12:30:02.335 UTC [1406] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.004 s, sync=0.002 s, total=0.019 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/ADDC900, redo lsn=0/ADDC900
-2024-11-22 12:30:02.339 UTC [1405] LOG:  database system is ready to accept connections
-2024-11-22 12:45:02.560 UTC [1406] LOG:  checkpoint starting: time
-2024-11-22 12:45:02.876 UTC [1406] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=8 kB, estimate=8 kB; lsn=0/ADDEAB8, redo lsn=0/ADDEA80
-2024-11-22 12:50:02.976 UTC [1406] LOG:  checkpoint starting: time
-2024-11-22 12:50:03.292 UTC [1406] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=10 kB, estimate=10 kB; lsn=0/ADE15C0, redo lsn=0/ADE1588
-2024-11-22 12:55:02.392 UTC [1406] LOG:  checkpoint starting: time
-2024-11-22 12:55:02.708 UTC [1406] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=11 kB; lsn=0/ADE4528, redo lsn=0/ADE44F0
-2024-11-22 13:00:02.806 UTC [1406] LOG:  checkpoint starting: time
-2024-11-22 13:00:03.114 UTC [1406] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.002 s, total=0.308 s; sync files=4, longest=0.002 s, average=0.001 s; distance=11 kB, estimate=11 kB; lsn=0/ADE73D0, redo lsn=0/ADE7398
-2024-11-22 13:05:02.132 UTC [1406] LOG:  checkpoint starting: time
-2024-11-22 13:05:02.448 UTC [1406] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=13 kB; lsn=0/ADEABA8, redo lsn=0/ADEAB70
-2024-11-22 13:10:02.544 UTC [1406] LOG:  checkpoint starting: time
-2024-11-22 13:10:03.157 UTC [1406] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.603 s, sync=0.002 s, total=0.613 s; sync files=5, longest=0.002 s, average=0.001 s; distance=29 kB, estimate=29 kB; lsn=0/ADF1FB0, redo lsn=0/ADF1F78
-2024-11-22 13:50:02.868 UTC [1406] LOG:  checkpoint starting: time
-2024-11-22 13:50:03.685 UTC [1406] LOG:  checkpoint complete: wrote 9 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.804 s, sync=0.004 s, total=0.817 s; sync files=6, longest=0.003 s, average=0.001 s; distance=18 kB, estimate=27 kB; lsn=0/ADF6AD8, redo lsn=0/ADF6AA0
-2024-11-22 13:55:02.784 UTC [1406] LOG:  checkpoint starting: time
-2024-11-22 13:55:03.100 UTC [1406] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=5 kB, estimate=25 kB; lsn=0/ADF82C8, redo lsn=0/ADF8290
-2024-11-22 14:00:02.130 UTC [1406] LOG:  checkpoint starting: time
-2024-11-22 14:00:02.446 UTC [1406] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=7 kB, estimate=23 kB; lsn=0/ADFA188, redo lsn=0/ADFA150
-2024-11-22 14:05:02.545 UTC [1406] LOG:  checkpoint starting: time
-2024-11-22 14:05:02.861 UTC [1406] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=8 kB, estimate=22 kB; lsn=0/ADFC270, redo lsn=0/ADFC238
-2024-11-22 14:10:02.960 UTC [1406] LOG:  checkpoint starting: time
-2024-11-22 14:10:03.877 UTC [1406] LOG:  checkpoint complete: wrote 10 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.904 s, sync=0.004 s, total=0.917 s; sync files=7, longest=0.003 s, average=0.001 s; distance=46 kB, estimate=46 kB; lsn=0/AE07D38, redo lsn=0/AE07D00
-2024-11-22 14:40:03.456 UTC [1406] LOG:  checkpoint starting: time
-2024-11-22 14:40:03.772 UTC [1406] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=8 kB, estimate=42 kB; lsn=0/AE0A068, redo lsn=0/AE0A030
-2024-11-22 14:45:03.870 UTC [1406] LOG:  checkpoint starting: time
-2024-11-22 14:45:04.186 UTC [1406] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=10 kB, estimate=39 kB; lsn=0/AE0C970, redo lsn=0/AE0C938
-2024-11-22 14:50:03.286 UTC [1406] LOG:  checkpoint starting: time
-2024-11-22 14:50:03.601 UTC [1406] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=36 kB; lsn=0/AE0F5F8, redo lsn=0/AE0F5C0
-2024-11-22 14:55:03.700 UTC [1406] LOG:  checkpoint starting: time
-2024-11-22 14:55:04.016 UTC [1406] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=10 kB, estimate=34 kB; lsn=0/AE11E48, redo lsn=0/AE11E10
-2024-11-22 15:15:03.408 UTC [1406] LOG:  checkpoint starting: time
-2024-11-22 15:15:03.725 UTC [1406] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=12 kB, estimate=31 kB; lsn=0/AE14E80, redo lsn=0/AE14E48
-2024-11-22 15:20:03.824 UTC [1406] LOG:  checkpoint starting: time
-2024-11-22 15:20:04.641 UTC [1406] LOG:  checkpoint complete: wrote 9 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.804 s, sync=0.004 s, total=0.817 s; sync files=7, longest=0.003 s, average=0.001 s; distance=47 kB, estimate=47 kB; lsn=0/AE20D28, redo lsn=0/AE20CF0
-2024-11-22 15:25:03.740 UTC [1406] LOG:  checkpoint starting: time
-2024-11-22 15:25:04.075 UTC [1406] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.022 s, total=0.335 s; sync files=4, longest=0.021 s, average=0.006 s; distance=11 kB, estimate=44 kB; lsn=0/AE23C18, redo lsn=0/AE23BE0
-2024-11-22 15:30:03.174 UTC [1406] LOG:  checkpoint starting: time
-2024-11-22 15:30:03.490 UTC [1406] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=12 kB, estimate=40 kB; lsn=0/AE27010, redo lsn=0/AE26FD8
-2024-11-22 15:35:03.588 UTC [1406] LOG:  checkpoint starting: time
-2024-11-22 15:35:03.904 UTC [1406] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=38 kB; lsn=0/AE2A770, redo lsn=0/AE2A738
-2024-11-22 15:40:04.004 UTC [1406] LOG:  checkpoint starting: time
-2024-11-22 15:40:04.823 UTC [1406] LOG:  checkpoint complete: wrote 9 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.805 s, sync=0.004 s, total=0.819 s; sync files=7, longest=0.003 s, average=0.001 s; distance=39 kB, estimate=39 kB; lsn=0/AE34618, redo lsn=0/AE345E0
+2024-11-22 16:53:45.935 UTC [8665] LOG:  starting PostgreSQL 16.4 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 13.3.0, 64-bit
+2024-11-22 16:53:45.935 UTC [8665] LOG:  listening on IPv6 address "::1", port 5432
+2024-11-22 16:53:45.935 UTC [8665] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-11-22 16:53:45.937 UTC [8665] FATAL:  could not create lock file "/run/postgresql/.s.PGSQL.5432.lock": No such file or directory
+2024-11-22 16:53:45.939 UTC [8665] LOG:  database system is shut down
+2024-11-23 00:56:54.142 UTC [1334] LOG:  starting PostgreSQL 16.4 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 13.3.0, 64-bit
+2024-11-23 00:56:54.143 UTC [1334] LOG:  listening on IPv6 address "::1", port 5432
+2024-11-23 00:56:54.143 UTC [1334] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-11-23 00:56:54.148 UTC [1334] LOG:  listening on Unix socket "/home/cloudide/postgresql-run/.s.PGSQL.5432"
+2024-11-23 00:56:54.158 UTC [1339] LOG:  database system was interrupted; last known up at 2024-11-23 00:48:52 UTC
+2024-11-23 00:56:54.187 UTC [1339] LOG:  database system was not properly shut down; automatic recovery in progress
+2024-11-23 00:56:54.193 UTC [1339] LOG:  redo starts at 0/4F06CB8
+2024-11-23 00:56:54.193 UTC [1339] LOG:  invalid record length at 0/4F06DA0: expected at least 24, got 0
+2024-11-23 00:56:54.194 UTC [1339] LOG:  redo done at 0/4F06D68 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2024-11-23 00:56:54.200 UTC [1337] LOG:  checkpoint starting: end-of-recovery immediate wait
+2024-11-23 00:56:54.210 UTC [1337] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.002 s, total=0.012 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/4F06DA0, redo lsn=0/4F06DA0
+2024-11-23 00:56:54.214 UTC [1334] LOG:  database system is ready to accept connections
+2024-11-23 01:01:54.311 UTC [1337] LOG:  checkpoint starting: time
+2024-11-23 01:01:54.623 UTC [1337] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.003 s, total=0.313 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=13 kB; lsn=0/4F0A210, redo lsn=0/4F0A1D8
+2024-11-23 01:06:54.646 UTC [1337] LOG:  checkpoint starting: time
+2024-11-23 01:06:54.959 UTC [1337] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.003 s, total=0.314 s; sync files=4, longest=0.002 s, average=0.001 s; distance=14 kB, estimate=14 kB; lsn=0/4F0DA58, redo lsn=0/4F0DA20
+2024-11-23 01:11:55.058 UTC [1337] LOG:  checkpoint starting: time
+2024-11-23 01:11:55.375 UTC [1337] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.003 s, total=0.317 s; sync files=4, longest=0.002 s, average=0.001 s; distance=14 kB, estimate=14 kB; lsn=0/4F11308, redo lsn=0/4F112D0
+2024-11-23 01:16:55.474 UTC [1337] LOG:  checkpoint starting: time
+2024-11-23 01:16:55.795 UTC [1337] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.005 s, total=0.321 s; sync files=4, longest=0.004 s, average=0.002 s; distance=15 kB, estimate=15 kB; lsn=0/4F15220, redo lsn=0/4F151E8
+2024-11-23 01:21:55.894 UTC [1337] LOG:  checkpoint starting: time
+2024-11-23 01:21:56.407 UTC [1337] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.503 s, sync=0.003 s, total=0.514 s; sync files=5, longest=0.003 s, average=0.001 s; distance=16 kB, estimate=16 kB; lsn=0/4F195E8, redo lsn=0/4F195B0
+2024-11-23 01:26:55.475 UTC [1337] LOG:  checkpoint starting: time
+2024-11-23 01:26:55.787 UTC [1337] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.003 s, total=0.312 s; sync files=4, longest=0.002 s, average=0.001 s; distance=8 kB, estimate=16 kB; lsn=0/4F1B608, redo lsn=0/4F1B5D0
+2024-11-23 01:31:55.885 UTC [1337] LOG:  checkpoint starting: time
+2024-11-23 01:31:56.199 UTC [1337] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.003 s, total=0.314 s; sync files=4, longest=0.003 s, average=0.001 s; distance=9 kB, estimate=15 kB; lsn=0/4F1DDB8, redo lsn=0/4F1DD80
+2024-11-23 01:36:55.298 UTC [1337] LOG:  checkpoint starting: time
+2024-11-23 01:36:56.214 UTC [1337] LOG:  checkpoint complete: wrote 10 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.903 s, sync=0.003 s, total=0.916 s; sync files=6, longest=0.002 s, average=0.001 s; distance=53 kB, estimate=53 kB; lsn=0/4F2B498, redo lsn=0/4F2B460
+2024-11-23 01:41:55.314 UTC [1337] LOG:  checkpoint starting: time
+2024-11-23 01:41:55.630 UTC [1337] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.003 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=12 kB, estimate=49 kB; lsn=0/4F2E540, redo lsn=0/4F2E508
+2024-11-23 01:46:55.770 UTC [1337] LOG:  checkpoint starting: time
+2024-11-23 01:46:56.088 UTC [1337] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.305 s, sync=0.003 s, total=0.319 s; sync files=4, longest=0.003 s, average=0.001 s; distance=12 kB, estimate=45 kB; lsn=0/4F318E8, redo lsn=0/4F318B0
+2024-11-23 01:51:55.187 UTC [1337] LOG:  checkpoint starting: time
+2024-11-23 01:51:55.518 UTC [1337] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.306 s, sync=0.004 s, total=0.332 s; sync files=4, longest=0.004 s, average=0.001 s; distance=13 kB, estimate=42 kB; lsn=0/4F34F38, redo lsn=0/4F34F00
+2024-11-23 01:56:55.615 UTC [1337] LOG:  checkpoint starting: time
+2024-11-23 01:56:55.930 UTC [1337] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.003 s, total=0.315 s; sync files=4, longest=0.002 s, average=0.001 s; distance=14 kB, estimate=39 kB; lsn=0/4F38B28, redo lsn=0/4F38AF0
+2024-11-23 02:01:56.030 UTC [1337] LOG:  checkpoint starting: time
+2024-11-23 02:01:56.383 UTC [1337] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.003 s, total=0.354 s; sync files=4, longest=0.003 s, average=0.001 s; distance=16 kB, estimate=37 kB; lsn=0/4F3CE98, redo lsn=0/4F3CE60
+2024-11-23 02:06:56.482 UTC [1337] LOG:  checkpoint starting: time
+2024-11-23 02:06:56.793 UTC [1337] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.003 s, total=0.312 s; sync files=4, longest=0.002 s, average=0.001 s; distance=13 kB, estimate=35 kB; lsn=0/4F40420, redo lsn=0/4F403E8
+2024-11-23 02:11:56.890 UTC [1337] LOG:  checkpoint starting: time
+2024-11-23 02:11:57.202 UTC [1337] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.003 s, total=0.312 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=33 kB; lsn=0/4F43E20, redo lsn=0/4F43DE8
+2024-11-23 02:16:56.298 UTC [1337] LOG:  checkpoint starting: time
+2024-11-23 02:16:57.511 UTC [1337] LOG:  checkpoint complete: wrote 13 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.205 s, sync=0.003 s, total=1.214 s; sync files=8, longest=0.002 s, average=0.001 s; distance=65 kB, estimate=65 kB; lsn=0/4F54300, redo lsn=0/4F542C8
+2024-11-23 02:21:56.518 UTC [1337] LOG:  checkpoint starting: time
+2024-11-23 02:21:56.830 UTC [1337] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.005 s, total=0.313 s; sync files=4, longest=0.004 s, average=0.002 s; distance=17 kB, estimate=60 kB; lsn=0/4F58900, redo lsn=0/4F588C8
+2024-11-23 02:26:56.930 UTC [1337] LOG:  checkpoint starting: time
+2024-11-23 02:26:57.241 UTC [1337] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.003 s, total=0.312 s; sync files=4, longest=0.002 s, average=0.001 s; distance=16 kB, estimate=56 kB; lsn=0/4F5C9E0, redo lsn=0/4F5C9A8
+2024-11-23 02:36:17.342 UTC [1137] LOG:  starting PostgreSQL 16.4 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 13.3.0, 64-bit
+2024-11-23 02:36:17.343 UTC [1137] LOG:  listening on IPv6 address "::1", port 5432
+2024-11-23 02:36:17.343 UTC [1137] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-11-23 02:36:17.349 UTC [1137] LOG:  listening on Unix socket "/home/cloudide/postgresql-run/.s.PGSQL.5432"
+2024-11-23 02:36:17.360 UTC [1142] LOG:  database system was interrupted; last known up at 2024-11-23 02:26:57 UTC
+2024-11-23 02:36:17.385 UTC [1142] LOG:  database system was not properly shut down; automatic recovery in progress
+2024-11-23 02:36:17.392 UTC [1142] LOG:  redo starts at 0/4F5C9A8
+2024-11-23 02:36:17.396 UTC [1142] LOG:  invalid record length at 0/4F60D88: expected at least 24, got 0
+2024-11-23 02:36:17.397 UTC [1142] LOG:  redo done at 0/4F60D50 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2024-11-23 02:36:17.404 UTC [1140] LOG:  checkpoint starting: end-of-recovery immediate wait
+2024-11-23 02:36:17.422 UTC [1140] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.004 s, sync=0.005 s, total=0.021 s; sync files=6, longest=0.003 s, average=0.001 s; distance=16 kB, estimate=16 kB; lsn=0/4F60D88, redo lsn=0/4F60D88
+2024-11-23 02:36:17.427 UTC [1137] LOG:  database system is ready to accept connections
