@@ -354,3 +354,255 @@
 2024-11-23 21:18:41.985 UTC [800] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=9 kB, estimate=21 kB; lsn=0/5174158, redo lsn=0/5174120
 2024-11-23 21:23:42.072 UTC [800] LOG:  checkpoint starting: time
 2024-11-23 21:23:42.388 UTC [800] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=9 kB, estimate=20 kB; lsn=0/5176760, redo lsn=0/5176728
+2024-11-23 21:28:42.402 UTC [800] LOG:  checkpoint starting: time
+2024-11-23 21:28:42.718 UTC [800] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=10 kB, estimate=19 kB; lsn=0/5179060, redo lsn=0/5179028
+2024-11-23 21:33:42.818 UTC [800] LOG:  checkpoint starting: time
+2024-11-23 21:33:43.936 UTC [800] LOG:  checkpoint complete: wrote 12 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.105 s, sync=0.004 s, total=1.118 s; sync files=7, longest=0.004 s, average=0.001 s; distance=61 kB, estimate=61 kB; lsn=0/5188720, redo lsn=0/51886E8
+2024-11-23 21:38:42.991 UTC [800] LOG:  checkpoint starting: time
+2024-11-23 21:38:43.306 UTC [800] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.315 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=56 kB; lsn=0/518B598, redo lsn=0/518B560
+2024-11-23 21:43:42.392 UTC [800] LOG:  checkpoint starting: time
+2024-11-23 21:43:42.704 UTC [800] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.003 s, total=0.312 s; sync files=4, longest=0.002 s, average=0.001 s; distance=13 kB, estimate=52 kB; lsn=0/518E9A8, redo lsn=0/518E970
+2024-11-23 21:48:42.803 UTC [800] LOG:  checkpoint starting: time
+2024-11-23 21:48:43.120 UTC [800] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=48 kB; lsn=0/5192048, redo lsn=0/5191FF8
+2024-11-23 21:53:42.219 UTC [800] LOG:  checkpoint starting: time
+2024-11-23 21:53:42.535 UTC [800] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=45 kB; lsn=0/5195B48, redo lsn=0/5195B10
+2024-11-23 21:58:42.633 UTC [800] LOG:  checkpoint starting: time
+2024-11-23 21:58:42.951 UTC [800] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=10 kB, estimate=41 kB; lsn=0/51986A0, redo lsn=0/5198668
+2024-11-23 22:03:43.047 UTC [800] LOG:  checkpoint starting: time
+2024-11-23 22:03:43.364 UTC [800] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=38 kB; lsn=0/519B680, redo lsn=0/519B648
+2024-11-23 22:08:43.464 UTC [800] LOG:  checkpoint starting: time
+2024-11-23 22:08:43.781 UTC [800] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=36 kB; lsn=0/519EAB8, redo lsn=0/519EA80
+2024-11-23 22:13:43.880 UTC [800] LOG:  checkpoint starting: time
+2024-11-23 22:13:44.196 UTC [800] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=33 kB; lsn=0/51A2380, redo lsn=0/51A2348
+2024-11-23 22:18:43.275 UTC [800] LOG:  checkpoint starting: time
+2024-11-23 22:18:43.593 UTC [800] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.005 s, total=0.318 s; sync files=4, longest=0.004 s, average=0.002 s; distance=14 kB, estimate=32 kB; lsn=0/51A5F68, redo lsn=0/51A5EF8
+2024-11-23 22:23:43.691 UTC [800] LOG:  checkpoint starting: time
+2024-11-23 22:23:44.007 UTC [800] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=30 kB; lsn=0/51A9AA8, redo lsn=0/51A9A70
+2024-11-23 22:28:43.107 UTC [800] LOG:  checkpoint starting: time
+2024-11-23 22:28:43.424 UTC [800] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=28 kB; lsn=0/51AD638, redo lsn=0/51AD600
+2024-11-23 22:33:43.523 UTC [800] LOG:  checkpoint starting: time
+2024-11-23 22:33:43.840 UTC [800] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=16 kB, estimate=27 kB; lsn=0/51B1658, redo lsn=0/51B1620
+2024-11-23 22:38:43.853 UTC [800] LOG:  checkpoint starting: time
+2024-11-23 22:38:44.169 UTC [800] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=15 kB, estimate=26 kB; lsn=0/51B5508, redo lsn=0/51B54D0
+2024-11-23 22:43:43.221 UTC [800] LOG:  checkpoint starting: time
+2024-11-23 22:43:43.538 UTC [800] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=16 kB, estimate=25 kB; lsn=0/51B98D8, redo lsn=0/51B98A0
+2024-11-23 22:48:43.637 UTC [800] LOG:  checkpoint starting: time
+2024-11-23 22:48:44.152 UTC [800] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.503 s, sync=0.004 s, total=0.516 s; sync files=5, longest=0.003 s, average=0.001 s; distance=17 kB, estimate=24 kB; lsn=0/51BDDB8, redo lsn=0/51BDD80
+2024-11-23 22:53:43.252 UTC [800] LOG:  checkpoint starting: time
+2024-11-23 22:53:43.568 UTC [800] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=10 kB, estimate=23 kB; lsn=0/51C05F8, redo lsn=0/51C05C0
+2024-11-23 22:58:43.582 UTC [800] LOG:  checkpoint starting: time
+2024-11-23 22:58:43.899 UTC [800] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=10 kB, estimate=21 kB; lsn=0/51C3078, redo lsn=0/51C3040
+2024-11-23 23:22:50.135 UTC [893] LOG:  starting PostgreSQL 16.4 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 13.3.0, 64-bit
+2024-11-23 23:22:50.136 UTC [893] LOG:  listening on IPv6 address "::1", port 5432
+2024-11-23 23:22:50.136 UTC [893] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-11-23 23:22:50.144 UTC [893] LOG:  listening on Unix socket "/home/cloudide/postgresql-run/.s.PGSQL.5432"
+2024-11-23 23:22:50.159 UTC [932] LOG:  database system was interrupted; last known up at 2024-11-23 22:58:43 UTC
+2024-11-23 23:22:50.257 UTC [932] LOG:  database system was not properly shut down; automatic recovery in progress
+2024-11-23 23:22:50.264 UTC [932] LOG:  redo starts at 0/51C3040
+2024-11-23 23:22:50.264 UTC [932] LOG:  invalid record length at 0/51C3128: expected at least 24, got 0
+2024-11-23 23:22:50.265 UTC [932] LOG:  redo done at 0/51C30F0 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2024-11-23 23:22:50.334 UTC [930] LOG:  checkpoint starting: end-of-recovery immediate wait
+2024-11-23 23:22:50.352 UTC [930] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.004 s, sync=0.002 s, total=0.021 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/51C3128, redo lsn=0/51C3128
+2024-11-23 23:22:50.358 UTC [893] LOG:  database system is ready to accept connections
+2024-11-23 23:22:50.448 UTC [979] FATAL:  lock file "postmaster.pid" already exists
+2024-11-23 23:22:50.448 UTC [979] HINT:  Is another postmaster (PID 893) running in data directory "/home/cloudide/pgdata"?
+2024-11-23 23:22:50.729 UTC [998] FATAL:  lock file "postmaster.pid" already exists
+2024-11-23 23:22:50.729 UTC [998] HINT:  Is another postmaster (PID 893) running in data directory "/home/cloudide/pgdata"?
+2024-11-23 23:22:50.839 UTC [1020] FATAL:  lock file "postmaster.pid" already exists
+2024-11-23 23:22:50.839 UTC [1020] HINT:  Is another postmaster (PID 893) running in data directory "/home/cloudide/pgdata"?
+2024-11-23 23:22:51.132 UTC [1043] FATAL:  lock file "postmaster.pid" already exists
+2024-11-23 23:22:51.132 UTC [1043] HINT:  Is another postmaster (PID 893) running in data directory "/home/cloudide/pgdata"?
+2024-11-23 23:22:51.337 UTC [1063] FATAL:  lock file "postmaster.pid" already exists
+2024-11-23 23:22:51.337 UTC [1063] HINT:  Is another postmaster (PID 893) running in data directory "/home/cloudide/pgdata"?
+2024-11-23 23:22:51.636 UTC [1091] FATAL:  lock file "postmaster.pid" already exists
+2024-11-23 23:22:51.636 UTC [1091] HINT:  Is another postmaster (PID 893) running in data directory "/home/cloudide/pgdata"?
+2024-11-23 23:22:51.935 UTC [1114] FATAL:  lock file "postmaster.pid" already exists
+2024-11-23 23:22:51.935 UTC [1114] HINT:  Is another postmaster (PID 893) running in data directory "/home/cloudide/pgdata"?
+2024-11-23 23:22:52.231 UTC [1132] FATAL:  lock file "postmaster.pid" already exists
+2024-11-23 23:22:52.231 UTC [1132] HINT:  Is another postmaster (PID 893) running in data directory "/home/cloudide/pgdata"?
+2024-11-23 23:22:52.435 UTC [1147] FATAL:  lock file "postmaster.pid" already exists
+2024-11-23 23:22:52.435 UTC [1147] HINT:  Is another postmaster (PID 893) running in data directory "/home/cloudide/pgdata"?
+2024-11-23 23:22:52.640 UTC [1166] FATAL:  lock file "postmaster.pid" already exists
+2024-11-23 23:22:52.640 UTC [1166] HINT:  Is another postmaster (PID 893) running in data directory "/home/cloudide/pgdata"?
+2024-11-23 23:22:52.934 UTC [1181] FATAL:  lock file "postmaster.pid" already exists
+2024-11-23 23:22:52.934 UTC [1181] HINT:  Is another postmaster (PID 893) running in data directory "/home/cloudide/pgdata"?
+2024-11-23 23:22:53.133 UTC [1196] FATAL:  lock file "postmaster.pid" already exists
+2024-11-23 23:22:53.133 UTC [1196] HINT:  Is another postmaster (PID 893) running in data directory "/home/cloudide/pgdata"?
+2024-11-23 23:22:53.249 UTC [1212] FATAL:  lock file "postmaster.pid" already exists
+2024-11-23 23:22:53.249 UTC [1212] HINT:  Is another postmaster (PID 893) running in data directory "/home/cloudide/pgdata"?
+2024-11-23 23:22:53.439 UTC [1230] FATAL:  lock file "postmaster.pid" already exists
+2024-11-23 23:22:53.439 UTC [1230] HINT:  Is another postmaster (PID 893) running in data directory "/home/cloudide/pgdata"?
+2024-11-23 23:22:53.554 UTC [1245] FATAL:  lock file "postmaster.pid" already exists
+2024-11-23 23:22:53.554 UTC [1245] HINT:  Is another postmaster (PID 893) running in data directory "/home/cloudide/pgdata"?
+2024-11-23 23:27:50.427 UTC [930] LOG:  checkpoint starting: time
+2024-11-23 23:27:50.744 UTC [930] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=10 kB, estimate=10 kB; lsn=0/51C5D38, redo lsn=0/51C5D00
+2024-11-23 23:32:50.844 UTC [930] LOG:  checkpoint starting: time
+2024-11-23 23:32:51.160 UTC [930] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.002 s, average=0.001 s; distance=13 kB, estimate=13 kB; lsn=0/51C9250, redo lsn=0/51C9218
+2024-11-23 23:37:50.258 UTC [930] LOG:  checkpoint starting: time
+2024-11-23 23:37:50.577 UTC [930] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.005 s, total=0.319 s; sync files=4, longest=0.004 s, average=0.002 s; distance=14 kB, estimate=14 kB; lsn=0/51CCAD8, redo lsn=0/51CCAA0
+2024-11-23 23:42:50.669 UTC [930] LOG:  checkpoint starting: time
+2024-11-23 23:42:50.984 UTC [930] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=14 kB; lsn=0/51D0608, redo lsn=0/51D05D0
+2024-11-23 23:47:51.026 UTC [930] LOG:  checkpoint starting: time
+2024-11-23 23:47:51.344 UTC [930] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=17 kB, estimate=17 kB; lsn=0/51D4AD0, redo lsn=0/51D4A98
+2024-11-23 23:52:51.419 UTC [930] LOG:  checkpoint starting: time
+2024-11-23 23:52:51.736 UTC [930] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=17 kB, estimate=17 kB; lsn=0/51D8F88, redo lsn=0/51D8F50
+2024-11-23 23:57:51.797 UTC [930] LOG:  checkpoint starting: time
+2024-11-23 23:57:52.113 UTC [930] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=16 kB; lsn=0/51DC600, redo lsn=0/51DC5C8
+2024-11-24 00:02:51.211 UTC [930] LOG:  checkpoint starting: time
+2024-11-24 00:02:51.528 UTC [930] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=16 kB; lsn=0/51E01A8, redo lsn=0/51E0170
+2024-11-24 00:07:51.628 UTC [930] LOG:  checkpoint starting: time
+2024-11-24 00:07:51.944 UTC [930] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=17 kB, estimate=17 kB; lsn=0/51E4698, redo lsn=0/51E4660
+2024-11-24 00:12:52.042 UTC [930] LOG:  checkpoint starting: time
+2024-11-24 00:12:52.555 UTC [930] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.503 s, sync=0.003 s, total=0.513 s; sync files=4, longest=0.002 s, average=0.001 s; distance=20 kB, estimate=20 kB; lsn=0/51E9698, redo lsn=0/51E9660
+2024-11-24 00:17:52.655 UTC [930] LOG:  checkpoint starting: time
+2024-11-24 00:17:52.966 UTC [930] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.003 s, total=0.311 s; sync files=4, longest=0.002 s, average=0.001 s; distance=10 kB, estimate=19 kB; lsn=0/51EBFB0, redo lsn=0/51EBF78
+2024-11-24 00:22:53.062 UTC [930] LOG:  checkpoint starting: time
+2024-11-24 00:22:53.379 UTC [930] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=9 kB, estimate=18 kB; lsn=0/51EE5A8, redo lsn=0/51EE570
+2024-11-24 00:27:53.479 UTC [930] LOG:  checkpoint starting: time
+2024-11-24 00:27:53.796 UTC [930] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=10 kB, estimate=17 kB; lsn=0/51F0FA8, redo lsn=0/51F0F38
+2024-11-24 00:32:53.825 UTC [930] LOG:  checkpoint starting: time
+2024-11-24 00:32:54.141 UTC [930] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=12 kB, estimate=16 kB; lsn=0/51F3FA0, redo lsn=0/51F3F68
+2024-11-24 00:37:53.241 UTC [930] LOG:  checkpoint starting: time
+2024-11-24 00:37:53.558 UTC [930] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=12 kB, estimate=16 kB; lsn=0/51F70A8, redo lsn=0/51F7070
+2024-11-24 00:42:53.658 UTC [930] LOG:  checkpoint starting: time
+2024-11-24 00:42:54.175 UTC [930] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.503 s, sync=0.004 s, total=0.517 s; sync files=5, longest=0.003 s, average=0.001 s; distance=12 kB, estimate=15 kB; lsn=0/51FA328, redo lsn=0/51FA2F0
+2024-11-24 00:47:53.274 UTC [930] LOG:  checkpoint starting: time
+2024-11-24 00:47:54.494 UTC [930] LOG:  checkpoint complete: wrote 13 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.205 s, sync=0.004 s, total=1.220 s; sync files=8, longest=0.003 s, average=0.001 s; distance=56 kB, estimate=56 kB; lsn=0/52083C0, redo lsn=0/5208388
+2024-11-24 00:52:53.591 UTC [930] LOG:  checkpoint starting: time
+2024-11-24 00:52:53.908 UTC [930] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=5 kB, estimate=51 kB; lsn=0/5209888, redo lsn=0/5209850
+2024-11-24 00:57:54.008 UTC [930] LOG:  checkpoint starting: time
+2024-11-24 00:57:54.324 UTC [930] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=8 kB, estimate=46 kB; lsn=0/520B990, redo lsn=0/520B958
+2024-11-24 01:02:54.424 UTC [930] LOG:  checkpoint starting: time
+2024-11-24 01:02:54.740 UTC [930] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=7 kB, estimate=42 kB; lsn=0/520D890, redo lsn=0/520D858
+2024-11-24 01:07:54.839 UTC [930] LOG:  checkpoint starting: time
+2024-11-24 01:07:55.156 UTC [930] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=8 kB, estimate=39 kB; lsn=0/520FBC8, redo lsn=0/520FB90
+2024-11-24 01:12:54.254 UTC [930] LOG:  checkpoint starting: time
+2024-11-24 01:12:54.571 UTC [930] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=8 kB, estimate=36 kB; lsn=0/5211F10, redo lsn=0/5211ED8
+2024-11-24 01:17:54.671 UTC [930] LOG:  checkpoint starting: time
+2024-11-24 01:17:54.988 UTC [930] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.005 s, total=0.318 s; sync files=4, longest=0.004 s, average=0.002 s; distance=11 kB, estimate=33 kB; lsn=0/5214DD8, redo lsn=0/5214DA0
+2024-11-24 01:22:54.991 UTC [930] LOG:  checkpoint starting: time
+2024-11-24 01:22:55.307 UTC [930] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=31 kB; lsn=0/5217D48, redo lsn=0/5217D10
+2024-11-24 01:27:54.407 UTC [930] LOG:  checkpoint starting: time
+2024-11-24 01:27:54.722 UTC [930] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=12 kB, estimate=29 kB; lsn=0/521AF10, redo lsn=0/521AED8
+2024-11-24 01:32:54.766 UTC [930] LOG:  checkpoint starting: time
+2024-11-24 01:32:55.084 UTC [930] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=8 kB, estimate=27 kB; lsn=0/521D1F0, redo lsn=0/521D1B8
+2024-11-24 01:37:54.110 UTC [930] LOG:  checkpoint starting: time
+2024-11-24 01:37:54.427 UTC [930] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=26 kB; lsn=0/521FDF8, redo lsn=0/521FDC0
+2024-11-24 01:42:54.526 UTC [930] LOG:  checkpoint starting: time
+2024-11-24 01:42:54.843 UTC [930] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=24 kB; lsn=0/5222CF8, redo lsn=0/5222CC0
+2024-11-24 01:47:54.943 UTC [930] LOG:  checkpoint starting: time
+2024-11-24 01:47:55.258 UTC [930] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=12 kB, estimate=23 kB; lsn=0/5225E30, redo lsn=0/5225DF8
+2024-11-24 01:52:54.358 UTC [930] LOG:  checkpoint starting: time
+2024-11-24 01:52:54.674 UTC [930] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=22 kB; lsn=0/52294F8, redo lsn=0/52294C0
+2024-11-24 01:57:54.770 UTC [930] LOG:  checkpoint starting: time
+2024-11-24 01:57:55.086 UTC [930] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=21 kB; lsn=0/522CA80, redo lsn=0/522CA48
+2024-11-24 02:02:54.186 UTC [930] LOG:  checkpoint starting: time
+2024-11-24 02:02:54.504 UTC [930] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=20 kB; lsn=0/5230180, redo lsn=0/5230148
+2024-11-24 02:07:54.602 UTC [930] LOG:  checkpoint starting: time
+2024-11-24 02:07:54.920 UTC [930] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=12 kB, estimate=19 kB; lsn=0/5233570, redo lsn=0/5233538
+2024-11-24 02:12:54.971 UTC [930] LOG:  checkpoint starting: time
+2024-11-24 02:12:55.288 UTC [930] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=19 kB; lsn=0/5236FD0, redo lsn=0/5236F98
+2024-11-24 02:17:54.386 UTC [930] LOG:  checkpoint starting: time
+2024-11-24 02:17:54.904 UTC [930] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.503 s, sync=0.004 s, total=0.518 s; sync files=5, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=18 kB; lsn=0/523A768, redo lsn=0/523A730
+2024-11-24 02:23:15.053 UTC [645] LOG:  starting PostgreSQL 16.4 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 13.3.0, 64-bit
+2024-11-24 02:23:15.055 UTC [645] LOG:  listening on IPv6 address "::1", port 5432
+2024-11-24 02:23:15.055 UTC [645] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-11-24 02:23:15.063 UTC [645] LOG:  listening on Unix socket "/home/cloudide/postgresql-run/.s.PGSQL.5432"
+2024-11-24 02:23:15.149 UTC [663] LOG:  database system was interrupted; last known up at 2024-11-24 02:17:54 UTC
+2024-11-24 02:23:15.266 UTC [663] LOG:  database system was not properly shut down; automatic recovery in progress
+2024-11-24 02:23:15.343 UTC [663] LOG:  redo starts at 0/523A730
+2024-11-24 02:23:15.348 UTC [663] LOG:  invalid record length at 0/523C440: expected at least 24, got 0
+2024-11-24 02:23:15.349 UTC [663] LOG:  redo done at 0/523C408 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2024-11-24 02:23:15.359 UTC [661] LOG:  checkpoint starting: end-of-recovery immediate wait
+2024-11-24 02:23:15.448 UTC [661] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.008 s, sync=0.070 s, total=0.092 s; sync files=5, longest=0.068 s, average=0.014 s; distance=7 kB, estimate=7 kB; lsn=0/523C440, redo lsn=0/523C440
+2024-11-24 02:23:15.452 UTC [645] LOG:  database system is ready to accept connections
+2024-11-24 02:23:15.566 UTC [702] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 02:23:15.566 UTC [702] HINT:  Is another postmaster (PID 645) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 02:23:15.682 UTC [713] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 02:23:15.682 UTC [713] HINT:  Is another postmaster (PID 645) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 02:23:15.949 UTC [734] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 02:23:15.949 UTC [734] HINT:  Is another postmaster (PID 645) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 02:23:16.064 UTC [748] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 02:23:16.064 UTC [748] HINT:  Is another postmaster (PID 645) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 02:23:16.263 UTC [768] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 02:23:16.263 UTC [768] HINT:  Is another postmaster (PID 645) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 02:23:16.449 UTC [798] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 02:23:16.449 UTC [798] HINT:  Is another postmaster (PID 645) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 02:23:16.565 UTC [819] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 02:23:16.565 UTC [819] HINT:  Is another postmaster (PID 645) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 02:23:16.681 UTC [830] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 02:23:16.681 UTC [830] HINT:  Is another postmaster (PID 645) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 02:23:16.853 UTC [848] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 02:23:16.853 UTC [848] HINT:  Is another postmaster (PID 645) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 02:23:16.970 UTC [858] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 02:23:16.970 UTC [858] HINT:  Is another postmaster (PID 645) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 02:23:17.086 UTC [880] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 02:23:17.086 UTC [880] HINT:  Is another postmaster (PID 645) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 02:23:17.249 UTC [905] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 02:23:17.249 UTC [905] HINT:  Is another postmaster (PID 645) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 02:23:17.364 UTC [925] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 02:23:17.364 UTC [925] HINT:  Is another postmaster (PID 645) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 02:23:17.546 UTC [943] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 02:23:17.546 UTC [943] HINT:  Is another postmaster (PID 645) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 02:23:17.652 UTC [963] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 02:23:17.652 UTC [963] HINT:  Is another postmaster (PID 645) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 02:28:15.548 UTC [661] LOG:  checkpoint starting: time
+2024-11-24 02:28:15.865 UTC [661] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=7 kB, estimate=7 kB; lsn=0/523E3A8, redo lsn=0/523E370
+2024-11-24 02:33:15.964 UTC [661] LOG:  checkpoint starting: time
+2024-11-24 02:33:16.281 UTC [661] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.002 s, average=0.001 s; distance=9 kB, estimate=9 kB; lsn=0/5240AD8, redo lsn=0/5240AA0
+2024-11-24 02:38:15.380 UTC [661] LOG:  checkpoint starting: time
+2024-11-24 02:38:15.697 UTC [661] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=9 kB, estimate=9 kB; lsn=0/52430F0, redo lsn=0/52430B8
+2024-11-24 02:43:15.797 UTC [661] LOG:  checkpoint starting: time
+2024-11-24 02:43:16.114 UTC [661] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=10 kB, estimate=10 kB; lsn=0/5245CC8, redo lsn=0/5245C90
+2024-11-24 02:48:15.212 UTC [661] LOG:  checkpoint starting: time
+2024-11-24 02:48:15.530 UTC [661] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=12 kB, estimate=12 kB; lsn=0/5248DD0, redo lsn=0/5248D98
+2024-11-24 02:53:15.629 UTC [661] LOG:  checkpoint starting: time
+2024-11-24 02:53:15.945 UTC [661] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=13 kB; lsn=0/524C338, redo lsn=0/524C300
+2024-11-24 02:58:16.044 UTC [661] LOG:  checkpoint starting: time
+2024-11-24 02:58:16.362 UTC [661] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=13 kB; lsn=0/524FA20, redo lsn=0/524F9E8
+2024-11-24 03:03:16.454 UTC [661] LOG:  checkpoint starting: time
+2024-11-24 03:03:16.771 UTC [661] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=14 kB; lsn=0/5253260, redo lsn=0/5253228
+2024-11-24 03:08:16.869 UTC [661] LOG:  checkpoint starting: time
+2024-11-24 03:08:17.180 UTC [661] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.003 s, total=0.312 s; sync files=4, longest=0.002 s, average=0.001 s; distance=12 kB, estimate=13 kB; lsn=0/5256600, redo lsn=0/52565C8
+2024-11-24 03:13:16.280 UTC [661] LOG:  checkpoint starting: time
+2024-11-24 03:13:16.598 UTC [661] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=13 kB; lsn=0/5259578, redo lsn=0/5259540
+2024-11-24 03:18:16.696 UTC [661] LOG:  checkpoint starting: time
+2024-11-24 03:18:17.013 UTC [661] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=13 kB; lsn=0/525CC70, redo lsn=0/525CC38
+2024-11-24 03:23:16.112 UTC [661] LOG:  checkpoint starting: time
+2024-11-24 03:23:16.429 UTC [661] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=14 kB; lsn=0/5260708, redo lsn=0/52606D0
+2024-11-24 03:28:16.528 UTC [661] LOG:  checkpoint starting: time
+2024-11-24 03:28:16.844 UTC [661] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=15 kB, estimate=15 kB; lsn=0/5264358, redo lsn=0/5264320
+2024-11-24 03:43:01.542 UTC [684] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 03:43:01.542 UTC [684] HINT:  Is another postmaster (PID 645) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 03:43:01.698 UTC [705] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 03:43:01.698 UTC [705] HINT:  Is another postmaster (PID 645) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 03:43:01.739 UTC [718] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 03:43:01.739 UTC [718] HINT:  Is another postmaster (PID 645) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 03:43:01.855 UTC [727] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 03:43:01.855 UTC [727] HINT:  Is another postmaster (PID 645) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 03:43:01.992 UTC [736] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 03:43:01.992 UTC [736] HINT:  Is another postmaster (PID 645) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 03:43:02.096 UTC [757] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 03:43:02.096 UTC [757] HINT:  Is another postmaster (PID 645) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 03:43:02.207 UTC [766] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 03:43:02.207 UTC [766] HINT:  Is another postmaster (PID 645) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 03:43:02.321 UTC [775] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 03:43:02.321 UTC [775] HINT:  Is another postmaster (PID 645) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 03:43:02.438 UTC [784] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 03:43:02.438 UTC [784] HINT:  Is another postmaster (PID 645) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 03:43:02.553 UTC [798] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 03:43:02.553 UTC [798] HINT:  Is another postmaster (PID 645) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 03:43:02.800 UTC [822] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 03:43:02.800 UTC [822] HINT:  Is another postmaster (PID 645) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 03:43:02.994 UTC [831] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 03:43:02.994 UTC [831] HINT:  Is another postmaster (PID 645) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 03:43:03.202 UTC [842] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 03:43:03.202 UTC [842] HINT:  Is another postmaster (PID 645) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 03:43:03.404 UTC [873] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 03:43:03.404 UTC [873] HINT:  Is another postmaster (PID 645) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 03:43:03.606 UTC [884] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 03:43:03.606 UTC [884] HINT:  Is another postmaster (PID 645) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 03:43:03.896 UTC [904] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 03:43:03.896 UTC [904] HINT:  Is another postmaster (PID 645) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 03:44:35.295 UTC [1754] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 03:44:35.295 UTC [1754] HINT:  Is another postmaster (PID 645) running in data directory "/home/cloudide/pgdata"?

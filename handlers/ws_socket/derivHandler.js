@@ -75,6 +75,7 @@ function initializeDerivWebSocket(server) {
                             // Reset crash state and multiplier after 7 seconds
                             await redisClient.set('multiplierCrashed', 'false');
                             await redisClient.set('maxMultiplier', 1.00);
+                            await redisClient.set('multiplier', 1.00);
                             console.log('Crash handled. Ready for the next round.');
                             isHandlingCrash = false;
                         } catch (error) {
