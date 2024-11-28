@@ -46,6 +46,7 @@ function initializeDerivWebSocket(server) {
     });
 
     let isHandlingCrash = false;
+    let newround_id = '';
 
     async function handleTickData(message) {
         if (message.tick && message.tick.symbol === 'R_100') {
@@ -66,7 +67,7 @@ function initializeDerivWebSocket(server) {
                 // If a crash is detected, we need to wait for 7 seconds before resetting
                 if (crashState === 'true' && !isHandlingCrash) {
                     console.log('Multiplier crashed. Waiting 7 seconds before resetting...');
-
+                    
                     isHandlingCrash = true;
 
                     // Use setTimeout to handle the reset after 7 seconds
@@ -95,7 +96,6 @@ function initializeDerivWebSocket(server) {
 
                     // Calculate percentage change
                     const priceChangePercentage = ((newPrice - previousPrice) / previousPrice) * 100;
-
                     const priceChangeThreshold = 0.04863; // Default threshold for price change
 
                     if (Math.abs(priceChangePercentage) <= priceChangeThreshold) {
@@ -134,12 +134,20 @@ function initializeDerivWebSocket(server) {
                         }
 
                         // Create a new round for the next game
-                        await prisma.multiplier.create({
+                        const created_bet = await prisma.multiplier.create({
                             data: {
                                 value: '', // Initial value for the new round
                                 appId: process.env.DERIV_ID
                             }
                         });
+                        if (created_bet) {
+                            newround_id = await prisma.multiplier.findFirst({
+                                where: {
+                                    id: created_bet.id,
+                                }
+                            });
+                            await redisClient.set('round_id', newround_id.id);
+                        }
 
                         // Reset multiplier and previous price
                         await redisClient.set('multiplier', initialMultiplier);

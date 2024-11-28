@@ -606,3 +606,1147 @@
 2024-11-24 03:43:03.896 UTC [904] HINT:  Is another postmaster (PID 645) running in data directory "/home/cloudide/pgdata"?
 2024-11-24 03:44:35.295 UTC [1754] FATAL:  lock file "postmaster.pid" already exists
 2024-11-24 03:44:35.295 UTC [1754] HINT:  Is another postmaster (PID 645) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 03:49:21.025 UTC [2210] LOG:  starting PostgreSQL 16.4 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 13.3.0, 64-bit
+2024-11-24 03:49:21.025 UTC [2210] LOG:  listening on IPv6 address "::1", port 5432
+2024-11-24 03:49:21.025 UTC [2210] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-11-24 03:49:21.028 UTC [2210] FATAL:  lock file "/home/cloudide/postgresql-run/.s.PGSQL.5432.lock" already exists
+2024-11-24 03:49:21.028 UTC [2210] HINT:  Is another postmaster (PID 645) using socket file "/home/cloudide/postgresql-run/.s.PGSQL.5432"?
+2024-11-24 03:49:21.030 UTC [2210] LOG:  database system is shut down
+2024-11-24 03:51:59.144 UTC [2702] LOG:  starting PostgreSQL 16.4 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 13.3.0, 64-bit
+2024-11-24 03:51:59.144 UTC [2702] LOG:  listening on IPv6 address "::1", port 5432
+2024-11-24 03:51:59.144 UTC [2702] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-11-24 03:51:59.149 UTC [2702] LOG:  listening on Unix socket "/home/cloudide/postgresql-run/.s.PGSQL.5432"
+2024-11-24 03:51:59.164 UTC [2705] LOG:  database system was interrupted; last known up at 2024-11-24 03:28:16 UTC
+2024-11-24 03:51:59.194 UTC [2705] LOG:  database system was not properly shut down; automatic recovery in progress
+2024-11-24 03:51:59.200 UTC [2705] LOG:  redo starts at 0/5264320
+2024-11-24 03:51:59.205 UTC [2705] LOG:  invalid record length at 0/5267848: expected at least 24, got 0
+2024-11-24 03:51:59.205 UTC [2705] LOG:  redo done at 0/5267810 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2024-11-24 03:51:59.213 UTC [2703] LOG:  checkpoint starting: end-of-recovery immediate wait
+2024-11-24 03:51:59.232 UTC [2703] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.004 s, sync=0.005 s, total=0.022 s; sync files=5, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=13 kB; lsn=0/5267848, redo lsn=0/5267848
+2024-11-24 03:51:59.237 UTC [2702] LOG:  database system is ready to accept connections
+2024-11-24 03:56:59.333 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 03:56:59.650 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=15 kB, estimate=15 kB; lsn=0/526B560, redo lsn=0/526B528
+2024-11-24 04:01:59.747 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 04:02:00.064 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=16 kB, estimate=16 kB; lsn=0/526F6A0, redo lsn=0/526F668
+2024-11-24 04:06:59.159 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 04:06:59.472 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.003 s, total=0.313 s; sync files=4, longest=0.003 s, average=0.001 s; distance=15 kB, estimate=16 kB; lsn=0/52732D0, redo lsn=0/5273298
+2024-11-24 04:11:59.491 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 04:11:59.808 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=15 kB, estimate=16 kB; lsn=0/5277100, redo lsn=0/52770C8
+2024-11-24 04:16:59.825 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 04:17:00.143 UTC [2703] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.305 s, sync=0.004 s, total=0.319 s; sync files=4, longest=0.004 s, average=0.001 s; distance=16 kB, estimate=16 kB; lsn=0/527B400, redo lsn=0/527B3C8
+2024-11-24 04:21:59.214 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 04:21:59.731 UTC [2703] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.504 s, sync=0.004 s, total=0.518 s; sync files=5, longest=0.004 s, average=0.001 s; distance=16 kB, estimate=16 kB; lsn=0/527F6F0, redo lsn=0/527F6B8
+2024-11-24 04:26:59.755 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 04:27:00.072 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=9 kB, estimate=16 kB; lsn=0/5281E30, redo lsn=0/5281DF8
+2024-11-24 04:31:59.171 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 04:31:59.487 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=10 kB, estimate=15 kB; lsn=0/5284810, redo lsn=0/52847D8
+2024-11-24 04:36:59.587 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 04:36:59.903 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=15 kB; lsn=0/5287520, redo lsn=0/52874E8
+2024-11-24 04:41:59.998 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 04:42:00.315 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=12 kB, estimate=14 kB; lsn=0/528A890, redo lsn=0/528A858
+2024-11-24 04:46:59.411 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 04:46:59.728 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=14 kB; lsn=0/528DD10, redo lsn=0/528DCD8
+2024-11-24 04:51:59.827 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 04:52:00.138 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.003 s, total=0.311 s; sync files=4, longest=0.002 s, average=0.001 s; distance=14 kB, estimate=14 kB; lsn=0/52916A8, redo lsn=0/5291670
+2024-11-24 04:56:59.235 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 04:56:59.551 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=14 kB; lsn=0/5294E18, redo lsn=0/5294DE0
+2024-11-24 05:01:59.624 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 05:01:59.942 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=15 kB, estimate=15 kB; lsn=0/5298D28, redo lsn=0/5298CF0
+2024-11-24 05:06:59.947 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 05:07:00.265 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=16 kB, estimate=16 kB; lsn=0/529CE90, redo lsn=0/529CE58
+2024-11-24 05:11:59.363 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 05:11:59.680 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=17 kB, estimate=17 kB; lsn=0/52A12B8, redo lsn=0/52A1280
+2024-11-24 05:16:59.779 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 05:17:00.096 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=15 kB, estimate=16 kB; lsn=0/52A4F58, redo lsn=0/52A4F20
+2024-11-24 05:21:59.107 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 05:21:59.624 UTC [2703] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.503 s, sync=0.004 s, total=0.517 s; sync files=4, longest=0.003 s, average=0.001 s; distance=17 kB, estimate=17 kB; lsn=0/52A9478, redo lsn=0/52A9440
+2024-11-24 05:26:59.724 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 05:27:00.042 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=8 kB, estimate=16 kB; lsn=0/52AB798, redo lsn=0/52AB760
+2024-11-24 05:31:59.139 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 05:31:59.455 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=9 kB, estimate=15 kB; lsn=0/52ADCE8, redo lsn=0/52ADCB0
+2024-11-24 05:36:59.526 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 05:36:59.842 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=10 kB, estimate=15 kB; lsn=0/52B0830, redo lsn=0/52B07F8
+2024-11-24 05:41:59.942 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 05:42:00.253 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.003 s, total=0.311 s; sync files=4, longest=0.002 s, average=0.001 s; distance=9 kB, estimate=14 kB; lsn=0/52B2CA0, redo lsn=0/52B2C68
+2024-11-24 05:46:59.353 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 05:47:00.270 UTC [2703] LOG:  checkpoint complete: wrote 10 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.905 s, sync=0.003 s, total=0.918 s; sync files=6, longest=0.002 s, average=0.001 s; distance=52 kB, estimate=52 kB; lsn=0/52BFFC8, redo lsn=0/52BFF90
+2024-11-24 05:51:59.367 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 05:51:59.685 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=48 kB; lsn=0/52C2D40, redo lsn=0/52C2D08
+2024-11-24 05:56:59.711 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 05:57:00.028 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=44 kB; lsn=0/52C5BE8, redo lsn=0/52C5BB0
+2024-11-24 06:01:59.127 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 06:01:59.445 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=41 kB; lsn=0/52C88A8, redo lsn=0/52C8870
+2024-11-24 06:06:59.543 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 06:07:00.060 UTC [2703] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.503 s, sync=0.004 s, total=0.517 s; sync files=5, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=38 kB; lsn=0/52CB898, redo lsn=0/52CB860
+2024-11-24 06:11:59.159 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 06:11:59.476 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=3 kB, estimate=35 kB; lsn=0/52CC600, redo lsn=0/52CC5C8
+2024-11-24 06:16:59.575 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 06:16:59.892 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=5 kB, estimate=32 kB; lsn=0/52CDDB8, redo lsn=0/52CDD80
+2024-11-24 06:21:59.991 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 06:22:00.308 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=5 kB, estimate=29 kB; lsn=0/52CF368, redo lsn=0/52CF330
+2024-11-24 06:26:59.407 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 06:26:59.725 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=6 kB, estimate=27 kB; lsn=0/52D0CC8, redo lsn=0/52D0C90
+2024-11-24 06:31:59.823 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 06:32:00.140 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=7 kB, estimate=25 kB; lsn=0/52D2BA8, redo lsn=0/52D2B70
+2024-11-24 06:36:59.239 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 06:36:59.556 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=8 kB, estimate=23 kB; lsn=0/52D4E98, redo lsn=0/52D4E60
+2024-11-24 06:41:59.655 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 06:41:59.972 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=8 kB, estimate=22 kB; lsn=0/52D70D8, redo lsn=0/52D70A0
+2024-11-24 06:47:00.072 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 06:47:00.388 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=10 kB, estimate=20 kB; lsn=0/52D9B48, redo lsn=0/52D9B10
+2024-11-24 06:52:00.443 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 06:52:00.759 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=19 kB; lsn=0/52DC840, redo lsn=0/52DC808
+2024-11-24 06:57:00.859 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 06:57:01.176 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=12 kB, estimate=19 kB; lsn=0/52DFA98, redo lsn=0/52DFA60
+2024-11-24 07:02:00.275 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 07:02:00.592 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=10 kB, estimate=18 kB; lsn=0/52E23D0, redo lsn=0/52E2398
+2024-11-24 07:07:00.692 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 07:07:01.008 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.003 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=9 kB, estimate=17 kB; lsn=0/52E4B18, redo lsn=0/52E4AE0
+2024-11-24 07:12:00.107 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 07:12:00.424 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=10 kB, estimate=16 kB; lsn=0/52E74C8, redo lsn=0/52E7490
+2024-11-24 07:17:00.503 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 07:17:00.819 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=12 kB, estimate=16 kB; lsn=0/52EA4D0, redo lsn=0/52EA498
+2024-11-24 07:22:00.919 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 07:22:01.236 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=15 kB; lsn=0/52ED188, redo lsn=0/52ED150
+2024-11-24 07:27:00.315 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 07:27:00.626 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.003 s, total=0.311 s; sync files=4, longest=0.002 s, average=0.001 s; distance=13 kB, estimate=15 kB; lsn=0/52F07A0, redo lsn=0/52F0768
+2024-11-24 07:32:00.724 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 07:32:01.041 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=15 kB; lsn=0/52F3768, redo lsn=0/52F3730
+2024-11-24 07:37:00.139 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 07:37:00.456 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=15 kB; lsn=0/52F6D70, redo lsn=0/52F6D38
+2024-11-24 07:42:00.555 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 07:42:00.872 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=14 kB; lsn=0/52FA4D8, redo lsn=0/52FA4A0
+2024-11-24 07:47:00.971 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 07:47:01.288 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=12 kB, estimate=14 kB; lsn=0/52FD7C0, redo lsn=0/52FD788
+2024-11-24 07:52:00.388 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 07:52:00.703 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=14 kB; lsn=0/53012F0, redo lsn=0/53012B8
+2024-11-24 07:57:00.803 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 07:57:02.625 UTC [2703] LOG:  checkpoint complete: wrote 19 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.807 s, sync=0.005 s, total=1.822 s; sync files=9, longest=0.004 s, average=0.001 s; distance=66 kB, estimate=66 kB; lsn=0/5311D40, redo lsn=0/5311D08
+2024-11-24 08:02:00.723 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 08:02:01.140 UTC [2703] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.403 s, sync=0.004 s, total=0.417 s; sync files=4, longest=0.003 s, average=0.001 s; distance=8 kB, estimate=60 kB; lsn=0/5313DE8, redo lsn=0/5313DB0
+2024-11-24 08:07:00.240 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 08:07:00.557 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=7 kB, estimate=55 kB; lsn=0/5317458, redo lsn=0/5315AA0
+2024-11-24 08:12:00.656 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 08:12:00.974 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=9 kB, estimate=50 kB; lsn=0/5317FC0, redo lsn=0/5317F88
+2024-11-24 08:17:00.980 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 08:17:01.297 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=10 kB, estimate=46 kB; lsn=0/531A920, redo lsn=0/531A8E8
+2024-11-24 08:22:00.395 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 08:22:00.710 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.315 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=43 kB; lsn=0/531D690, redo lsn=0/531D658
+2024-11-24 08:27:00.807 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 08:27:01.122 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=12 kB, estimate=40 kB; lsn=0/5320A68, redo lsn=0/5320A30
+2024-11-24 08:32:00.219 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 08:32:00.535 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=37 kB; lsn=0/5323FD8, redo lsn=0/5323FA0
+2024-11-24 08:37:00.631 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 08:37:00.946 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=15 kB, estimate=35 kB; lsn=0/5327C00, redo lsn=0/5327BC8
+2024-11-24 08:42:00.981 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 08:42:01.299 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.004 s, average=0.001 s; distance=16 kB, estimate=33 kB; lsn=0/532BD30, redo lsn=0/532BCF8
+2024-11-24 08:47:00.398 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 08:47:00.714 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=31 kB; lsn=0/532F138, redo lsn=0/532F100
+2024-11-24 08:52:00.813 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 08:52:01.130 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=29 kB; lsn=0/5332D08, redo lsn=0/5332CD0
+2024-11-24 08:57:00.230 UTC [2703] LOG:  checkpoint starting: time
+2024-11-24 08:57:00.547 UTC [2703] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=16 kB, estimate=28 kB; lsn=0/5336E70, redo lsn=0/5336E38
+2024-11-24 14:34:39.580 UTC [653] LOG:  starting PostgreSQL 16.4 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 13.3.0, 64-bit
+2024-11-24 14:34:39.580 UTC [653] LOG:  listening on IPv6 address "::1", port 5432
+2024-11-24 14:34:39.580 UTC [653] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-11-24 14:34:39.585 UTC [653] LOG:  listening on Unix socket "/home/cloudide/postgresql-run/.s.PGSQL.5432"
+2024-11-24 14:34:39.598 UTC [674] LOG:  database system was interrupted; last known up at 2024-11-24 08:57:00 UTC
+2024-11-24 14:34:39.631 UTC [674] LOG:  database system was not properly shut down; automatic recovery in progress
+2024-11-24 14:34:39.638 UTC [674] LOG:  redo starts at 0/5336E38
+2024-11-24 14:34:39.643 UTC [674] LOG:  invalid record length at 0/533A340: expected at least 24, got 0
+2024-11-24 14:34:39.644 UTC [674] LOG:  redo done at 0/533A308 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2024-11-24 14:34:39.649 UTC [672] LOG:  checkpoint starting: end-of-recovery immediate wait
+2024-11-24 14:34:39.661 UTC [672] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.003 s, total=0.014 s; sync files=5, longest=0.002 s, average=0.001 s; distance=13 kB, estimate=13 kB; lsn=0/533A340, redo lsn=0/533A340
+2024-11-24 14:34:39.674 UTC [653] LOG:  database system is ready to accept connections
+2024-11-24 14:34:39.717 UTC [686] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 14:34:39.717 UTC [686] HINT:  Is another postmaster (PID 653) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 14:34:39.834 UTC [700] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 14:34:39.834 UTC [700] HINT:  Is another postmaster (PID 653) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 14:34:39.951 UTC [709] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 14:34:39.951 UTC [709] HINT:  Is another postmaster (PID 653) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 14:34:40.067 UTC [718] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 14:34:40.067 UTC [718] HINT:  Is another postmaster (PID 653) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 14:34:40.185 UTC [727] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 14:34:40.185 UTC [727] HINT:  Is another postmaster (PID 653) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 14:34:40.301 UTC [736] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 14:34:40.301 UTC [736] HINT:  Is another postmaster (PID 653) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 14:34:40.418 UTC [745] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 14:34:40.418 UTC [745] HINT:  Is another postmaster (PID 653) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 14:34:40.534 UTC [754] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 14:34:40.534 UTC [754] HINT:  Is another postmaster (PID 653) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 14:34:40.652 UTC [777] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 14:34:40.652 UTC [777] HINT:  Is another postmaster (PID 653) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 14:34:40.768 UTC [786] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 14:34:40.768 UTC [786] HINT:  Is another postmaster (PID 653) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 14:34:40.884 UTC [795] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 14:34:40.884 UTC [795] HINT:  Is another postmaster (PID 653) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 14:34:41.000 UTC [809] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 14:34:41.000 UTC [809] HINT:  Is another postmaster (PID 653) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 14:34:41.116 UTC [818] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 14:34:41.116 UTC [818] HINT:  Is another postmaster (PID 653) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 14:34:41.283 UTC [827] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 14:34:41.283 UTC [827] HINT:  Is another postmaster (PID 653) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 14:34:41.476 UTC [850] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 14:34:41.476 UTC [850] HINT:  Is another postmaster (PID 653) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 14:39:39.665 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 14:39:39.980 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=14 kB; lsn=0/533DF10, redo lsn=0/533DED8
+2024-11-24 14:44:40.080 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 14:44:40.397 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=15 kB, estimate=15 kB; lsn=0/5341D68, redo lsn=0/5341D30
+2024-11-24 14:49:40.480 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 14:49:40.835 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.025 s, total=0.356 s; sync files=4, longest=0.018 s, average=0.007 s; distance=17 kB, estimate=17 kB; lsn=0/53461F0, redo lsn=0/53461B8
+2024-11-24 14:54:40.935 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 14:54:41.251 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=16 kB, estimate=17 kB; lsn=0/534A380, redo lsn=0/534A348
+2024-11-24 14:59:40.351 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 14:59:40.867 UTC [672] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.503 s, sync=0.003 s, total=0.516 s; sync files=5, longest=0.003 s, average=0.001 s; distance=17 kB, estimate=17 kB; lsn=0/534EA38, redo lsn=0/534EA00
+2024-11-24 15:04:40.920 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 15:04:41.237 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=9 kB, estimate=16 kB; lsn=0/5351068, redo lsn=0/5351030
+2024-11-24 15:09:40.335 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 15:09:40.653 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.005 s, total=0.318 s; sync files=4, longest=0.004 s, average=0.002 s; distance=9 kB, estimate=16 kB; lsn=0/5353860, redo lsn=0/5353828
+2024-11-24 15:14:40.752 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 15:14:41.069 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=10 kB, estimate=15 kB; lsn=0/5356330, redo lsn=0/53562F8
+2024-11-24 15:19:40.165 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 15:19:40.482 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=15 kB; lsn=0/53590A0, redo lsn=0/5359068
+2024-11-24 15:24:40.581 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 15:24:40.897 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=12 kB, estimate=14 kB; lsn=0/535C268, redo lsn=0/535C230
+2024-11-24 15:29:40.984 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 15:29:41.301 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=14 kB; lsn=0/535F8A8, redo lsn=0/535F870
+2024-11-24 15:34:40.401 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 15:34:40.717 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=14 kB; lsn=0/5363008, redo lsn=0/5362FD0
+2024-11-24 15:39:40.803 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 15:39:41.119 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=14 kB; lsn=0/5366A28, redo lsn=0/53669F0
+2024-11-24 15:44:40.217 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 15:44:40.535 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=15 kB, estimate=15 kB; lsn=0/536A700, redo lsn=0/536A6C8
+2024-11-24 15:49:40.634 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 15:49:40.951 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=15 kB, estimate=15 kB; lsn=0/536E518, redo lsn=0/536E4E0
+2024-11-24 15:54:41.049 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 15:54:41.365 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=16 kB, estimate=16 kB; lsn=0/53726E0, redo lsn=0/53726A8
+2024-11-24 15:59:41.385 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 15:59:41.902 UTC [672] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.503 s, sync=0.004 s, total=0.518 s; sync files=4, longest=0.003 s, average=0.001 s; distance=18 kB, estimate=18 kB; lsn=0/5377050, redo lsn=0/5377018
+2024-11-24 16:04:42.002 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 16:04:42.318 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=8 kB, estimate=17 kB; lsn=0/5379240, redo lsn=0/5379208
+2024-11-24 16:09:41.418 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 16:09:41.735 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=8 kB, estimate=16 kB; lsn=0/537B410, redo lsn=0/537B3D8
+2024-11-24 16:14:41.833 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 16:14:42.150 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=8 kB, estimate=15 kB; lsn=0/537D718, redo lsn=0/537D6E0
+2024-11-24 16:19:41.236 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 16:19:41.553 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=9 kB, estimate=15 kB; lsn=0/537FDD0, redo lsn=0/537FD98
+2024-11-24 16:24:41.649 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 16:24:41.965 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=10 kB, estimate=14 kB; lsn=0/5382810, redo lsn=0/53827D8
+2024-11-24 16:29:42.065 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 16:29:42.382 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=9 kB, estimate=14 kB; lsn=0/5384DB0, redo lsn=0/5384D78
+2024-11-24 16:34:42.481 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 16:34:42.798 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.004 s, average=0.001 s; distance=10 kB, estimate=13 kB; lsn=0/5387910, redo lsn=0/53878D8
+2024-11-24 16:39:42.898 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 16:39:43.215 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=13 kB; lsn=0/538A600, redo lsn=0/538A5C8
+2024-11-24 16:44:42.314 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 16:44:42.631 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=12 kB, estimate=13 kB; lsn=0/538D670, redo lsn=0/538D638
+2024-11-24 16:49:42.730 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 16:49:43.048 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=13 kB; lsn=0/5390C10, redo lsn=0/5390BD8
+2024-11-24 16:54:42.108 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 16:54:43.227 UTC [672] LOG:  checkpoint complete: wrote 12 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.105 s, sync=0.004 s, total=1.119 s; sync files=7, longest=0.003 s, average=0.001 s; distance=50 kB, estimate=50 kB; lsn=0/539D6C8, redo lsn=0/539D690
+2024-11-24 16:59:42.327 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 16:59:42.643 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=4 kB, estimate=46 kB; lsn=0/539EA58, redo lsn=0/539EA20
+2024-11-24 17:04:42.743 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 17:04:43.060 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=5 kB, estimate=42 kB; lsn=0/53A01A0, redo lsn=0/53A0168
+2024-11-24 17:09:42.157 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 17:09:42.473 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=6 kB, estimate=38 kB; lsn=0/53A1C18, redo lsn=0/53A1BE0
+2024-11-24 17:14:42.569 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 17:14:42.887 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=7 kB, estimate=35 kB; lsn=0/53A3838, redo lsn=0/53A3800
+2024-11-24 17:19:42.987 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 17:19:43.299 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.003 s, total=0.313 s; sync files=4, longest=0.002 s, average=0.001 s; distance=8 kB, estimate=32 kB; lsn=0/53A5A48, redo lsn=0/53A5A10
+2024-11-24 17:24:42.397 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 17:24:42.709 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.003 s, total=0.312 s; sync files=4, longest=0.002 s, average=0.001 s; distance=8 kB, estimate=30 kB; lsn=0/53A7B78, redo lsn=0/53A7B40
+2024-11-24 17:29:42.808 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 17:29:43.125 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=9 kB, estimate=28 kB; lsn=0/53AA228, redo lsn=0/53AA1F0
+2024-11-24 17:34:42.225 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 17:34:42.542 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=26 kB; lsn=0/53AD088, redo lsn=0/53AD050
+2024-11-24 17:39:42.642 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 17:39:42.959 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=25 kB; lsn=0/53AFF50, redo lsn=0/53AFF18
+2024-11-24 17:44:43.057 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 17:44:43.374 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=23 kB; lsn=0/53B2E78, redo lsn=0/53B2E40
+2024-11-24 17:49:43.473 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 17:49:43.790 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=22 kB; lsn=0/53B6848, redo lsn=0/53B6810
+2024-11-24 17:54:43.889 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 17:54:44.206 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=21 kB; lsn=0/53B9720, redo lsn=0/53B96E8
+2024-11-24 17:59:43.280 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 17:59:43.596 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=20 kB; lsn=0/53BC5B8, redo lsn=0/53BC580
+2024-11-24 18:04:43.695 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 18:04:44.011 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=19 kB; lsn=0/53BF9F0, redo lsn=0/53BF9B8
+2024-11-24 18:09:43.111 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 18:09:43.428 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=19 kB; lsn=0/53C3148, redo lsn=0/53C3110
+2024-11-24 18:14:43.525 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 18:14:43.849 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.005 s, total=0.324 s; sync files=4, longest=0.004 s, average=0.002 s; distance=14 kB, estimate=18 kB; lsn=0/53C6D08, redo lsn=0/53C6CD0
+2024-11-24 18:19:43.947 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 18:19:44.264 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=15 kB, estimate=18 kB; lsn=0/53CA968, redo lsn=0/53CA930
+2024-11-24 18:24:43.350 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 18:24:43.667 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=15 kB, estimate=18 kB; lsn=0/53CE5F0, redo lsn=0/53CE5B8
+2024-11-24 18:29:43.765 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 18:29:44.283 UTC [672] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.503 s, sync=0.004 s, total=0.518 s; sync files=5, longest=0.003 s, average=0.001 s; distance=15 kB, estimate=17 kB; lsn=0/53D24C8, redo lsn=0/53D2490
+2024-11-24 18:34:43.301 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 18:34:43.719 UTC [672] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.403 s, sync=0.004 s, total=0.418 s; sync files=4, longest=0.003 s, average=0.001 s; distance=15 kB, estimate=17 kB; lsn=0/53D62E0, redo lsn=0/53D62A8
+2024-11-24 18:39:43.736 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 18:39:44.053 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=7 kB, estimate=16 kB; lsn=0/53D7F78, redo lsn=0/53D7F40
+2024-11-24 18:44:43.110 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 18:44:43.426 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=8 kB, estimate=15 kB; lsn=0/53DA260, redo lsn=0/53DA228
+2024-11-24 18:49:43.525 UTC [672] LOG:  checkpoint starting: time
+2024-11-24 18:49:43.843 UTC [672] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=9 kB, estimate=15 kB; lsn=0/53DC9C0, redo lsn=0/53DC988
+2024-11-24 18:56:17.724 UTC [464] LOG:  starting PostgreSQL 16.4 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 13.3.0, 64-bit
+2024-11-24 18:56:17.725 UTC [464] LOG:  listening on IPv6 address "::1", port 5432
+2024-11-24 18:56:17.725 UTC [464] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-11-24 18:56:17.733 UTC [464] LOG:  listening on Unix socket "/home/cloudide/postgresql-run/.s.PGSQL.5432"
+2024-11-24 18:56:17.747 UTC [478] LOG:  database system was interrupted; last known up at 2024-11-24 18:49:43 UTC
+2024-11-24 18:56:17.854 UTC [478] LOG:  database system was not properly shut down; automatic recovery in progress
+2024-11-24 18:56:17.895 UTC [478] LOG:  redo starts at 0/53DC988
+2024-11-24 18:56:17.899 UTC [478] LOG:  invalid record length at 0/53DF1F8: expected at least 24, got 0
+2024-11-24 18:56:17.899 UTC [478] LOG:  redo done at 0/53DF1C0 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2024-11-24 18:56:17.904 UTC [476] LOG:  checkpoint starting: end-of-recovery immediate wait
+2024-11-24 18:56:17.916 UTC [476] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.003 s, total=0.013 s; sync files=5, longest=0.002 s, average=0.001 s; distance=10 kB, estimate=10 kB; lsn=0/53DF1F8, redo lsn=0/53DF1F8
+2024-11-24 18:56:17.919 UTC [464] LOG:  database system is ready to accept connections
+2024-11-24 18:56:18.021 UTC [498] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 18:56:18.021 UTC [498] HINT:  Is another postmaster (PID 464) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 18:56:18.139 UTC [508] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 18:56:18.139 UTC [508] HINT:  Is another postmaster (PID 464) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 18:56:18.255 UTC [518] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 18:56:18.255 UTC [518] HINT:  Is another postmaster (PID 464) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 18:56:18.371 UTC [528] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 18:56:18.371 UTC [528] HINT:  Is another postmaster (PID 464) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 18:56:18.489 UTC [537] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 18:56:18.489 UTC [537] HINT:  Is another postmaster (PID 464) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 18:56:18.614 UTC [547] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 18:56:18.614 UTC [547] HINT:  Is another postmaster (PID 464) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 18:56:18.732 UTC [559] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 18:56:18.732 UTC [559] HINT:  Is another postmaster (PID 464) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 18:56:18.848 UTC [568] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 18:56:18.848 UTC [568] HINT:  Is another postmaster (PID 464) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 18:56:18.998 UTC [587] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 18:56:18.998 UTC [587] HINT:  Is another postmaster (PID 464) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 18:56:19.106 UTC [597] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 18:56:19.106 UTC [597] HINT:  Is another postmaster (PID 464) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 18:56:19.222 UTC [608] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 18:56:19.222 UTC [608] HINT:  Is another postmaster (PID 464) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 18:56:19.338 UTC [617] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 18:56:19.338 UTC [617] HINT:  Is another postmaster (PID 464) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 18:56:19.456 UTC [626] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 18:56:19.456 UTC [626] HINT:  Is another postmaster (PID 464) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 18:56:19.608 UTC [640] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 18:56:19.608 UTC [640] HINT:  Is another postmaster (PID 464) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 18:56:19.725 UTC [649] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 18:56:19.725 UTC [649] HINT:  Is another postmaster (PID 464) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 19:01:18.015 UTC [476] LOG:  checkpoint starting: time
+2024-11-24 19:01:18.326 UTC [476] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.003 s, total=0.311 s; sync files=4, longest=0.002 s, average=0.001 s; distance=11 kB, estimate=11 kB; lsn=0/53E1E68, redo lsn=0/53E1E30
+2024-11-24 19:06:18.426 UTC [476] LOG:  checkpoint starting: time
+2024-11-24 19:06:18.737 UTC [476] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.003 s, total=0.311 s; sync files=4, longest=0.002 s, average=0.001 s; distance=11 kB, estimate=11 kB; lsn=0/53E4B70, redo lsn=0/53E4B38
+2024-11-24 19:11:18.837 UTC [476] LOG:  checkpoint starting: time
+2024-11-24 19:11:19.153 UTC [476] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=13 kB; lsn=0/53E8338, redo lsn=0/53E8300
+2024-11-24 19:16:18.218 UTC [476] LOG:  checkpoint starting: time
+2024-11-24 19:16:18.534 UTC [476] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=14 kB; lsn=0/53EBC50, redo lsn=0/53EBC18
+2024-11-24 19:21:18.634 UTC [476] LOG:  checkpoint starting: time
+2024-11-24 19:21:18.950 UTC [476] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=14 kB; lsn=0/53EF7D8, redo lsn=0/53EF7A0
+2024-11-24 19:26:19.050 UTC [476] LOG:  checkpoint starting: time
+2024-11-24 19:26:19.363 UTC [476] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.314 s; sync files=4, longest=0.003 s, average=0.001 s; distance=17 kB, estimate=17 kB; lsn=0/53F3D98, redo lsn=0/53F3D60
+2024-11-24 19:31:19.462 UTC [476] LOG:  checkpoint starting: time
+2024-11-24 19:31:19.779 UTC [476] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=17 kB; lsn=0/53F7788, redo lsn=0/53F7750
+2024-11-24 19:36:19.878 UTC [476] LOG:  checkpoint starting: time
+2024-11-24 19:36:20.195 UTC [476] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=16 kB; lsn=0/53FB190, redo lsn=0/53FB158
+2024-11-24 19:41:19.294 UTC [476] LOG:  checkpoint starting: time
+2024-11-24 19:41:19.609 UTC [476] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.315 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=16 kB; lsn=0/53FECD0, redo lsn=0/53FEC98
+2024-11-24 19:46:19.706 UTC [476] LOG:  checkpoint starting: time
+2024-11-24 19:46:20.023 UTC [476] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=15 kB, estimate=16 kB; lsn=0/5402AE8, redo lsn=0/5402AB0
+2024-11-24 19:51:19.122 UTC [476] LOG:  checkpoint starting: time
+2024-11-24 19:51:19.438 UTC [476] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=16 kB; lsn=0/5406430, redo lsn=0/54063F8
+2024-11-24 19:56:19.538 UTC [476] LOG:  checkpoint starting: time
+2024-11-24 19:56:19.854 UTC [476] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=16 kB, estimate=16 kB; lsn=0/540A760, redo lsn=0/540A728
+2024-11-24 20:01:19.895 UTC [476] LOG:  checkpoint starting: time
+2024-11-24 20:01:20.211 UTC [476] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=16 kB, estimate=16 kB; lsn=0/540E878, redo lsn=0/540E840
+2024-11-24 20:06:19.310 UTC [476] LOG:  checkpoint starting: time
+2024-11-24 20:06:19.625 UTC [476] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=17 kB, estimate=17 kB; lsn=0/5412CC0, redo lsn=0/5412C88
+2024-11-24 20:11:19.701 UTC [476] LOG:  checkpoint starting: time
+2024-11-24 20:11:20.212 UTC [476] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.503 s, sync=0.003 s, total=0.512 s; sync files=5, longest=0.002 s, average=0.001 s; distance=19 kB, estimate=19 kB; lsn=0/5417998, redo lsn=0/5417960
+2024-11-24 20:16:19.310 UTC [476] LOG:  checkpoint starting: time
+2024-11-24 20:16:19.827 UTC [476] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.504 s, sync=0.004 s, total=0.518 s; sync files=4, longest=0.003 s, average=0.001 s; distance=19 kB, estimate=19 kB; lsn=0/541C740, redo lsn=0/541C708
+2024-11-24 20:21:19.926 UTC [476] LOG:  checkpoint starting: time
+2024-11-24 20:21:20.243 UTC [476] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=18 kB; lsn=0/541F600, redo lsn=0/541F5C8
+2024-11-24 20:26:19.342 UTC [476] LOG:  checkpoint starting: time
+2024-11-24 20:26:19.657 UTC [476] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=12 kB, estimate=18 kB; lsn=0/5422938, redo lsn=0/5422900
+2024-11-24 20:31:19.743 UTC [476] LOG:  checkpoint starting: time
+2024-11-24 20:31:20.060 UTC [476] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=17 kB; lsn=0/5425DB8, redo lsn=0/5425D80
+2024-11-24 20:36:19.079 UTC [476] LOG:  checkpoint starting: time
+2024-11-24 20:36:19.396 UTC [476] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=17 kB; lsn=0/5429860, redo lsn=0/5429828
+2024-11-24 20:41:19.495 UTC [476] LOG:  checkpoint starting: time
+2024-11-24 20:41:20.011 UTC [476] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.503 s, sync=0.004 s, total=0.516 s; sync files=4, longest=0.003 s, average=0.001 s; distance=16 kB, estimate=17 kB; lsn=0/542D878, redo lsn=0/542D840
+2024-11-24 20:46:19.111 UTC [476] LOG:  checkpoint starting: time
+2024-11-24 20:46:19.428 UTC [476] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=9 kB, estimate=16 kB; lsn=0/542FF98, redo lsn=0/542FF60
+2024-11-24 20:51:19.520 UTC [476] LOG:  checkpoint starting: time
+2024-11-24 20:51:19.837 UTC [476] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=15 kB; lsn=0/5432E28, redo lsn=0/5432DF0
+2024-11-24 20:56:19.865 UTC [476] LOG:  checkpoint starting: time
+2024-11-24 20:56:20.783 UTC [476] LOG:  checkpoint complete: wrote 10 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.905 s, sync=0.003 s, total=0.919 s; sync files=6, longest=0.002 s, average=0.001 s; distance=46 kB, estimate=46 kB; lsn=0/543E868, redo lsn=0/543E830
+2024-11-24 21:01:19.882 UTC [476] LOG:  checkpoint starting: time
+2024-11-24 21:01:20.199 UTC [476] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=8 kB, estimate=42 kB; lsn=0/5440AD8, redo lsn=0/5440AA0
+2024-11-24 21:58:31.856 UTC [783] LOG:  starting PostgreSQL 16.4 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 13.3.0, 64-bit
+2024-11-24 21:58:31.857 UTC [783] LOG:  listening on IPv6 address "::1", port 5432
+2024-11-24 21:58:31.857 UTC [783] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-11-24 21:58:31.865 UTC [783] LOG:  listening on Unix socket "/home/cloudide/postgresql-run/.s.PGSQL.5432"
+2024-11-24 21:58:31.880 UTC [790] LOG:  database system was interrupted; last known up at 2024-11-24 21:01:20 UTC
+2024-11-24 21:58:31.949 UTC [790] LOG:  database system was not properly shut down; automatic recovery in progress
+2024-11-24 21:58:31.957 UTC [790] LOG:  redo starts at 0/5440AA0
+2024-11-24 21:58:31.962 UTC [790] LOG:  invalid record length at 0/5442E48: expected at least 24, got 0
+2024-11-24 21:58:31.963 UTC [790] LOG:  redo done at 0/5442E10 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2024-11-24 21:58:31.971 UTC [788] LOG:  checkpoint starting: end-of-recovery immediate wait
+2024-11-24 21:58:31.991 UTC [788] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.005 s, sync=0.005 s, total=0.023 s; sync files=5, longest=0.003 s, average=0.001 s; distance=8 kB, estimate=8 kB; lsn=0/5442E48, redo lsn=0/5442E48
+2024-11-24 21:58:31.997 UTC [783] LOG:  database system is ready to accept connections
+2024-11-24 21:58:32.114 UTC [814] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 21:58:32.114 UTC [814] HINT:  Is another postmaster (PID 783) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 21:58:32.231 UTC [824] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 21:58:32.231 UTC [824] HINT:  Is another postmaster (PID 783) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 21:58:32.455 UTC [850] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 21:58:32.455 UTC [850] HINT:  Is another postmaster (PID 783) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 21:58:32.747 UTC [862] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 21:58:32.747 UTC [862] HINT:  Is another postmaster (PID 783) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 21:58:32.950 UTC [870] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 21:58:32.950 UTC [870] HINT:  Is another postmaster (PID 783) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 21:58:33.154 UTC [882] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 21:58:33.154 UTC [882] HINT:  Is another postmaster (PID 783) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 21:58:33.357 UTC [891] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 21:58:33.357 UTC [891] HINT:  Is another postmaster (PID 783) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 21:58:33.649 UTC [901] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 21:58:33.649 UTC [901] HINT:  Is another postmaster (PID 783) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 21:58:33.852 UTC [910] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 21:58:33.852 UTC [910] HINT:  Is another postmaster (PID 783) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 21:58:34.056 UTC [920] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 21:58:34.056 UTC [920] HINT:  Is another postmaster (PID 783) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 21:58:34.348 UTC [929] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 21:58:34.348 UTC [929] HINT:  Is another postmaster (PID 783) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 21:58:34.548 UTC [938] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 21:58:34.548 UTC [938] HINT:  Is another postmaster (PID 783) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 21:58:34.746 UTC [947] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 21:58:34.746 UTC [947] HINT:  Is another postmaster (PID 783) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 21:58:34.846 UTC [956] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 21:58:34.846 UTC [956] HINT:  Is another postmaster (PID 783) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 21:58:34.952 UTC [965] FATAL:  lock file "postmaster.pid" already exists
+2024-11-24 21:58:34.952 UTC [965] HINT:  Is another postmaster (PID 783) running in data directory "/home/cloudide/pgdata"?
+2024-11-24 22:03:32.092 UTC [788] LOG:  checkpoint starting: time
+2024-11-24 22:03:32.410 UTC [788] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=10 kB, estimate=10 kB; lsn=0/54458A0, redo lsn=0/5445868
+2024-11-24 22:08:32.506 UTC [788] LOG:  checkpoint starting: time
+2024-11-24 22:08:32.823 UTC [788] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=10 kB, estimate=10 kB; lsn=0/5448310, redo lsn=0/54482D8
+2024-11-24 22:13:32.922 UTC [788] LOG:  checkpoint starting: time
+2024-11-24 22:13:33.239 UTC [788] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=10 kB, estimate=10 kB; lsn=0/544AED0, redo lsn=0/544AE98
+2024-11-24 22:18:32.339 UTC [788] LOG:  checkpoint starting: time
+2024-11-24 22:18:32.656 UTC [788] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=10 kB, estimate=10 kB; lsn=0/544D8F0, redo lsn=0/544D8B8
+2024-11-24 22:23:32.660 UTC [788] LOG:  checkpoint starting: time
+2024-11-24 22:23:32.976 UTC [788] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=11 kB; lsn=0/54508C8, redo lsn=0/5450890
+2024-11-24 22:28:33.074 UTC [788] LOG:  checkpoint starting: time
+2024-11-24 22:28:33.390 UTC [788] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=11 kB; lsn=0/5453620, redo lsn=0/54535E8
+2024-11-24 22:33:33.490 UTC [788] LOG:  checkpoint starting: time
+2024-11-24 22:33:33.806 UTC [788] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=13 kB; lsn=0/5456AF0, redo lsn=0/5456AB8
+2024-11-24 22:38:33.906 UTC [788] LOG:  checkpoint starting: time
+2024-11-24 22:38:34.423 UTC [788] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.503 s, sync=0.004 s, total=0.518 s; sync files=5, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=14 kB; lsn=0/545A468, redo lsn=0/545A430
+2024-11-24 22:43:33.451 UTC [788] LOG:  checkpoint starting: time
+2024-11-24 22:43:33.768 UTC [788] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=5 kB, estimate=13 kB; lsn=0/545BC60, redo lsn=0/545BC28
+2024-11-24 22:48:33.831 UTC [788] LOG:  checkpoint starting: time
+2024-11-24 22:48:34.146 UTC [788] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=6 kB, estimate=12 kB; lsn=0/545D840, redo lsn=0/545D808
+2024-11-24 22:53:33.246 UTC [788] LOG:  checkpoint starting: time
+2024-11-24 22:53:33.563 UTC [788] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=6 kB, estimate=12 kB; lsn=0/545F378, redo lsn=0/545F340
+2024-11-24 22:58:33.663 UTC [788] LOG:  checkpoint starting: time
+2024-11-24 22:58:33.981 UTC [788] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.005 s, total=0.318 s; sync files=4, longest=0.004 s, average=0.002 s; distance=7 kB, estimate=11 kB; lsn=0/54610E0, redo lsn=0/54610A8
+2024-11-24 23:03:34.060 UTC [788] LOG:  checkpoint starting: time
+2024-11-24 23:03:34.378 UTC [788] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.004 s, average=0.001 s; distance=8 kB, estimate=11 kB; lsn=0/5463378, redo lsn=0/5463340
+2024-11-24 23:08:34.478 UTC [788] LOG:  checkpoint starting: time
+2024-11-24 23:08:34.795 UTC [788] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.004 s, average=0.001 s; distance=9 kB, estimate=11 kB; lsn=0/54657D8, redo lsn=0/54657A0
+2024-11-24 23:13:34.886 UTC [788] LOG:  checkpoint starting: time
+2024-11-24 23:13:35.202 UTC [788] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=11 kB; lsn=0/5468650, redo lsn=0/5468618
+2024-11-24 23:18:34.301 UTC [788] LOG:  checkpoint starting: time
+2024-11-24 23:18:34.617 UTC [788] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=12 kB, estimate=12 kB; lsn=0/546B8E0, redo lsn=0/546B8A8
+2024-11-24 23:23:34.717 UTC [788] LOG:  checkpoint starting: time
+2024-11-24 23:23:35.034 UTC [788] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=12 kB, estimate=12 kB; lsn=0/546EBF8, redo lsn=0/546EBC0
+2024-11-24 23:28:34.130 UTC [788] LOG:  checkpoint starting: time
+2024-11-24 23:28:34.446 UTC [788] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=13 kB; lsn=0/5472088, redo lsn=0/5472050
+2024-11-24 23:33:34.546 UTC [788] LOG:  checkpoint starting: time
+2024-11-24 23:33:34.862 UTC [788] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=12 kB; lsn=0/5474EA8, redo lsn=0/5474E70
+2024-11-24 23:38:34.962 UTC [788] LOG:  checkpoint starting: time
+2024-11-24 23:38:35.279 UTC [788] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=12 kB; lsn=0/5477B28, redo lsn=0/5477AF0
+2024-11-24 23:43:34.379 UTC [788] LOG:  checkpoint starting: time
+2024-11-24 23:43:34.695 UTC [788] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=13 kB; lsn=0/547B100, redo lsn=0/547B0C8
+2024-11-24 23:48:34.790 UTC [788] LOG:  checkpoint starting: time
+2024-11-24 23:48:35.106 UTC [788] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=14 kB; lsn=0/547E9A0, redo lsn=0/547E968
+2024-11-24 23:53:34.203 UTC [788] LOG:  checkpoint starting: time
+2024-11-24 23:53:34.521 UTC [788] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.304 s, sync=0.004 s, total=0.319 s; sync files=4, longest=0.003 s, average=0.001 s; distance=12 kB, estimate=14 kB; lsn=0/5481C70, redo lsn=0/5481C38
+2024-11-24 23:58:34.551 UTC [788] LOG:  checkpoint starting: time
+2024-11-24 23:58:34.869 UTC [788] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.005 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=13 kB; lsn=0/5485090, redo lsn=0/5485058
+2024-11-25 00:03:34.870 UTC [788] LOG:  checkpoint starting: time
+2024-11-25 00:03:35.187 UTC [788] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=13 kB; lsn=0/5488750, redo lsn=0/5488718
+2024-11-25 00:08:34.286 UTC [788] LOG:  checkpoint starting: time
+2024-11-25 00:08:34.603 UTC [788] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=14 kB; lsn=0/548C090, redo lsn=0/548C058
+2024-11-25 00:13:34.695 UTC [788] LOG:  checkpoint starting: time
+2024-11-25 00:13:35.012 UTC [788] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=15 kB, estimate=15 kB; lsn=0/548FD70, redo lsn=0/548FD38
+2024-11-25 00:18:34.110 UTC [788] LOG:  checkpoint starting: time
+2024-11-25 00:18:34.427 UTC [788] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=15 kB; lsn=0/54937B8, redo lsn=0/5493780
+2024-11-25 00:23:34.443 UTC [788] LOG:  checkpoint starting: time
+2024-11-25 00:23:34.762 UTC [788] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.305 s, sync=0.004 s, total=0.319 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=15 kB; lsn=0/5496FD0, redo lsn=0/5496F98
+2024-11-25 00:28:34.860 UTC [788] LOG:  checkpoint starting: time
+2024-11-25 00:28:35.376 UTC [788] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.503 s, sync=0.004 s, total=0.517 s; sync files=5, longest=0.003 s, average=0.001 s; distance=16 kB, estimate=16 kB; lsn=0/549B2D0, redo lsn=0/549B298
+2024-11-25 00:33:34.474 UTC [788] LOG:  checkpoint starting: time
+2024-11-25 00:33:35.392 UTC [788] LOG:  checkpoint complete: wrote 10 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.905 s, sync=0.003 s, total=0.919 s; sync files=6, longest=0.002 s, average=0.001 s; distance=50 kB, estimate=50 kB; lsn=0/54A7B90, redo lsn=0/54A7B58
+2024-11-25 00:38:34.400 UTC [788] LOG:  checkpoint starting: time
+2024-11-25 00:38:34.712 UTC [788] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.003 s, total=0.312 s; sync files=4, longest=0.003 s, average=0.001 s; distance=9 kB, estimate=46 kB; lsn=0/54AA190, redo lsn=0/54AA158
+2024-11-25 00:43:34.810 UTC [788] LOG:  checkpoint starting: time
+2024-11-25 00:43:35.221 UTC [788] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.402 s, sync=0.003 s, total=0.411 s; sync files=5, longest=0.002 s, average=0.001 s; distance=10 kB, estimate=42 kB; lsn=0/54ACC68, redo lsn=0/54ACC30
+2024-11-25 00:48:34.319 UTC [788] LOG:  checkpoint starting: time
+2024-11-25 00:48:34.630 UTC [788] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.003 s, total=0.311 s; sync files=4, longest=0.002 s, average=0.001 s; distance=12 kB, estimate=39 kB; lsn=0/54AFCD0, redo lsn=0/54AFC98
+2024-11-25 00:53:34.730 UTC [788] LOG:  checkpoint starting: time
+2024-11-25 00:53:35.041 UTC [788] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.003 s, total=0.311 s; sync files=4, longest=0.002 s, average=0.001 s; distance=12 kB, estimate=36 kB; lsn=0/54B2DF8, redo lsn=0/54B2DC0
+2024-11-25 00:58:34.051 UTC [788] LOG:  checkpoint starting: time
+2024-11-25 00:58:34.365 UTC [788] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.315 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=34 kB; lsn=0/54B63E8, redo lsn=0/54B63B0
+2024-11-25 01:03:34.462 UTC [788] LOG:  checkpoint starting: time
+2024-11-25 01:03:34.778 UTC [788] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=32 kB; lsn=0/54B9C10, redo lsn=0/54B9BD8
+2024-11-25 01:08:34.820 UTC [788] LOG:  checkpoint starting: time
+2024-11-25 01:08:35.136 UTC [788] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=30 kB; lsn=0/54BD798, redo lsn=0/54BD760
+2024-11-25 01:13:34.234 UTC [788] LOG:  checkpoint starting: time
+2024-11-25 01:13:34.551 UTC [788] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=16 kB, estimate=29 kB; lsn=0/54C18A8, redo lsn=0/54C1870
+2024-11-25 01:18:34.650 UTC [788] LOG:  checkpoint starting: time
+2024-11-25 01:18:34.968 UTC [788] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=27 kB; lsn=0/54C53C0, redo lsn=0/54C5388
+2024-11-25 01:23:35.068 UTC [788] LOG:  checkpoint starting: time
+2024-11-25 01:23:35.385 UTC [788] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=15 kB, estimate=26 kB; lsn=0/54C9188, redo lsn=0/54C9150
+2024-11-25 01:28:35.482 UTC [788] LOG:  checkpoint starting: time
+2024-11-25 01:28:35.797 UTC [788] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=25 kB; lsn=0/54CC930, redo lsn=0/54CC8F8
+2024-11-25 01:33:35.894 UTC [788] LOG:  checkpoint starting: time
+2024-11-25 01:33:36.212 UTC [788] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=16 kB, estimate=24 kB; lsn=0/54D0B10, redo lsn=0/54D0AD8
+2024-11-25 01:38:35.312 UTC [788] LOG:  checkpoint starting: time
+2024-11-25 01:38:35.628 UTC [788] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=15 kB, estimate=23 kB; lsn=0/54D4988, redo lsn=0/54D4950
+2024-11-25 01:43:35.727 UTC [788] LOG:  checkpoint starting: time
+2024-11-25 01:43:36.044 UTC [788] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=17 kB, estimate=22 kB; lsn=0/54D8DF8, redo lsn=0/54D8DC0
+2024-11-25 01:48:35.143 UTC [788] LOG:  checkpoint starting: time
+2024-11-25 01:48:35.460 UTC [788] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=16 kB, estimate=22 kB; lsn=0/54DCF50, redo lsn=0/54DCF18
+2024-11-25 12:59:24.140 UTC [2995] FATAL:  lock file "postmaster.pid" already exists
+2024-11-25 12:59:24.140 UTC [2995] HINT:  Is another postmaster (PID 783) running in data directory "/home/cloudide/pgdata"?
+2024-11-25 12:59:24.176 UTC [3003] FATAL:  lock file "postmaster.pid" already exists
+2024-11-25 12:59:24.176 UTC [3003] HINT:  Is another postmaster (PID 783) running in data directory "/home/cloudide/pgdata"?
+2024-11-25 12:59:24.309 UTC [3023] FATAL:  lock file "postmaster.pid" already exists
+2024-11-25 12:59:24.309 UTC [3023] HINT:  Is another postmaster (PID 783) running in data directory "/home/cloudide/pgdata"?
+2024-11-25 12:59:24.407 UTC [3036] FATAL:  lock file "postmaster.pid" already exists
+2024-11-25 12:59:24.407 UTC [3036] HINT:  Is another postmaster (PID 783) running in data directory "/home/cloudide/pgdata"?
+2024-11-25 12:59:24.525 UTC [3045] FATAL:  lock file "postmaster.pid" already exists
+2024-11-25 12:59:24.525 UTC [3045] HINT:  Is another postmaster (PID 783) running in data directory "/home/cloudide/pgdata"?
+2024-11-25 12:59:24.640 UTC [3054] FATAL:  lock file "postmaster.pid" already exists
+2024-11-25 12:59:24.640 UTC [3054] HINT:  Is another postmaster (PID 783) running in data directory "/home/cloudide/pgdata"?
+2024-11-25 12:59:24.755 UTC [3063] FATAL:  lock file "postmaster.pid" already exists
+2024-11-25 12:59:24.755 UTC [3063] HINT:  Is another postmaster (PID 783) running in data directory "/home/cloudide/pgdata"?
+2024-11-25 12:59:24.872 UTC [3072] FATAL:  lock file "postmaster.pid" already exists
+2024-11-25 12:59:24.872 UTC [3072] HINT:  Is another postmaster (PID 783) running in data directory "/home/cloudide/pgdata"?
+2024-11-25 12:59:24.986 UTC [3081] FATAL:  lock file "postmaster.pid" already exists
+2024-11-25 12:59:24.986 UTC [3081] HINT:  Is another postmaster (PID 783) running in data directory "/home/cloudide/pgdata"?
+2024-11-25 12:59:25.102 UTC [3090] FATAL:  lock file "postmaster.pid" already exists
+2024-11-25 12:59:25.102 UTC [3090] HINT:  Is another postmaster (PID 783) running in data directory "/home/cloudide/pgdata"?
+2024-11-25 12:59:25.217 UTC [3099] FATAL:  lock file "postmaster.pid" already exists
+2024-11-25 12:59:25.217 UTC [3099] HINT:  Is another postmaster (PID 783) running in data directory "/home/cloudide/pgdata"?
+2024-11-25 12:59:25.334 UTC [3122] FATAL:  lock file "postmaster.pid" already exists
+2024-11-25 12:59:25.334 UTC [3122] HINT:  Is another postmaster (PID 783) running in data directory "/home/cloudide/pgdata"?
+2024-11-25 12:59:25.450 UTC [3131] FATAL:  lock file "postmaster.pid" already exists
+2024-11-25 12:59:25.450 UTC [3131] HINT:  Is another postmaster (PID 783) running in data directory "/home/cloudide/pgdata"?
+2024-11-25 12:59:25.610 UTC [3140] FATAL:  lock file "postmaster.pid" already exists
+2024-11-25 12:59:25.610 UTC [3140] HINT:  Is another postmaster (PID 783) running in data directory "/home/cloudide/pgdata"?
+2024-11-25 12:59:25.718 UTC [3154] FATAL:  lock file "postmaster.pid" already exists
+2024-11-25 12:59:25.718 UTC [3154] HINT:  Is another postmaster (PID 783) running in data directory "/home/cloudide/pgdata"?
+2024-11-25 12:59:25.838 UTC [3164] FATAL:  lock file "postmaster.pid" already exists
+2024-11-25 12:59:25.838 UTC [3164] HINT:  Is another postmaster (PID 783) running in data directory "/home/cloudide/pgdata"?
+2024-11-25 13:40:44.186 UTC [7076] FATAL:  lock file "postmaster.pid" already exists
+2024-11-25 13:40:44.186 UTC [7076] HINT:  Is another postmaster (PID 783) running in data directory "/home/cloudide/pgdata"?
+2024-11-25 13:41:48.676 UTC [7251] FATAL:  lock file "postmaster.pid" already exists
+2024-11-25 13:41:48.676 UTC [7251] HINT:  Is another postmaster (PID 783) running in data directory "/home/cloudide/pgdata"?
+2024-11-25 13:43:01.438 UTC [7399] LOG:  starting PostgreSQL 16.4 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 13.3.0, 64-bit
+2024-11-25 13:43:01.439 UTC [7399] LOG:  listening on IPv6 address "::1", port 5432
+2024-11-25 13:43:01.439 UTC [7399] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-11-25 13:43:01.444 UTC [7399] LOG:  listening on Unix socket "/home/cloudide/postgresql-run/.s.PGSQL.5432"
+2024-11-25 13:43:01.457 UTC [7402] LOG:  database system was interrupted; last known up at 2024-11-25 01:48:35 UTC
+2024-11-25 13:43:01.485 UTC [7402] LOG:  database system was not properly shut down; automatic recovery in progress
+2024-11-25 13:43:01.496 UTC [7402] LOG:  redo starts at 0/54DCF18
+2024-11-25 13:43:01.496 UTC [7402] LOG:  invalid record length at 0/54DD000: expected at least 24, got 0
+2024-11-25 13:43:01.496 UTC [7402] LOG:  redo done at 0/54DCFC8 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2024-11-25 13:43:01.504 UTC [7400] LOG:  checkpoint starting: end-of-recovery immediate wait
+2024-11-25 13:43:01.523 UTC [7400] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.005 s, sync=0.002 s, total=0.021 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/54DD000, redo lsn=0/54DD000
+2024-11-25 13:43:01.527 UTC [7399] LOG:  database system is ready to accept connections
+2024-11-25 13:48:01.621 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 13:48:02.038 UTC [7400] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.403 s, sync=0.004 s, total=0.417 s; sync files=5, longest=0.003 s, average=0.001 s; distance=18 kB, estimate=18 kB; lsn=0/54E19A0, redo lsn=0/54E1968
+2024-11-25 13:53:01.137 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 13:53:01.454 UTC [7400] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=18 kB, estimate=18 kB; lsn=0/54E6278, redo lsn=0/54E6240
+2024-11-25 13:58:01.553 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 13:58:02.069 UTC [7400] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.503 s, sync=0.004 s, total=0.517 s; sync files=5, longest=0.003 s, average=0.001 s; distance=18 kB, estimate=18 kB; lsn=0/54EAAC0, redo lsn=0/54EAA88
+2024-11-25 14:03:01.125 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 14:03:01.442 UTC [7400] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=10 kB, estimate=17 kB; lsn=0/54ED2C8, redo lsn=0/54ED290
+2024-11-25 14:08:01.510 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 14:08:01.827 UTC [7400] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=16 kB; lsn=0/54EFFC8, redo lsn=0/54EFF90
+2024-11-25 14:13:01.927 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 14:13:02.243 UTC [7400] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=16 kB; lsn=0/54F34A8, redo lsn=0/54F3470
+2024-11-25 14:18:01.341 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 14:18:01.857 UTC [7400] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.503 s, sync=0.004 s, total=0.516 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=16 kB; lsn=0/54F6E58, redo lsn=0/54F6E20
+2024-11-25 14:23:01.903 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 14:23:02.220 UTC [7400] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=7 kB, estimate=15 kB; lsn=0/54F8D40, redo lsn=0/54F8D08
+2024-11-25 14:28:01.317 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 14:28:01.633 UTC [7400] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=7 kB, estimate=14 kB; lsn=0/54FAC08, redo lsn=0/54FABD0
+2024-11-25 14:33:01.728 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 14:33:02.046 UTC [7400] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.004 s, average=0.001 s; distance=8 kB, estimate=14 kB; lsn=0/54FCF40, redo lsn=0/54FCF08
+2024-11-25 14:38:01.145 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 14:38:01.457 UTC [7400] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.003 s, total=0.312 s; sync files=4, longest=0.003 s, average=0.001 s; distance=10 kB, estimate=13 kB; lsn=0/54FFA08, redo lsn=0/54FF9D0
+2024-11-25 14:43:01.557 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 14:43:01.873 UTC [7400] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=10 kB, estimate=13 kB; lsn=0/5502540, redo lsn=0/5502508
+2024-11-25 14:48:01.973 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 14:48:02.290 UTC [7400] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=8 kB, estimate=12 kB; lsn=0/5504610, redo lsn=0/55045D8
+2024-11-25 14:53:01.390 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 14:53:01.707 UTC [7400] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=9 kB, estimate=12 kB; lsn=0/5506B70, redo lsn=0/5506B38
+2024-11-25 14:58:01.805 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 14:58:02.121 UTC [7400] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=9 kB, estimate=12 kB; lsn=0/5509360, redo lsn=0/5509328
+2024-11-25 15:03:01.218 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 15:03:01.535 UTC [7400] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=12 kB; lsn=0/550C030, redo lsn=0/550BFE0
+2024-11-25 15:08:01.634 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 15:08:01.951 UTC [7400] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=12 kB; lsn=0/550EE68, redo lsn=0/550EE30
+2024-11-25 15:13:01.959 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 15:13:02.274 UTC [7400] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=12 kB; lsn=0/5511E58, redo lsn=0/5511E20
+2024-11-25 15:18:01.373 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 15:18:01.691 UTC [7400] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=12 kB; lsn=0/5514C38, redo lsn=0/5514C00
+2024-11-25 15:23:01.713 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 15:23:02.029 UTC [7400] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=12 kB, estimate=12 kB; lsn=0/5517C48, redo lsn=0/5517C10
+2024-11-25 15:28:01.126 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 15:28:01.442 UTC [7400] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=10 kB, estimate=11 kB; lsn=0/551A7E0, redo lsn=0/551A7A8
+2024-11-25 15:33:01.541 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 15:33:01.858 UTC [7400] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=12 kB, estimate=12 kB; lsn=0/551D948, redo lsn=0/551D910
+2024-11-25 15:38:01.958 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 15:38:02.475 UTC [7400] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.504 s, sync=0.004 s, total=0.518 s; sync files=5, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=13 kB; lsn=0/5521028, redo lsn=0/5520FF0
+2024-11-25 15:43:01.573 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 15:43:01.890 UTC [7400] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=5 kB, estimate=12 kB; lsn=0/5522608, redo lsn=0/55225D0
+2024-11-25 15:48:01.989 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 15:48:02.306 UTC [7400] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=7 kB, estimate=12 kB; lsn=0/55243E8, redo lsn=0/55243B0
+2024-11-25 15:53:01.406 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 15:53:01.722 UTC [7400] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=7 kB, estimate=11 kB; lsn=0/55263B8, redo lsn=0/5526380
+2024-11-25 15:58:01.809 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 15:58:02.126 UTC [7400] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=8 kB, estimate=11 kB; lsn=0/5528720, redo lsn=0/55286E8
+2024-11-25 16:53:02.172 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 16:53:03.184 UTC [7400] LOG:  checkpoint complete: wrote 11 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.004 s, sync=0.003 s, total=1.012 s; sync files=11, longest=0.003 s, average=0.001 s; distance=10 kB, estimate=11 kB; lsn=0/552CF30, redo lsn=0/552B1A0
+2024-11-25 16:58:02.259 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 16:58:02.870 UTC [7400] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.603 s, sync=0.003 s, total=0.611 s; sync files=7, longest=0.002 s, average=0.001 s; distance=9 kB, estimate=11 kB; lsn=0/552D798, redo lsn=0/552D760
+2024-11-25 17:03:02.969 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 17:03:03.280 UTC [7400] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.003 s, total=0.311 s; sync files=4, longest=0.002 s, average=0.001 s; distance=9 kB, estimate=11 kB; lsn=0/552FDD8, redo lsn=0/552FDA0
+2024-11-25 17:08:02.378 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 17:08:02.689 UTC [7400] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.003 s, total=0.311 s; sync files=4, longest=0.002 s, average=0.001 s; distance=10 kB, estimate=11 kB; lsn=0/5532660, redo lsn=0/5532628
+2024-11-25 17:13:02.786 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 17:13:03.096 UTC [7400] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.003 s, total=0.311 s; sync files=4, longest=0.002 s, average=0.001 s; distance=11 kB, estimate=11 kB; lsn=0/5535548, redo lsn=0/5535510
+2024-11-25 17:18:02.125 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 17:18:03.339 UTC [7400] LOG:  checkpoint complete: wrote 13 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.205 s, sync=0.003 s, total=1.215 s; sync files=8, longest=0.003 s, average=0.001 s; distance=57 kB, estimate=57 kB; lsn=0/5543C90, redo lsn=0/5543C58
+2024-11-25 17:23:02.357 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 17:23:02.674 UTC [7400] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=53 kB; lsn=0/5547410, redo lsn=0/55473D8
+2024-11-25 17:28:02.773 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 17:28:03.089 UTC [7400] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=49 kB; lsn=0/554A228, redo lsn=0/554A1F0
+2024-11-25 17:33:02.121 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 17:33:02.438 UTC [7400] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=12 kB, estimate=45 kB; lsn=0/554D4C0, redo lsn=0/554D488
+2024-11-25 17:38:02.537 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 17:38:02.854 UTC [7400] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=12 kB, estimate=42 kB; lsn=0/5550898, redo lsn=0/5550860
+2024-11-25 17:43:02.953 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 17:43:03.270 UTC [7400] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=39 kB; lsn=0/55540A0, redo lsn=0/5554068
+2024-11-25 17:48:02.369 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 17:48:02.685 UTC [7400] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=36 kB; lsn=0/5557760, redo lsn=0/5557728
+2024-11-25 17:53:02.782 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 17:53:03.100 UTC [7400] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=34 kB; lsn=0/555AD78, redo lsn=0/555AD40
+2024-11-25 17:58:02.197 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 17:58:02.514 UTC [7400] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=32 kB; lsn=0/555E590, redo lsn=0/555E558
+2024-11-25 18:03:02.613 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 18:03:02.930 UTC [7400] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=30 kB; lsn=0/5561EB8, redo lsn=0/5561E80
+2024-11-25 18:08:03.031 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 18:08:03.347 UTC [7400] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=29 kB; lsn=0/5565850, redo lsn=0/5565818
+2024-11-25 18:13:03.447 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 18:13:03.764 UTC [7400] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=27 kB; lsn=0/5569300, redo lsn=0/55692C8
+2024-11-25 18:18:03.833 UTC [7400] LOG:  checkpoint starting: time
+2024-11-25 18:18:04.350 UTC [7400] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.504 s, sync=0.004 s, total=0.518 s; sync files=5, longest=0.003 s, average=0.001 s; distance=15 kB, estimate=26 kB; lsn=0/556CF70, redo lsn=0/556CF38
+2024-11-26 01:09:37.908 UTC [668] LOG:  starting PostgreSQL 16.4 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 13.3.0, 64-bit
+2024-11-26 01:09:37.909 UTC [668] LOG:  listening on IPv6 address "::1", port 5432
+2024-11-26 01:09:37.910 UTC [668] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-11-26 01:09:37.915 UTC [668] LOG:  listening on Unix socket "/home/cloudide/postgresql-run/.s.PGSQL.5432"
+2024-11-26 01:09:37.927 UTC [682] LOG:  database system was interrupted; last known up at 2024-11-25 18:18:04 UTC
+2024-11-26 01:09:38.003 UTC [682] LOG:  database system was not properly shut down; automatic recovery in progress
+2024-11-26 01:09:38.008 UTC [682] LOG:  redo starts at 0/556CF38
+2024-11-26 01:09:38.013 UTC [682] LOG:  invalid record length at 0/556EBF0: expected at least 24, got 0
+2024-11-26 01:09:38.014 UTC [682] LOG:  redo done at 0/556EBB8 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2024-11-26 01:09:38.019 UTC [680] LOG:  checkpoint starting: end-of-recovery immediate wait
+2024-11-26 01:09:38.032 UTC [680] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.004 s, sync=0.004 s, total=0.015 s; sync files=5, longest=0.002 s, average=0.001 s; distance=7 kB, estimate=7 kB; lsn=0/556EBF0, redo lsn=0/556EBF0
+2024-11-26 01:09:38.037 UTC [668] LOG:  database system is ready to accept connections
+2024-11-26 01:09:38.140 UTC [697] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 01:09:38.140 UTC [697] HINT:  Is another postmaster (PID 668) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 01:09:38.400 UTC [706] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 01:09:38.400 UTC [706] HINT:  Is another postmaster (PID 668) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 01:09:38.595 UTC [715] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 01:09:38.595 UTC [715] HINT:  Is another postmaster (PID 668) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 01:09:38.704 UTC [724] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 01:09:38.704 UTC [724] HINT:  Is another postmaster (PID 668) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 01:09:38.905 UTC [737] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 01:09:38.905 UTC [737] HINT:  Is another postmaster (PID 668) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 01:09:39.021 UTC [765] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 01:09:39.021 UTC [765] HINT:  Is another postmaster (PID 668) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 01:09:39.138 UTC [774] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 01:09:39.138 UTC [774] HINT:  Is another postmaster (PID 668) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 01:09:39.253 UTC [783] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 01:09:39.253 UTC [783] HINT:  Is another postmaster (PID 668) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 01:09:39.497 UTC [802] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 01:09:39.497 UTC [802] HINT:  Is another postmaster (PID 668) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 01:09:39.609 UTC [811] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 01:09:39.609 UTC [811] HINT:  Is another postmaster (PID 668) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 01:09:39.805 UTC [821] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 01:09:39.805 UTC [821] HINT:  Is another postmaster (PID 668) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 01:09:39.998 UTC [836] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 01:09:39.998 UTC [836] HINT:  Is another postmaster (PID 668) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 01:09:40.199 UTC [848] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 01:09:40.199 UTC [848] HINT:  Is another postmaster (PID 668) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 01:09:40.310 UTC [857] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 01:09:40.310 UTC [857] HINT:  Is another postmaster (PID 668) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 01:09:40.510 UTC [866] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 01:09:40.510 UTC [866] HINT:  Is another postmaster (PID 668) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 01:14:38.131 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 01:14:38.442 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.003 s, total=0.311 s; sync files=4, longest=0.002 s, average=0.001 s; distance=8 kB, estimate=8 kB; lsn=0/5570C58, redo lsn=0/5570C20
+2024-11-26 01:19:38.451 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 01:19:38.767 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=9 kB, estimate=9 kB; lsn=0/5573280, redo lsn=0/5573248
+2024-11-26 01:24:38.867 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 01:24:39.184 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=10 kB, estimate=10 kB; lsn=0/5575B30, redo lsn=0/5575AF8
+2024-11-26 01:29:38.283 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 01:29:38.600 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=11 kB; lsn=0/55788C0, redo lsn=0/5578888
+2024-11-26 01:34:38.700 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 01:34:39.017 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=13 kB; lsn=0/557BFD8, redo lsn=0/557BFA0
+2024-11-26 01:39:38.116 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 01:39:38.433 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=13 kB; lsn=0/557F740, redo lsn=0/557F708
+2024-11-26 01:44:38.527 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 01:44:38.844 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=15 kB, estimate=15 kB; lsn=0/55836C8, redo lsn=0/5583690
+2024-11-26 01:49:38.943 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 01:49:39.260 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=16 kB, estimate=16 kB; lsn=0/5587730, redo lsn=0/55876F8
+2024-11-26 01:54:38.350 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 01:54:38.666 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=15 kB; lsn=0/558ADD8, redo lsn=0/558ADA0
+2024-11-26 01:59:38.762 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 01:59:39.078 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=12 kB, estimate=15 kB; lsn=0/558E0D0, redo lsn=0/558E098
+2024-11-26 02:04:38.177 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 02:04:38.494 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=15 kB, estimate=15 kB; lsn=0/5591D90, redo lsn=0/5591D58
+2024-11-26 02:09:38.519 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 02:09:38.836 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=16 kB, estimate=16 kB; lsn=0/5595F00, redo lsn=0/5595EC8
+2024-11-26 02:14:38.936 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 02:14:39.253 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=17 kB, estimate=17 kB; lsn=0/559A418, redo lsn=0/559A3E0
+2024-11-26 02:19:38.306 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 02:19:38.623 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=18 kB, estimate=18 kB; lsn=0/559EEE8, redo lsn=0/559EEB0
+2024-11-26 02:24:38.704 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 02:24:39.022 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=18 kB, estimate=18 kB; lsn=0/55A37A0, redo lsn=0/55A3768
+2024-11-26 02:29:38.121 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 02:29:38.434 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.003 s, total=0.313 s; sync files=4, longest=0.003 s, average=0.001 s; distance=18 kB, estimate=18 kB; lsn=0/55A8180, redo lsn=0/55A8148
+2024-11-26 02:34:38.534 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 02:34:39.052 UTC [680] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.503 s, sync=0.004 s, total=0.518 s; sync files=5, longest=0.003 s, average=0.001 s; distance=18 kB, estimate=18 kB; lsn=0/55ACC60, redo lsn=0/55ACC28
+2024-11-26 02:39:38.151 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 02:39:38.468 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=10 kB, estimate=17 kB; lsn=0/55AF858, redo lsn=0/55AF820
+2024-11-26 02:44:38.567 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 02:44:38.883 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=10 kB, estimate=17 kB; lsn=0/55B2440, redo lsn=0/55B2408
+2024-11-26 02:49:38.983 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 02:49:39.497 UTC [680] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.503 s, sync=0.004 s, total=0.514 s; sync files=4, longest=0.003 s, average=0.001 s; distance=12 kB, estimate=16 kB; lsn=0/55B5680, redo lsn=0/55B5648
+2024-11-26 02:54:38.595 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 02:54:38.907 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.003 s, total=0.312 s; sync files=4, longest=0.003 s, average=0.001 s; distance=6 kB, estimate=15 kB; lsn=0/55B70E0, redo lsn=0/55B70A8
+2024-11-26 02:59:39.005 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 02:59:39.321 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.004 s, average=0.001 s; distance=7 kB, estimate=14 kB; lsn=0/55B8CE8, redo lsn=0/55B8CB0
+2024-11-26 03:04:39.418 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 03:04:39.733 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=16 kB, estimate=16 kB; lsn=0/55BCCF0, redo lsn=0/55BCCB8
+2024-11-26 03:09:39.831 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 03:09:40.146 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=12 kB, estimate=15 kB; lsn=0/55BFDF8, redo lsn=0/55BFDC0
+2024-11-26 03:14:39.228 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 03:14:40.205 UTC [680] LOG:  checkpoint complete: wrote 10 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.904 s, sync=0.002 s, total=0.977 s; sync files=6, longest=0.001 s, average=0.001 s; distance=54 kB, estimate=54 kB; lsn=0/55CD6A0, redo lsn=0/55CD668
+2024-11-26 03:19:39.303 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 03:19:39.620 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=50 kB; lsn=0/55D0EE0, redo lsn=0/55D0EA8
+2024-11-26 03:24:39.720 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 03:24:40.037 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=46 kB; lsn=0/55D4680, redo lsn=0/55D4648
+2024-11-26 03:29:39.065 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 03:29:39.583 UTC [680] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.504 s, sync=0.004 s, total=0.518 s; sync files=5, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=43 kB; lsn=0/55D7F78, redo lsn=0/55D7F40
+2024-11-26 03:33:44.903 UTC [55785] LOG:  could not receive data from client: Connection reset by peer
+2024-11-26 03:34:39.691 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 03:34:40.094 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.403 s; sync files=4, longest=0.003 s, average=0.001 s; distance=7 kB, estimate=39 kB; lsn=0/55D9CD8, redo lsn=0/55D9CA0
+2024-11-26 03:39:39.193 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 03:39:39.511 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=7 kB, estimate=36 kB; lsn=0/55DB9B0, redo lsn=0/55DB978
+2024-11-26 03:44:39.607 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 03:44:39.924 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=8 kB, estimate=33 kB; lsn=0/55DDD08, redo lsn=0/55DDCD0
+2024-11-26 03:49:40.023 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 03:49:40.437 UTC [680] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.403 s, sync=0.004 s, total=0.415 s; sync files=5, longest=0.004 s, average=0.001 s; distance=9 kB, estimate=31 kB; lsn=0/55E0320, redo lsn=0/55E02E8
+2024-11-26 03:54:40.493 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 03:54:40.810 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=9 kB, estimate=29 kB; lsn=0/55E2728, redo lsn=0/55E26F0
+2024-11-26 03:59:40.908 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 03:59:41.226 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=10 kB, estimate=27 kB; lsn=0/55E4FA0, redo lsn=0/55E4F68
+2024-11-26 04:04:40.297 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 04:04:40.614 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=25 kB; lsn=0/55E7F88, redo lsn=0/55E7F50
+2024-11-26 04:09:40.713 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 04:09:41.028 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=24 kB; lsn=0/55EAF30, redo lsn=0/55EAEF8
+2024-11-26 04:14:40.127 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 04:14:40.445 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=12 kB, estimate=23 kB; lsn=0/55EE1D0, redo lsn=0/55EE198
+2024-11-26 04:19:40.544 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 04:19:40.857 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.003 s, total=0.314 s; sync files=4, longest=0.003 s, average=0.001 s; distance=15 kB, estimate=22 kB; lsn=0/55F1FB8, redo lsn=0/55F1F80
+2024-11-26 04:24:40.955 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 04:24:41.271 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=21 kB; lsn=0/55F4EB0, redo lsn=0/55F4E78
+2024-11-26 04:29:40.367 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 04:29:40.684 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=12 kB, estimate=20 kB; lsn=0/55F8128, redo lsn=0/55F80F0
+2024-11-26 04:34:40.711 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 04:34:41.027 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=19 kB; lsn=0/55FB850, redo lsn=0/55FB818
+2024-11-26 04:39:40.126 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 04:39:40.443 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=19 kB; lsn=0/55FF298, redo lsn=0/55FF260
+2024-11-26 04:44:40.543 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 04:44:40.859 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=18 kB; lsn=0/56028E8, redo lsn=0/56028B0
+2024-11-26 04:49:40.955 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 04:49:41.271 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=18 kB; lsn=0/5606470, redo lsn=0/5606438
+2024-11-26 04:54:40.371 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 04:54:41.990 UTC [680] LOG:  checkpoint complete: wrote 17 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.606 s, sync=0.004 s, total=1.619 s; sync files=13, longest=0.003 s, average=0.001 s; distance=84 kB, estimate=84 kB; lsn=0/561B7E0, redo lsn=0/561B7A8
+2024-11-26 04:59:41.087 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 04:59:42.206 UTC [680] LOG:  checkpoint complete: wrote 12 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.105 s, sync=0.004 s, total=1.119 s; sync files=8, longest=0.003 s, average=0.001 s; distance=63 kB, estimate=82 kB; lsn=0/562B588, redo lsn=0/562B550
+2024-11-26 05:04:41.291 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 05:04:42.810 UTC [680] LOG:  checkpoint complete: wrote 16 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.506 s, sync=0.003 s, total=1.519 s; sync files=11, longest=0.002 s, average=0.001 s; distance=87 kB, estimate=87 kB; lsn=0/56411F8, redo lsn=0/56411C0
+2024-11-26 05:09:41.907 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 05:09:42.624 UTC [680] LOG:  checkpoint complete: wrote 8 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.704 s, sync=0.004 s, total=0.717 s; sync files=5, longest=0.003 s, average=0.001 s; distance=37 kB, estimate=82 kB; lsn=0/564A628, redo lsn=0/564A5F0
+2024-11-26 05:14:41.723 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 05:14:42.038 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.315 s; sync files=4, longest=0.003 s, average=0.001 s; distance=8 kB, estimate=74 kB; lsn=0/564C8C8, redo lsn=0/564C890
+2024-11-26 05:19:41.138 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 05:19:41.454 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=9 kB, estimate=68 kB; lsn=0/564ED98, redo lsn=0/564ED60
+2024-11-26 05:24:41.551 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 05:24:41.867 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=8 kB, estimate=62 kB; lsn=0/5651018, redo lsn=0/5650FE0
+2024-11-26 05:29:41.967 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 05:29:42.282 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=9 kB, estimate=57 kB; lsn=0/56537A8, redo lsn=0/5653770
+2024-11-26 05:34:41.391 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 05:34:41.704 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.003 s, total=0.313 s; sync files=4, longest=0.002 s, average=0.001 s; distance=11 kB, estimate=52 kB; lsn=0/5656480, redo lsn=0/5656448
+2024-11-26 05:39:41.803 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 05:39:42.118 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.315 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=48 kB; lsn=0/5659308, redo lsn=0/56592D0
+2024-11-26 05:44:41.218 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 05:44:41.534 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=44 kB; lsn=0/565CBA8, redo lsn=0/565CB70
+2024-11-26 05:54:41.731 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 05:54:42.046 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=12 kB, estimate=41 kB; lsn=0/565FC60, redo lsn=0/565FC28
+2024-11-26 05:59:41.146 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 05:59:41.461 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.315 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=38 kB; lsn=0/56633C0, redo lsn=0/5663388
+2024-11-26 06:04:41.491 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 06:04:41.809 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=36 kB; lsn=0/5666DA0, redo lsn=0/5666D68
+2024-11-26 06:09:41.907 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 06:09:42.223 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=15 kB, estimate=34 kB; lsn=0/566ABF8, redo lsn=0/566ABC0
+2024-11-26 06:14:41.321 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 06:14:42.239 UTC [680] LOG:  checkpoint complete: wrote 10 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.905 s, sync=0.003 s, total=0.918 s; sync files=6, longest=0.002 s, average=0.001 s; distance=57 kB, estimate=57 kB; lsn=0/5679338, redo lsn=0/5679300
+2024-11-26 06:19:41.335 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 06:19:41.952 UTC [680] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.603 s, sync=0.004 s, total=0.617 s; sync files=7, longest=0.003 s, average=0.001 s; distance=19 kB, estimate=54 kB; lsn=0/567E1F8, redo lsn=0/567E1C0
+2024-11-26 06:24:42.036 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 06:24:42.651 UTC [680] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.603 s, sync=0.003 s, total=0.616 s; sync files=7, longest=0.003 s, average=0.001 s; distance=20 kB, estimate=50 kB; lsn=0/5683420, redo lsn=0/56833E8
+2024-11-26 06:29:42.751 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 06:29:43.069 UTC [680] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.305 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=15 kB, estimate=47 kB; lsn=0/56872F0, redo lsn=0/56872B8
+2024-11-26 06:34:42.169 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 06:34:42.483 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.315 s; sync files=4, longest=0.003 s, average=0.001 s; distance=16 kB, estimate=44 kB; lsn=0/568B520, redo lsn=0/568B4E8
+2024-11-26 06:39:42.582 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 06:39:42.899 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=15 kB, estimate=41 kB; lsn=0/568F1C8, redo lsn=0/568F190
+2024-11-26 06:44:42.962 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 06:44:43.580 UTC [680] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.604 s, sync=0.004 s, total=0.618 s; sync files=7, longest=0.003 s, average=0.001 s; distance=22 kB, estimate=39 kB; lsn=0/5694C50, redo lsn=0/5694C18
+2024-11-26 06:49:42.680 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 06:49:42.994 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.315 s; sync files=4, longest=0.003 s, average=0.001 s; distance=16 kB, estimate=37 kB; lsn=0/5698DA0, redo lsn=0/5698D68
+2024-11-26 06:54:43.094 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 06:54:43.710 UTC [680] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.603 s, sync=0.004 s, total=0.617 s; sync files=7, longest=0.003 s, average=0.001 s; distance=25 kB, estimate=35 kB; lsn=0/56A0D78, redo lsn=0/569F328
+2024-11-26 06:59:43.807 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 06:59:44.124 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=23 kB, estimate=34 kB; lsn=0/56A5078, redo lsn=0/56A5040
+2024-11-26 07:04:43.224 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 07:04:43.841 UTC [680] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.604 s, sync=0.004 s, total=0.618 s; sync files=7, longest=0.003 s, average=0.001 s; distance=26 kB, estimate=33 kB; lsn=0/56ABBF0, redo lsn=0/56ABBB8
+2024-11-26 07:09:43.939 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 07:09:44.958 UTC [680] LOG:  checkpoint complete: wrote 11 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.004 s, sync=0.004 s, total=1.019 s; sync files=8, longest=0.003 s, average=0.001 s; distance=22 kB, estimate=32 kB; lsn=0/56B15B8, redo lsn=0/56B1580
+2024-11-26 07:14:44.058 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 07:14:44.470 UTC [680] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.403 s, sync=0.003 s, total=0.413 s; sync files=5, longest=0.003 s, average=0.001 s; distance=6 kB, estimate=30 kB; lsn=0/56B2FF8, redo lsn=0/56B2FC0
+2024-11-26 07:19:44.534 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 07:19:44.849 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=5 kB, estimate=27 kB; lsn=0/56B4788, redo lsn=0/56B4750
+2024-11-26 07:24:44.947 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 07:24:45.264 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=6 kB, estimate=25 kB; lsn=0/56B60B0, redo lsn=0/56B6078
+2024-11-26 07:29:44.363 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 07:29:44.679 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=6 kB, estimate=23 kB; lsn=0/56B7B88, redo lsn=0/56B7B50
+2024-11-26 07:34:44.777 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 07:34:45.088 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.002 s, total=0.311 s; sync files=4, longest=0.002 s, average=0.001 s; distance=7 kB, estimate=22 kB; lsn=0/56B9930, redo lsn=0/56B98F8
+2024-11-26 07:39:44.188 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 07:39:44.505 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=9 kB, estimate=20 kB; lsn=0/56BBF98, redo lsn=0/56BBF60
+2024-11-26 07:44:44.593 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 07:44:44.910 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=9 kB, estimate=19 kB; lsn=0/56BE648, redo lsn=0/56BE610
+2024-11-26 07:49:45.007 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 07:49:45.624 UTC [680] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.603 s, sync=0.004 s, total=0.618 s; sync files=7, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=19 kB; lsn=0/56C2120, redo lsn=0/56C20E8
+2024-11-26 07:54:45.723 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 07:54:46.340 UTC [680] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.603 s, sync=0.004 s, total=0.617 s; sync files=7, longest=0.003 s, average=0.001 s; distance=17 kB, estimate=19 kB; lsn=0/56C66D0, redo lsn=0/56C6698
+2024-11-26 07:59:45.439 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 07:59:46.758 UTC [680] LOG:  checkpoint complete: wrote 14 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.306 s, sync=0.003 s, total=1.319 s; sync files=10, longest=0.002 s, average=0.001 s; distance=64 kB, estimate=64 kB; lsn=0/56D6828, redo lsn=0/56D67F0
+2024-11-26 08:04:45.802 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 08:04:46.413 UTC [680] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.603 s, sync=0.003 s, total=0.611 s; sync files=7, longest=0.002 s, average=0.001 s; distance=18 kB, estimate=59 kB; lsn=0/56DB330, redo lsn=0/56DB2F8
+2024-11-26 08:09:45.513 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 08:09:45.827 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.003 s, total=0.315 s; sync files=4, longest=0.003 s, average=0.001 s; distance=12 kB, estimate=55 kB; lsn=0/56DE410, redo lsn=0/56DE3D8
+2024-11-26 08:14:45.927 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 08:14:46.544 UTC [680] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.603 s, sync=0.004 s, total=0.617 s; sync files=7, longest=0.003 s, average=0.001 s; distance=19 kB, estimate=51 kB; lsn=0/56E3028, redo lsn=0/56E2FF0
+2024-11-26 08:19:45.643 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 08:19:45.960 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=10 kB, estimate=47 kB; lsn=0/56E5BA0, redo lsn=0/56E5B68
+2024-11-26 08:24:46.059 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 08:24:46.376 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=44 kB; lsn=0/56E93F8, redo lsn=0/56E93C0
+2024-11-26 08:29:46.475 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 08:29:46.792 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=40 kB; lsn=0/56EC968, redo lsn=0/56EC930
+2024-11-26 08:34:46.891 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 08:34:47.207 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=12 kB, estimate=38 kB; lsn=0/56EFC00, redo lsn=0/56EFBC8
+2024-11-26 08:39:46.307 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 08:39:47.121 UTC [680] LOG:  checkpoint complete: wrote 9 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.803 s, sync=0.002 s, total=0.814 s; sync files=8, longest=0.001 s, average=0.001 s; distance=18 kB, estimate=36 kB; lsn=0/56F44D8, redo lsn=0/56F44A0
+2024-11-26 08:44:46.221 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 08:44:46.537 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=6 kB, estimate=33 kB; lsn=0/56F5D58, redo lsn=0/56F5D20
+2024-11-26 08:49:46.636 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 08:49:46.952 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.004 s, average=0.001 s; distance=8 kB, estimate=30 kB; lsn=0/56F7D80, redo lsn=0/56F7D48
+2024-11-26 08:54:47.052 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 08:54:47.368 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=7 kB, estimate=28 kB; lsn=0/56F9C98, redo lsn=0/56F9C60
+2024-11-26 08:59:47.454 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 08:59:47.770 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=9 kB, estimate=26 kB; lsn=0/56FC180, redo lsn=0/56FC148
+2024-11-26 09:04:47.869 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 09:04:48.184 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=24 kB; lsn=0/56FF060, redo lsn=0/56FF028
+2024-11-26 09:09:47.235 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 09:09:48.153 UTC [680] LOG:  checkpoint complete: wrote 10 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.905 s, sync=0.003 s, total=0.919 s; sync files=6, longest=0.003 s, average=0.001 s; distance=52 kB, estimate=52 kB; lsn=0/570C428, redo lsn=0/570C3F0
+2024-11-26 09:14:47.251 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 09:14:47.566 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.315 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=48 kB; lsn=0/570F2C8, redo lsn=0/570F290
+2024-11-26 09:19:47.663 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 09:19:47.976 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.004 s, total=0.313 s; sync files=4, longest=0.003 s, average=0.001 s; distance=12 kB, estimate=45 kB; lsn=0/57125B8, redo lsn=0/5712580
+2024-11-26 09:24:48.076 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 09:24:48.388 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.003 s, total=0.313 s; sync files=4, longest=0.003 s, average=0.001 s; distance=12 kB, estimate=41 kB; lsn=0/57158A0, redo lsn=0/5715868
+2024-11-26 09:29:48.487 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 09:29:48.797 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.003 s, total=0.310 s; sync files=4, longest=0.002 s, average=0.001 s; distance=14 kB, estimate=39 kB; lsn=0/57190B8, redo lsn=0/5719080
+2024-11-26 09:34:48.897 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 09:34:49.208 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.003 s, total=0.312 s; sync files=4, longest=0.002 s, average=0.001 s; distance=11 kB, estimate=36 kB; lsn=0/571BCF0, redo lsn=0/571BCB8
+2024-11-26 09:39:48.307 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 09:39:48.619 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.003 s, total=0.312 s; sync files=4, longest=0.002 s, average=0.001 s; distance=11 kB, estimate=33 kB; lsn=0/571EBF8, redo lsn=0/571EBC0
+2024-11-26 09:44:48.718 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 09:44:49.030 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.003 s, total=0.312 s; sync files=4, longest=0.002 s, average=0.001 s; distance=12 kB, estimate=31 kB; lsn=0/5721DA8, redo lsn=0/5721D70
+2024-11-26 09:49:48.109 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 09:49:48.421 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.003 s, total=0.312 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=29 kB; lsn=0/5725338, redo lsn=0/5725300
+2024-11-26 09:54:48.520 UTC [680] LOG:  checkpoint starting: time
+2024-11-26 09:54:48.831 UTC [680] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.003 s, total=0.311 s; sync files=4, longest=0.002 s, average=0.001 s; distance=12 kB, estimate=28 kB; lsn=0/5728680, redo lsn=0/5728648
+2024-11-26 15:37:28.099 UTC [702] LOG:  starting PostgreSQL 16.4 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 13.3.0, 64-bit
+2024-11-26 15:37:28.101 UTC [702] LOG:  listening on IPv6 address "::1", port 5432
+2024-11-26 15:37:28.101 UTC [702] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-11-26 15:37:28.108 UTC [702] LOG:  listening on Unix socket "/home/cloudide/postgresql-run/.s.PGSQL.5432"
+2024-11-26 15:37:28.126 UTC [709] LOG:  database system was interrupted; last known up at 2024-11-26 09:54:48 UTC
+2024-11-26 15:37:28.164 UTC [709] LOG:  database system was not properly shut down; automatic recovery in progress
+2024-11-26 15:37:28.171 UTC [709] LOG:  redo starts at 0/5728648
+2024-11-26 15:37:28.171 UTC [709] LOG:  invalid record length at 0/5728730: expected at least 24, got 0
+2024-11-26 15:37:28.172 UTC [709] LOG:  redo done at 0/57286F8 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2024-11-26 15:37:28.243 UTC [707] LOG:  checkpoint starting: end-of-recovery immediate wait
+2024-11-26 15:37:28.262 UTC [707] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.005 s, sync=0.002 s, total=0.022 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/5728730, redo lsn=0/5728730
+2024-11-26 15:37:28.268 UTC [702] LOG:  database system is ready to accept connections
+2024-11-26 15:37:28.367 UTC [736] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 15:37:28.367 UTC [736] HINT:  Is another postmaster (PID 702) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 15:37:28.485 UTC [745] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 15:37:28.485 UTC [745] HINT:  Is another postmaster (PID 702) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 15:37:28.653 UTC [765] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 15:37:28.653 UTC [765] HINT:  Is another postmaster (PID 702) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 15:37:28.771 UTC [774] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 15:37:28.771 UTC [774] HINT:  Is another postmaster (PID 702) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 15:37:28.886 UTC [783] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 15:37:28.886 UTC [783] HINT:  Is another postmaster (PID 702) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 15:37:29.005 UTC [797] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 15:37:29.005 UTC [797] HINT:  Is another postmaster (PID 702) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 15:37:29.148 UTC [806] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 15:37:29.148 UTC [806] HINT:  Is another postmaster (PID 702) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 15:37:29.263 UTC [823] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 15:37:29.263 UTC [823] HINT:  Is another postmaster (PID 702) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 15:37:29.448 UTC [850] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 15:37:29.448 UTC [850] HINT:  Is another postmaster (PID 702) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 15:37:29.565 UTC [871] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 15:37:29.565 UTC [871] HINT:  Is another postmaster (PID 702) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 15:37:29.681 UTC [880] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 15:37:29.681 UTC [880] HINT:  Is another postmaster (PID 702) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 15:37:29.849 UTC [891] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 15:37:29.849 UTC [891] HINT:  Is another postmaster (PID 702) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 15:37:30.046 UTC [910] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 15:37:30.046 UTC [910] HINT:  Is another postmaster (PID 702) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 15:37:30.156 UTC [923] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 15:37:30.156 UTC [923] HINT:  Is another postmaster (PID 702) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 15:37:30.355 UTC [933] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 15:37:30.355 UTC [933] HINT:  Is another postmaster (PID 702) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 15:42:28.362 UTC [707] LOG:  checkpoint starting: time
+2024-11-26 15:42:28.680 UTC [707] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=13 kB; lsn=0/572BEF0, redo lsn=0/572BEB8
+2024-11-26 15:43:48.297 UTC [3480] LOG:  could not receive data from client: Connection reset by peer
+2024-11-26 15:47:28.779 UTC [707] LOG:  checkpoint starting: time
+2024-11-26 15:47:29.096 UTC [707] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=14 kB; lsn=0/572F828, redo lsn=0/572F7F0
+2024-11-26 15:52:28.192 UTC [707] LOG:  checkpoint starting: time
+2024-11-26 15:52:28.508 UTC [707] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=15 kB, estimate=15 kB; lsn=0/57335C0, redo lsn=0/5733588
+2024-11-26 15:57:28.608 UTC [707] LOG:  checkpoint starting: time
+2024-11-26 15:57:28.926 UTC [707] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.005 s, total=0.318 s; sync files=4, longest=0.004 s, average=0.002 s; distance=14 kB, estimate=15 kB; lsn=0/57370F8, redo lsn=0/57370C0
+2024-11-26 16:02:29.024 UTC [707] LOG:  checkpoint starting: time
+2024-11-26 16:02:29.341 UTC [707] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=15 kB, estimate=15 kB; lsn=0/573AD68, redo lsn=0/573AD30
+2024-11-26 16:07:29.440 UTC [707] LOG:  checkpoint starting: time
+2024-11-26 16:07:29.758 UTC [707] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=15 kB, estimate=15 kB; lsn=0/573E9F0, redo lsn=0/573E9B8
+2024-11-26 16:12:29.856 UTC [707] LOG:  checkpoint starting: time
+2024-11-26 16:12:30.374 UTC [707] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.503 s, sync=0.004 s, total=0.518 s; sync files=5, longest=0.003 s, average=0.001 s; distance=16 kB, estimate=16 kB; lsn=0/5742C88, redo lsn=0/5742C50
+2024-11-26 16:17:29.380 UTC [707] LOG:  checkpoint starting: time
+2024-11-26 16:17:29.797 UTC [707] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.403 s, sync=0.004 s, total=0.417 s; sync files=4, longest=0.003 s, average=0.001 s; distance=15 kB, estimate=16 kB; lsn=0/5746B68, redo lsn=0/5746B30
+2024-11-26 16:22:29.850 UTC [707] LOG:  checkpoint starting: time
+2024-11-26 16:22:30.167 UTC [707] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=9 kB, estimate=15 kB; lsn=0/5748FA8, redo lsn=0/5748F70
+2024-11-26 16:27:29.263 UTC [707] LOG:  checkpoint starting: time
+2024-11-26 16:27:29.579 UTC [707] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=10 kB, estimate=15 kB; lsn=0/574BA30, redo lsn=0/574B9F8
+2024-11-26 16:32:29.678 UTC [707] LOG:  checkpoint starting: time
+2024-11-26 16:32:29.996 UTC [707] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=10 kB, estimate=14 kB; lsn=0/574E4E8, redo lsn=0/574E4B0
+2024-11-26 16:37:30.094 UTC [707] LOG:  checkpoint starting: time
+2024-11-26 16:37:30.406 UTC [707] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.003 s, total=0.312 s; sync files=4, longest=0.002 s, average=0.001 s; distance=10 kB, estimate=14 kB; lsn=0/5750DC0, redo lsn=0/5750D88
+2024-11-26 16:42:30.504 UTC [707] LOG:  checkpoint starting: time
+2024-11-26 16:42:30.816 UTC [707] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.003 s, total=0.312 s; sync files=4, longest=0.002 s, average=0.001 s; distance=11 kB, estimate=14 kB; lsn=0/5753D78, redo lsn=0/5753D40
+2024-11-26 16:47:30.913 UTC [707] LOG:  checkpoint starting: time
+2024-11-26 16:47:31.224 UTC [707] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.003 s, total=0.312 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=14 kB; lsn=0/5757248, redo lsn=0/5757210
+2024-11-26 16:52:30.263 UTC [707] LOG:  checkpoint starting: time
+2024-11-26 16:52:30.581 UTC [707] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=14 kB; lsn=0/575AA80, redo lsn=0/575AA48
+2024-11-26 16:57:30.680 UTC [707] LOG:  checkpoint starting: time
+2024-11-26 16:57:30.998 UTC [707] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=14 kB; lsn=0/575E578, redo lsn=0/575E540
+2024-11-26 17:02:31.096 UTC [707] LOG:  checkpoint starting: time
+2024-11-26 17:02:31.413 UTC [707] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=14 kB; lsn=0/5761F20, redo lsn=0/5761EE8
+2024-11-26 18:36:30.735 UTC [862] LOG:  starting PostgreSQL 16.4 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 13.3.0, 64-bit
+2024-11-26 18:36:30.736 UTC [862] LOG:  listening on IPv6 address "::1", port 5432
+2024-11-26 18:36:30.736 UTC [862] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-11-26 18:36:30.741 UTC [862] LOG:  listening on Unix socket "/home/cloudide/postgresql-run/.s.PGSQL.5432"
+2024-11-26 18:36:30.752 UTC [869] LOG:  database system was interrupted; last known up at 2024-11-26 17:02:31 UTC
+2024-11-26 18:36:30.787 UTC [869] LOG:  database system was not properly shut down; automatic recovery in progress
+2024-11-26 18:36:30.793 UTC [869] LOG:  redo starts at 0/5761EE8
+2024-11-26 18:36:30.793 UTC [869] LOG:  invalid record length at 0/5761FD0: expected at least 24, got 0
+2024-11-26 18:36:30.794 UTC [869] LOG:  redo done at 0/5761F98 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2024-11-26 18:36:30.801 UTC [867] LOG:  checkpoint starting: end-of-recovery immediate wait
+2024-11-26 18:36:30.813 UTC [867] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.004 s, sync=0.001 s, total=0.014 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/5761FD0, redo lsn=0/5761FD0
+2024-11-26 18:36:30.818 UTC [862] LOG:  database system is ready to accept connections
+2024-11-26 18:36:30.905 UTC [888] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 18:36:30.905 UTC [888] HINT:  Is another postmaster (PID 862) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 18:36:31.023 UTC [897] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 18:36:31.023 UTC [897] HINT:  Is another postmaster (PID 862) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 18:36:31.286 UTC [917] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 18:36:31.286 UTC [917] HINT:  Is another postmaster (PID 862) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 18:36:31.489 UTC [951] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 18:36:31.489 UTC [951] HINT:  Is another postmaster (PID 862) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 18:36:31.789 UTC [966] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 18:36:31.789 UTC [966] HINT:  Is another postmaster (PID 862) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 18:36:31.995 UTC [973] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 18:36:31.995 UTC [973] HINT:  Is another postmaster (PID 862) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 18:36:32.285 UTC [978] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 18:36:32.285 UTC [978] HINT:  Is another postmaster (PID 862) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 18:36:32.489 UTC [983] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 18:36:32.489 UTC [983] HINT:  Is another postmaster (PID 862) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 18:36:32.692 UTC [991] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 18:36:32.692 UTC [991] HINT:  Is another postmaster (PID 862) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 18:36:32.891 UTC [996] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 18:36:32.891 UTC [996] HINT:  Is another postmaster (PID 862) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 18:36:33.095 UTC [1001] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 18:36:33.095 UTC [1001] HINT:  Is another postmaster (PID 862) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 18:36:33.389 UTC [1006] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 18:36:33.389 UTC [1006] HINT:  Is another postmaster (PID 862) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 18:36:33.585 UTC [1011] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 18:36:33.585 UTC [1011] HINT:  Is another postmaster (PID 862) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 18:36:33.782 UTC [1016] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 18:36:33.782 UTC [1016] HINT:  Is another postmaster (PID 862) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 18:36:33.893 UTC [1027] FATAL:  lock file "postmaster.pid" already exists
+2024-11-26 18:36:33.893 UTC [1027] HINT:  Is another postmaster (PID 862) running in data directory "/home/cloudide/pgdata"?
+2024-11-26 18:41:30.912 UTC [867] LOG:  checkpoint starting: time
+2024-11-26 18:41:31.223 UTC [867] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.003 s, total=0.311 s; sync files=4, longest=0.002 s, average=0.001 s; distance=16 kB, estimate=16 kB; lsn=0/5766400, redo lsn=0/57663C8
+2024-11-26 18:46:30.320 UTC [867] LOG:  checkpoint starting: time
+2024-11-26 18:46:30.637 UTC [867] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=16 kB; lsn=0/5769DD8, redo lsn=0/5769DA0
+2024-11-26 18:51:30.737 UTC [867] LOG:  checkpoint starting: time
+2024-11-26 18:51:31.054 UTC [867] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=15 kB, estimate=16 kB; lsn=0/576DA70, redo lsn=0/576DA38
+2024-11-26 18:56:30.089 UTC [867] LOG:  checkpoint starting: time
+2024-11-26 18:56:30.407 UTC [867] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=15 kB, estimate=16 kB; lsn=0/5771990, redo lsn=0/5771958
+2024-11-26 19:01:30.459 UTC [867] LOG:  checkpoint starting: time
+2024-11-26 19:01:30.775 UTC [867] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=16 kB, estimate=16 kB; lsn=0/5775A78, redo lsn=0/5775A40
+2024-11-26 19:06:30.849 UTC [867] LOG:  checkpoint starting: time
+2024-11-26 19:06:31.166 UTC [867] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=17 kB, estimate=17 kB; lsn=0/577A1E0, redo lsn=0/577A1A8
+2024-11-26 19:11:30.265 UTC [867] LOG:  checkpoint starting: time
+2024-11-26 19:11:30.582 UTC [867] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=16 kB, estimate=17 kB; lsn=0/577E338, redo lsn=0/577E300
+2024-11-26 19:16:30.681 UTC [867] LOG:  checkpoint starting: time
+2024-11-26 19:16:30.991 UTC [867] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.003 s, total=0.310 s; sync files=4, longest=0.002 s, average=0.001 s; distance=17 kB, estimate=17 kB; lsn=0/57827C0, redo lsn=0/5782788
+2024-11-26 19:21:31.088 UTC [867] LOG:  checkpoint starting: time
+2024-11-26 19:21:31.405 UTC [867] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=18 kB, estimate=18 kB; lsn=0/5787110, redo lsn=0/57870D8
+2024-11-26 19:26:31.416 UTC [867] LOG:  checkpoint starting: time
+2024-11-26 19:26:31.934 UTC [867] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.503 s, sync=0.005 s, total=0.519 s; sync files=4, longest=0.004 s, average=0.002 s; distance=18 kB, estimate=18 kB; lsn=0/578BCF0, redo lsn=0/578BCB8
+2024-11-26 19:31:32.032 UTC [867] LOG:  checkpoint starting: time
+2024-11-26 19:31:32.549 UTC [867] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.503 s, sync=0.004 s, total=0.517 s; sync files=5, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=18 kB; lsn=0/578EB90, redo lsn=0/578EB58
+2024-11-26 19:36:32.648 UTC [867] LOG:  checkpoint starting: time
+2024-11-26 19:36:32.965 UTC [867] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=4 kB, estimate=16 kB; lsn=0/578FC88, redo lsn=0/578FC50
+2024-11-26 19:41:33.030 UTC [867] LOG:  checkpoint starting: time
+2024-11-26 19:41:33.347 UTC [867] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=4 kB, estimate=15 kB; lsn=0/5790CE8, redo lsn=0/5790CB0
+2024-11-26 19:46:33.446 UTC [867] LOG:  checkpoint starting: time
+2024-11-26 19:46:33.755 UTC [867] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.003 s, total=0.310 s; sync files=4, longest=0.002 s, average=0.001 s; distance=6 kB, estimate=14 kB; lsn=0/57926F8, redo lsn=0/57926C0
+2024-11-26 19:51:33.848 UTC [867] LOG:  checkpoint starting: time
+2024-11-26 19:51:34.158 UTC [867] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.003 s, total=0.310 s; sync files=4, longest=0.002 s, average=0.001 s; distance=5 kB, estimate=13 kB; lsn=0/5793E98, redo lsn=0/5793E60
+2024-11-26 19:56:33.256 UTC [867] LOG:  checkpoint starting: time
+2024-11-26 19:56:33.567 UTC [867] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.003 s, total=0.311 s; sync files=4, longest=0.002 s, average=0.001 s; distance=6 kB, estimate=13 kB; lsn=0/5795A00, redo lsn=0/57959C8
+2024-11-26 20:01:33.665 UTC [867] LOG:  checkpoint starting: time
+2024-11-26 20:01:33.976 UTC [867] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.003 s, total=0.311 s; sync files=4, longest=0.002 s, average=0.001 s; distance=8 kB, estimate=12 kB; lsn=0/5797B20, redo lsn=0/5797AE8
+2024-11-26 20:06:33.985 UTC [867] LOG:  checkpoint starting: time
+2024-11-26 20:06:34.294 UTC [867] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.003 s, total=0.310 s; sync files=4, longest=0.002 s, average=0.001 s; distance=8 kB, estimate=12 kB; lsn=0/5799B98, redo lsn=0/5799B60
+2024-11-26 20:11:33.390 UTC [867] LOG:  checkpoint starting: time
+2024-11-26 20:11:33.702 UTC [867] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.003 s, total=0.312 s; sync files=4, longest=0.003 s, average=0.001 s; distance=8 kB, estimate=11 kB; lsn=0/579BCC0, redo lsn=0/579BC88
+2024-11-26 20:16:33.800 UTC [867] LOG:  checkpoint starting: time
+2024-11-26 20:16:34.111 UTC [867] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.003 s, total=0.311 s; sync files=4, longest=0.002 s, average=0.001 s; distance=9 kB, estimate=11 kB; lsn=0/579E2A0, redo lsn=0/579E268
+2024-11-26 20:21:33.208 UTC [867] LOG:  checkpoint starting: time
+2024-11-26 20:21:33.518 UTC [867] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.002 s, total=0.310 s; sync files=4, longest=0.002 s, average=0.001 s; distance=9 kB, estimate=11 kB; lsn=0/57A0828, redo lsn=0/57A07F0
+2024-11-26 20:26:33.583 UTC [867] LOG:  checkpoint starting: time
+2024-11-26 20:26:33.897 UTC [867] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.315 s; sync files=4, longest=0.003 s, average=0.001 s; distance=11 kB, estimate=11 kB; lsn=0/57A3550, redo lsn=0/57A3518
+2024-11-26 20:31:33.996 UTC [867] LOG:  checkpoint starting: time
+2024-11-26 20:31:34.312 UTC [867] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=12 kB, estimate=12 kB; lsn=0/57A6798, redo lsn=0/57A6760
+2024-11-26 20:36:33.410 UTC [867] LOG:  checkpoint starting: time
+2024-11-26 20:36:33.727 UTC [867] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=9 kB, estimate=12 kB; lsn=0/57A8F10, redo lsn=0/57A8ED8
+2024-11-26 20:41:33.827 UTC [867] LOG:  checkpoint starting: time
+2024-11-26 20:41:34.145 UTC [867] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=10 kB, estimate=12 kB; lsn=0/57ABA60, redo lsn=0/57ABA28
+2024-11-26 20:46:33.207 UTC [867] LOG:  checkpoint starting: time
+2024-11-26 20:46:33.524 UTC [867] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=10 kB, estimate=11 kB; lsn=0/57AE398, redo lsn=0/57AE360
+2024-11-26 20:51:33.620 UTC [867] LOG:  checkpoint starting: time
+2024-11-26 20:51:33.937 UTC [867] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.005 s, total=0.317 s; sync files=4, longest=0.004 s, average=0.002 s; distance=11 kB, estimate=11 kB; lsn=0/57B12A8, redo lsn=0/57B1270
+2024-11-26 20:56:34.022 UTC [867] LOG:  checkpoint starting: time
+2024-11-26 20:56:34.340 UTC [867] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=14 kB; lsn=0/57B4BC8, redo lsn=0/57B4B90
+2024-11-26 21:01:34.439 UTC [867] LOG:  checkpoint starting: time
+2024-11-26 21:01:34.756 UTC [867] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=14 kB; lsn=0/57B8248, redo lsn=0/57B8210
+2024-11-26 21:06:34.856 UTC [867] LOG:  checkpoint starting: time
+2024-11-26 21:06:35.173 UTC [867] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=14 kB; lsn=0/57BBA68, redo lsn=0/57BBA30
+2024-11-26 21:11:34.272 UTC [867] LOG:  checkpoint starting: time
+2024-11-26 21:11:34.591 UTC [867] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.006 s, total=0.319 s; sync files=4, longest=0.005 s, average=0.002 s; distance=14 kB, estimate=14 kB; lsn=0/57BF308, redo lsn=0/57BF2D0
+2024-11-28 14:02:52.700 UTC [510] LOG:  starting PostgreSQL 16.4 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 13.3.0, 64-bit
+2024-11-28 14:02:52.701 UTC [510] LOG:  listening on IPv6 address "::1", port 5432
+2024-11-28 14:02:52.701 UTC [510] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-11-28 14:02:52.709 UTC [510] LOG:  listening on Unix socket "/home/cloudide/postgresql-run/.s.PGSQL.5432"
+2024-11-28 14:02:52.724 UTC [523] LOG:  database system was interrupted; last known up at 2024-11-26 21:11:34 UTC
+2024-11-28 14:02:52.769 UTC [523] LOG:  database system was not properly shut down; automatic recovery in progress
+2024-11-28 14:02:52.778 UTC [523] LOG:  redo starts at 0/57BF2D0
+2024-11-28 14:02:52.782 UTC [523] LOG:  invalid record length at 0/57C2500: expected at least 24, got 0
+2024-11-28 14:02:52.783 UTC [523] LOG:  redo done at 0/57C24C8 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2024-11-28 14:02:52.791 UTC [521] LOG:  checkpoint starting: end-of-recovery immediate wait
+2024-11-28 14:02:52.814 UTC [521] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.007 s, sync=0.006 s, total=0.026 s; sync files=6, longest=0.004 s, average=0.001 s; distance=12 kB, estimate=12 kB; lsn=0/57C2500, redo lsn=0/57C2500
+2024-11-28 14:02:52.820 UTC [510] LOG:  database system is ready to accept connections
+2024-11-28 14:02:52.941 UTC [538] FATAL:  lock file "postmaster.pid" already exists
+2024-11-28 14:02:52.941 UTC [538] HINT:  Is another postmaster (PID 510) running in data directory "/home/cloudide/pgdata"?
+2024-11-28 14:02:53.060 UTC [547] FATAL:  lock file "postmaster.pid" already exists
+2024-11-28 14:02:53.060 UTC [547] HINT:  Is another postmaster (PID 510) running in data directory "/home/cloudide/pgdata"?
+2024-11-28 14:02:53.177 UTC [556] FATAL:  lock file "postmaster.pid" already exists
+2024-11-28 14:02:53.177 UTC [556] HINT:  Is another postmaster (PID 510) running in data directory "/home/cloudide/pgdata"?
+2024-11-28 14:02:53.295 UTC [565] FATAL:  lock file "postmaster.pid" already exists
+2024-11-28 14:02:53.295 UTC [565] HINT:  Is another postmaster (PID 510) running in data directory "/home/cloudide/pgdata"?
+2024-11-28 14:02:53.413 UTC [574] FATAL:  lock file "postmaster.pid" already exists
+2024-11-28 14:02:53.413 UTC [574] HINT:  Is another postmaster (PID 510) running in data directory "/home/cloudide/pgdata"?
+2024-11-28 14:02:53.531 UTC [583] FATAL:  lock file "postmaster.pid" already exists
+2024-11-28 14:02:53.531 UTC [583] HINT:  Is another postmaster (PID 510) running in data directory "/home/cloudide/pgdata"?
+2024-11-28 14:02:53.649 UTC [594] FATAL:  lock file "postmaster.pid" already exists
+2024-11-28 14:02:53.649 UTC [594] HINT:  Is another postmaster (PID 510) running in data directory "/home/cloudide/pgdata"?
+2024-11-28 14:02:53.858 UTC [626] FATAL:  lock file "postmaster.pid" already exists
+2024-11-28 14:02:53.858 UTC [626] HINT:  Is another postmaster (PID 510) running in data directory "/home/cloudide/pgdata"?
+2024-11-28 14:02:54.158 UTC [645] FATAL:  lock file "postmaster.pid" already exists
+2024-11-28 14:02:54.158 UTC [645] HINT:  Is another postmaster (PID 510) running in data directory "/home/cloudide/pgdata"?
+2024-11-28 14:02:54.460 UTC [655] FATAL:  lock file "postmaster.pid" already exists
+2024-11-28 14:02:54.460 UTC [655] HINT:  Is another postmaster (PID 510) running in data directory "/home/cloudide/pgdata"?
+2024-11-28 14:02:54.759 UTC [665] FATAL:  lock file "postmaster.pid" already exists
+2024-11-28 14:02:54.759 UTC [665] HINT:  Is another postmaster (PID 510) running in data directory "/home/cloudide/pgdata"?
+2024-11-28 14:02:55.061 UTC [682] FATAL:  lock file "postmaster.pid" already exists
+2024-11-28 14:02:55.061 UTC [682] HINT:  Is another postmaster (PID 510) running in data directory "/home/cloudide/pgdata"?
+2024-11-28 14:02:55.352 UTC [691] FATAL:  lock file "postmaster.pid" already exists
+2024-11-28 14:02:55.352 UTC [691] HINT:  Is another postmaster (PID 510) running in data directory "/home/cloudide/pgdata"?
+2024-11-28 14:02:55.555 UTC [700] FATAL:  lock file "postmaster.pid" already exists
+2024-11-28 14:02:55.555 UTC [700] HINT:  Is another postmaster (PID 510) running in data directory "/home/cloudide/pgdata"?
+2024-11-28 14:02:55.764 UTC [710] FATAL:  lock file "postmaster.pid" already exists
+2024-11-28 14:02:55.764 UTC [710] HINT:  Is another postmaster (PID 510) running in data directory "/home/cloudide/pgdata"?
+2024-11-28 14:07:52.913 UTC [521] LOG:  checkpoint starting: time
+2024-11-28 14:07:53.431 UTC [521] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.504 s, sync=0.005 s, total=0.518 s; sync files=5, longest=0.004 s, average=0.001 s; distance=14 kB, estimate=14 kB; lsn=0/57C5EC8, redo lsn=0/57C5E90
+2024-11-28 14:12:52.530 UTC [521] LOG:  checkpoint starting: time
+2024-11-28 14:12:52.849 UTC [521] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.304 s, sync=0.004 s, total=0.319 s; sync files=4, longest=0.003 s, average=0.001 s; distance=7 kB, estimate=13 kB; lsn=0/57C7E20, redo lsn=0/57C7DE8
+2024-11-28 14:17:52.949 UTC [521] LOG:  checkpoint starting: time
+2024-11-28 14:17:53.266 UTC [521] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=8 kB, estimate=13 kB; lsn=0/57CA038, redo lsn=0/57C9FE8
+2024-11-28 14:22:52.349 UTC [521] LOG:  checkpoint starting: time
+2024-11-28 14:22:52.665 UTC [521] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=9 kB, estimate=12 kB; lsn=0/57CC4C8, redo lsn=0/57CC490
+2024-11-28 14:27:52.765 UTC [521] LOG:  checkpoint starting: time
+2024-11-28 14:27:53.082 UTC [521] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=10 kB, estimate=12 kB; lsn=0/57CEFA0, redo lsn=0/57CEF68
+2024-11-28 14:32:52.181 UTC [521] LOG:  checkpoint starting: time
+2024-11-28 14:32:52.496 UTC [521] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.001 s; distance=12 kB, estimate=12 kB; lsn=0/57D2038, redo lsn=0/57D1FE8
+2024-11-28 14:37:52.596 UTC [521] LOG:  checkpoint starting: time
+2024-11-28 14:37:52.913 UTC [521] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.318 s; sync files=4, longest=0.003 s, average=0.001 s; distance=12 kB, estimate=12 kB; lsn=0/57D52D8, redo lsn=0/57D52A0
+2024-11-28 14:42:53.013 UTC [521] LOG:  checkpoint starting: time
+2024-11-28 14:42:53.330 UTC [521] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=13 kB, estimate=13 kB; lsn=0/57D8AB0, redo lsn=0/57D8A78
+2024-11-28 14:47:53.427 UTC [521] LOG:  checkpoint starting: time
+2024-11-28 14:47:53.744 UTC [521] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.004 s, total=0.317 s; sync files=4, longest=0.003 s, average=0.001 s; distance=14 kB, estimate=14 kB; lsn=0/57DC550, redo lsn=0/57DC518
+2024-11-28 14:52:53.843 UTC [521] LOG:  checkpoint starting: time
+2024-11-28 14:52:54.461 UTC [521] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.604 s, sync=0.005 s, total=0.618 s; sync files=7, longest=0.003 s, average=0.001 s; distance=16 kB, estimate=16 kB; lsn=0/57E0658, redo lsn=0/57E0620
+2024-11-28 14:57:53.557 UTC [521] LOG:  checkpoint starting: time
+2024-11-28 14:57:54.173 UTC [521] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.603 s, sync=0.004 s, total=0.617 s; sync files=7, longest=0.003 s, average=0.001 s; distance=18 kB, estimate=18 kB; lsn=0/57E51C0, redo lsn=0/57E5188

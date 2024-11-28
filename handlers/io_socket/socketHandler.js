@@ -3,17 +3,15 @@ const prisma = require('../../services/db');
 const Redis = require('ioredis');
 const cors = require('cors');
 const redis = new Redis();
+const jwt = require('jsonwebtoken');
 const initFrontendSocketServer = require('./frontendHandler');
 
-// Utility function to get the cookie from the request headers
+let userCount = 0;
+
 const getCookie = (cookieHeader, cookieName) => {
     const match = cookieHeader && cookieHeader.match(new RegExp(`(^| )${cookieName}=([^;]+)`));
     return match ? match[2] : null;
 };
-
-function generateRandomMessageId() {
-    return Math.random().toString(36).substring(2, 7);
-}
 
 // async function deleteAllFromModel() {
 //     try {
@@ -29,8 +27,16 @@ function generateRandomMessageId() {
 // deleteAllFromModel();
 
 // Function to verify user by auth_token
+
 const verifyUser = async (authToken) => {
     try {
+        const decoded = jwt.verify(authToken, process.env.JWT_SECRET);
+
+        if (!decoded) {
+            console.log('Token expired');
+            return null;
+        }
+
         return await prisma.user.findUnique({ where: { auth_token: authToken } });
     } catch (error) {
         console.error('Error verifying user:', error);
@@ -38,7 +44,28 @@ const verifyUser = async (authToken) => {
     }
 };
 
+const authenticateUser = async (socket, authToken) => {
+    if (!authToken) {
+        socket.emit('error', 'Authentication token not provided');
+        return null;
+    }
+
+    try {
+        const user = await verifyUser(authToken);
+        if (!user) {
+            socket.emit('error', 'Authentication failed');
+            return null;
+        }
+        return user;
+    } catch (error) {
+        console.error('Error during user authentication:', error);
+        socket.emit('error', 'Authentication error');
+        return null;
+    }
+};
+
 const fetchLiveBets = async (socket) => {
+
     try {
         // Fetch the latest multiplier (representing the current round)
         const latestMultiplier = await prisma.multiplier.findFirst({
@@ -56,9 +83,6 @@ const fetchLiveBets = async (socket) => {
             });
             return;
         }
-
-        console.log(`Latest Round ID: ${latestMultiplier.id}`);
-
         // Fetch live bets for the latest round
         const liveBets = await prisma.bet.findMany({
             where: { round_id: latestMultiplier.id.toString() },
@@ -94,9 +118,6 @@ const fetchLiveBets = async (socket) => {
             totalPreviousBetsCount,
         });
 
-        console.log(
-            `Live Bets Count: ${totalBetsCount}, Previous Round Bets Count: ${totalPreviousBetsCount}`
-        );
     } catch (error) {
         console.error('Error fetching round data:', error);
         socket.emit('live-bets', {
@@ -112,17 +133,43 @@ const fetchLiveBets = async (socket) => {
 const placeBet = async (socket) => {
     socket.on('new-bet', async (bet) => {
         try {
+            if (bet === "") return;
+            const { round_id, code, appId } = bet;
+
+            const existingbet = await prisma.bet.findFirst({
+                where: {
+                    round_id: round_id,
+                    code: code,
+                    appId: appId,
+                },
+            });
+
+            if (existingbet) {
+                const updatedexistingbet = await prisma.bet.update({
+                    where: {
+                        id: existingbet.id,
+                    },
+                    data: bet,
+                });
+                socket.emit('bet-updated', updatedexistingbet);
+                emitAllBetsData(socket)
+                fetchLiveBets(socket); 
+                return;
+            }
+
             const createdBet = await prisma.bet.create({
                 data: bet,
             });
 
-            io.emit('bet-updated', createdBet);
+            socket.emit('bet-updated', createdBet);
+            emitAllBetsData(socket)
+            fetchLiveBets(socket); 
         } catch (error) {
             console.error('Error creating new bet:', error);
         }
     });
 }
-// Function to emit user data (e.g., username) to the client
+
 const emitUserDataByToken = async (socket, authToken) => {
     try {
         const user = await verifyUser(authToken);
@@ -133,42 +180,29 @@ const emitUserDataByToken = async (socket, authToken) => {
         }
 
         socket.emit('username', { username: user.username });
-        console.log(`Emitted username for user ${user.username}`);
     } catch (error) {
         console.error('Error fetching user data:', error);
         socket.emit('error', 'Failed to fetch user data');
     }
 };
 
-// Function to emit multipliers data
-const emitMultiplierData = async (socket, authToken) => {
+const emitMultiplierData = async (socket) => {
     try {
-        const user = await verifyUser(authToken);
-        if (!user) {
-            socket.emit('error', 'Invalid or missing authentication token');
-            return;
-        }
-        setInterval(async () => {
-            const multipliers = await prisma.multiplier.findMany();
-            socket.emit('multiplier_data', multipliers);
-            // console.log('Emitted multiplier data');
-        }, 2000);
-    
+        const multipliers = await prisma.multiplier.findMany();
+        socket.emit('multiplier_data', multipliers);
+
     } catch (error) {
         console.error('Error fetching multiplier data:', error);
         socket.emit('error', 'Failed to fetch multiplier data');
     }
 };
 
-// Function to emit all bets data
-const emitAllBetsData = async (socket, authToken) => {
+const emitAllBetsData = async (socket) => {
     try {
         const bets = await prisma.bet.findMany();
         socket.emit('bets_data', bets);
-        console.log('Emitted bet data');
     } catch (error) {
-        console.error('Error fetching bet data:', error);
-        socket.emit('error', 'Failed to fetch bet data');
+        console.error('Error fetching or emitting bets:', error);
     }
 };
 
@@ -346,94 +380,79 @@ const handleChat = (socket, authToken) => {
     });
 };
 
-let userCount = 0;
-
-// Initialize WebSocket server
 const initSocketServer = (httpServer) => {
     const io = new Server(httpServer, {
+        pingInterval: 25000,
+        pingTimeout: 60000, 
         cors: {
-            origin: '*',
-            methods: ["GET", "POST"],
+            origin: ['*'],
+            methods: ['GET', 'POST'],
         },
-        allowEIO3: true
+        allowEIO3: true,
     });
 
     io.on('connection', async (socket) => {
         console.log('New client connected');
-
         userCount++;
         io.emit('userCount', userCount);
 
+        const pingInterval = setInterval(() => {
+            socket.emit('ping');
+        }, 25000); 
+
         const requestedUrl = socket.handshake.headers.referer;
-        console.log("Url:", requestedUrl);
 
-        if (requestedUrl && requestedUrl.includes('https://api-deriv-aviator.topwebtools.online')) {
-            console.log('Status access allowed based on URL');
+        if (requestedUrl?.includes('https://api-deriv-aviator.topwebtools.online')) {
             socket.emit('info', 'Connected as guest');
+            socket.on('disconnect', () => {
+                clearInterval(pingInterval);
+                console.log('Guest disconnected');
+                userCount--;
+                io.emit('userCount', userCount);
+            });
+            return;
+        }
 
-            socket.on('disconnect', async () => {
+        // const authToken = socket.handshake.headers.cookie?.match(/token=(\S+);?/)[1]; 
+        const authToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJWUlRDMTAwMzI2MDkiLCJhcHBJZCI6IjEwODkiLCJ0b2tlbiI6ImExLU5yTHN0elBycURicjlHSGNPeUo3TkQ5YjF5YVBJIiwiaWF0IjoxNzMyMzAwMDE2fQ.u3ky2FJKUsSQ5tDncQBIFcxklJwFZmMyDnkkz1Wq2Ok"
+        console.log('authToken:', authToken)
+
+        try {
+            const user = await authenticateUser(socket, authToken);
+            if (!user) {
+                socket.disconnect();
+                return;
+            }
+
+            console.log('User authenticated:', user.id);
+            await emitUserDataByToken(socket, authToken);
+            
+            await placeBet(socket);
+            handleChat(socket, authToken);
+                await emitAllBetsData(socket); 
+                await emitMultiplierData(socket); 
+                await fetchLiveBets(socket); 
+            initFrontendSocketServer(socket);
+            socket.on('disconnect', () => {
+                clearInterval(pingInterval);
                 console.log('Client disconnected');
                 userCount--;
                 io.emit('userCount', userCount);
             });
-
-            return; // Early exit, preventing further code execution
+        } catch (error) {
+            console.error('Connection setup failed:', error);
+            socket.emit('error', 'Connection setup failed');
         }
-
-
-        // If not a guest, check for token authentication
-        const cookieHeader = socket.handshake.headers.cookie;
-        // const authToken = getCookie(cookieHeader, 'token');
-        const authToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJWUlRDMTAwMzI2MDkiLCJhcHBJZCI6IjEwODkiLCJ0b2tlbiI6ImExLU5yTHN0elBycURicjlHSGNPeUo3TkQ5YjF5YVBJIiwiaWF0IjoxNzMyMzAwMDE2fQ.u3ky2FJKUsSQ5tDncQBIFcxklJwFZmMyDnkkz1Wq2Ok"
-        console.log('authToken:', authToken)
-        if (authToken) {
-            try {
-                // Authenticate user
-                const user = await verifyUser(authToken);
-                if (!user) {
-                    socket.emit('error', 'Authentication failed');
-                    socket.disconnect();
-                    return;
-                }
-
-                console.log('user verified')
-                // Emit user data
-                await emitUserDataByToken(socket, authToken);
-
-                // Emit live bets
-                await fetchLiveBets(socket);
-
-                // Emit bets
-                await placeBet(socket);
-
-                // Emit multiplier data
-                await emitMultiplierData(socket, authToken);
-
-                // Emit bets data
-                await emitAllBetsData(socket, authToken)
-
-                // Emit multiplier
-                initFrontendSocketServer(socket);
-
-                // Handle chat interactions
-                handleChat(socket, authToken);
-            } catch (error) {
-                console.error('Error during connection setup:', error);
-                socket.emit('error', 'Connection error');
-            }
-        } else {
-            socket.emit('error', 'Authentication token not provided');
-            socket.disconnect();
-        }
-
-        // Listen for disconnect
-        socket.on('disconnect', async () => {
-            console.log('Client disconnected');
-            userCount--;
-            io.emit('userCount', userCount);
-        });
     });
+
     return io;
 };
+
+
+process.on('SIGINT', () => {
+    clearInterval(intervalId);
+    console.log('Interval cleared, shutting down.');
+    process.exit(0);
+});
 
 module.exports = { initSocketServer };
