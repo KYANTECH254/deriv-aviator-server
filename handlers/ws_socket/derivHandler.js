@@ -1,9 +1,18 @@
 const WebSocket = require('ws');
 const Redis = require('ioredis');
-const redisClient = new Redis();
 const initialMultiplier = 1.00;
 const prisma = require('../../services/db');
 let isHandlingCrash = false;
+
+const redisClient = new Redis({
+    host: 'eu-west-webserver-service-manager.topwebtools.online',
+    port: 6379,
+    password: 'Sss333123kyan'
+});
+
+redisClient.ping()
+    .then(() => console.log("Connected to Redis!"))
+    .catch(err => console.error("Failed to connect:", err));
 
 function initializeDerivWebSocket(server) {
     const derivWs = new WebSocket(`${process.env.SOCKET_URL}${process.env.DERIV_ID}`);

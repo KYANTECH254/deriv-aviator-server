@@ -2,9 +2,19 @@ const { Server } = require('socket.io');
 const prisma = require('../../services/db');
 const Redis = require('ioredis');
 const cors = require('cors');
-const redis = new Redis();
 const jwt = require('jsonwebtoken');
 const initFrontendSocketServer = require('./frontendHandler');
+const fs = require('fs');
+
+const redis = new Redis({
+    host: 'eu-west-webserver-service-manager.topwebtools.online',
+    port: 6379,
+    password: 'Sss333123kyan'
+});
+
+redis.ping()
+    .then(() => console.log("Connected to Redis!"))
+    .catch(err => console.error("Failed to connect:", err));
 
 let userCount = 0;
 
@@ -153,7 +163,7 @@ const placeBet = async (socket) => {
                 });
                 socket.emit('bet-updated', updatedexistingbet);
                 emitAllBetsData(socket)
-                fetchLiveBets(socket); 
+                fetchLiveBets(socket);
                 return;
             }
 
@@ -163,7 +173,7 @@ const placeBet = async (socket) => {
 
             socket.emit('bet-updated', createdBet);
             emitAllBetsData(socket)
-            fetchLiveBets(socket); 
+            fetchLiveBets(socket);
         } catch (error) {
             console.error('Error creating new bet:', error);
         }
@@ -380,10 +390,23 @@ const handleChat = (socket, authToken) => {
     });
 };
 
+const initFunctionsOnLiveData = async (socket) => {
+    socket.on("load-live-bets", async (data) => {
+        try {
+            console.log('Loading live bets...');
+            await fetchLiveBets(socket);
+            await emitMultiplierData(socket);
+            await emitAllBetsData(socket);
+        } catch (err) {
+            console.error('Error loading live bets:', err);
+        }
+    })
+};
+
 const initSocketServer = (httpServer) => {
     const io = new Server(httpServer, {
         pingInterval: 25000,
-        pingTimeout: 60000, 
+        pingTimeout: 60000,
         cors: {
             origin: ['*'],
             methods: ['GET', 'POST'],
@@ -398,7 +421,7 @@ const initSocketServer = (httpServer) => {
 
         const pingInterval = setInterval(() => {
             socket.emit('ping');
-        }, 25000); 
+        }, 25000);
 
         const requestedUrl = socket.handshake.headers.referer;
 
@@ -414,8 +437,8 @@ const initSocketServer = (httpServer) => {
         }
 
         // const authToken = socket.handshake.headers.cookie?.match(/token=(\S+);?/)[1]; 
-        const authToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJWUlRDMTAwMzI2MDkiLCJhcHBJZCI6IjEwODkiLCJ0b2tlbiI6ImExLU5yTHN0elBycURicjlHSGNPeUo3TkQ5YjF5YVBJIiwiaWF0IjoxNzMyMzAwMDE2fQ.u3ky2FJKUsSQ5tDncQBIFcxklJwFZmMyDnkkz1Wq2Ok"
-        console.log('authToken:', authToken)
+        // const authToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJWUlRDMTAwMzI2MDkiLCJhcHBJZCI6IjEwODkiLCJ0b2tlbiI6ImExLU5yTHN0elBycURicjlHSGNPeUo3TkQ5YjF5YVBJIiwiaWF0IjoxNzMyMzAwMDE2fQ.u3ky2FJKUsSQ5tDncQBIFcxklJwFZmMyDnkkz1Wq2Ok"
+        // console.log('authToken:', authToken)
 
         try {
             const user = await authenticateUser(socket, authToken);
@@ -426,13 +449,20 @@ const initSocketServer = (httpServer) => {
 
             console.log('User authenticated:', user.id);
             await emitUserDataByToken(socket, authToken);
-            
+
             await placeBet(socket);
             handleChat(socket, authToken);
-                await emitAllBetsData(socket); 
-                await emitMultiplierData(socket); 
-                await fetchLiveBets(socket); 
+            await emitAllBetsData(socket);
+            await emitMultiplierData(socket);
+            await fetchLiveBets(socket);
             initFrontendSocketServer(socket);
+            await initFunctionsOnLiveData(socket);
+
+
+  const longestLosingStreak = await findLongestLosingStreak(prisma);
+  console.log("Longest Losing Streak without hitting 1.55:", longestLosingStreak);
+  
+              
             socket.on('disconnect', () => {
                 clearInterval(pingInterval);
                 console.log('Client disconnected');
@@ -448,11 +478,12 @@ const initSocketServer = (httpServer) => {
     return io;
 };
 
-
 process.on('SIGINT', () => {
-    clearInterval(intervalId);
     console.log('Interval cleared, shutting down.');
     process.exit(0);
 });
+// myModule.js
+module.exports = {
+    initSocketServer,
+};
 
-module.exports = { initSocketServer };
