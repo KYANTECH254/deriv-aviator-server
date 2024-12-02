@@ -7,7 +7,6 @@ const { initSocketServer } = require('./handlers/io_socket/socketHandler');
 const initializeDerivWebSocket = require('./handlers/ws_socket/derivHandler');
 const bodyParser = require('body-parser');
 
-// Create an Express application
 const app = express();
 
 // Enable CORS
