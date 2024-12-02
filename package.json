@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "postinstall": "prisma generate",
     "dev": "node --watch index.js",
-    "start": "nodemon index.js"
+   "start": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
