@@ -482,7 +482,7 @@ process.on('SIGINT', () => {
     console.log('Interval cleared, shutting down.');
     process.exit(0);
 });
-// myModule.js
+
 module.exports = {
     initSocketServer,
 };

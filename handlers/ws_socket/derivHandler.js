@@ -93,7 +93,7 @@ function initializeDerivWebSocket(server) {
                         }
                     }, 7000);
 
-                    return;  // Skip further tick processing while handling crash state
+                    return; 
                 }
 
                 if (!isHandlingCrash) {
