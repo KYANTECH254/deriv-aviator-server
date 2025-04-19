@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Status</title>
+    <script src="https://cdn.socket.io/4.8.0/socket.io.min.js" integrity="sha384-OoIbkvzsFFQAG88r+IqMAjyOtYDPGO0cqK5HF5Uosdy/zUEGySeAzytENMDynREd" crossorigin="anonymous"></script>
+</head>
+<style>
+    body {
+        background-color: black;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #e0e0e0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 500;
+    }
+    .status-container {
+      background-color: #2a2b2d;
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      justify-content: center;
+      border-radius: 20px;
+      width: 300px;
+      height: 150px;
+      row-gap: 10px;
+    }
+    .main-text {
+      font-size: 24px;
+      width: 100%;
+      text-align: center;
+      color: red;
+    }
+    .text-cont {
+      display: flex;
+      flex-direction: row;
+      column-gap: 10px;
+      align-items: center;
+      font-size: 18px;
+    }
+    .green {
+      color: green;
+    }
+    .red {
+      color: red;
+    }
+</style>
+
+<body>
+
+    <div class="status-container">
+        <h1 class="main-text">Server Status Information</h1>
+        <div class="text-cont">
+            <div class="text-1">
+                Server status:
+            </div>
+            <div id="statusText" class="text-2 red">
+                Checking...
+            </div>
+        </div>
+        <div class="text-cont">
+            <div class="text-1">
+                Connected users:
+            </div>
+            <div id="userCount" class="text">
+                0
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Connect to the Socket.IO server
+        const socket = io('https://api-deriv-aviator.topwebtools.online/');  
+
+        // When connected, update the status to "Online"
+        socket.on('connect', () => {
+            console.log('Connected to the server');
+            document.getElementById('statusText').classList.remove('red');
+            document.getElementById('statusText').classList.add('green');
+            document.getElementById('statusText').textContent = 'Online';
+        });
+
+        socket.emit('origin', window.location.href)
+
+        // Handle disconnection event
+        socket.on('disconnect', () => {
+            console.log('Disconnected from the server');
+            document.getElementById('statusText').classList.remove('green');
+            document.getElementById('statusText').classList.add('red');
+            document.getElementById('statusText').textContent = 'Offline';
+        });
+
+        // Listen for the 'userCount' event from the server to update connected users
+        socket.on('userCount', (count) => {
+            document.getElementById('userCount').textContent = count;
+        });
+    </script>
+
+</body>
+
+</html>

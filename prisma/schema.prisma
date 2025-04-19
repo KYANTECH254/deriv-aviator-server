@@ -1,0 +1,67 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model App {
+  id          Int      @id @default(autoincrement())
+  apiKey      String   @unique
+  platformId  String   @unique
+  platform    String   @default("deriv")
+  deriv_id    String   @unique
+  name        String
+  origin      String
+  permissions String
+  connected   Int      @default(0)
+  type        Int      @default(1)
+  max_conn    Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  users       User[]   @relation("AppToUser")
+}
+
+model User {
+  id          Int      @id @default(autoincrement())
+  userId      String
+  username    String
+  balance     Float
+  token       String   @unique
+  auth_token  String   @unique
+  phoneNumber String?
+  email       String?
+  appId       String
+  currency    String   @default("USD")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @default(now()) @updatedAt
+  app         App      @relation("AppToUser", fields: [appId], references: [deriv_id])
+
+  @@index([appId])
+}
+
+model Multiplier {
+  id        Int      @id @default(autoincrement())
+  value     String?
+  appId     String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+}
+
+model Bet {
+  id         Int      @id @default(autoincrement())
+  round_id   String
+  status     String
+  bet_amount Int
+  profit     Int
+  multiplier String
+  avatar     String   @default("")
+  username   String   @default("")
+  code       String
+  appId      String
+  currency   String
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @default(now()) @updatedAt
+}
