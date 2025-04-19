@@ -328,16 +328,14 @@ const handleChat = (socket, authToken) => {
             await redis.srem(userLikesKey, userId);
             newLikeCount = await redis.decr(likeCountKey);  // Decrease like count
         } else {
-            // User is liking the message
             await redis.sadd(userLikesKey, userId);
-            newLikeCount = await redis.incr(likeCountKey);  // Increase like count
+            newLikeCount = await redis.incr(likeCountKey);  
         }
 
-        // Emit the updated like count and user like status to all users in the room
         socket.emit('update_like_count', {
             messageId,
             likeCount: newLikeCount,
-            userHasLiked: !alreadyLiked,  // New like status
+            userHasLiked: !alreadyLiked,  
         });
     });
 
