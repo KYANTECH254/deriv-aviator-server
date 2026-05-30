@@ -7,7 +7,9 @@ const redisClient = require('../../config/redisConfig');
 console.log(`URL:${process.env.SOCKET_URL}${process.env.DERIV_ID}`);
 
 function initializeDerivWebSocket(server) {
-    const derivWs = new WebSocket(`${process.env.SOCKET_URL}${process.env.DERIV_ID}`);
+    const derivWs = new WebSocket(
+        `${process.env.SOCKET_URL}?app_id=${process.env.DERIV_ID}`
+    );
 
     derivWs.on('open', () => {
         console.log('Connected to Deriv WebSocket API');
@@ -68,7 +70,7 @@ function initializeDerivWebSocket(server) {
                 // If a crash is detected, we need to wait for 7 seconds before resetting
                 if (crashState === 'true' && !isHandlingCrash) {
                     console.log('Multiplier crashed. Waiting 7 seconds before resetting...');
-                    
+
                     isHandlingCrash = true;
 
                     // Use setTimeout to handle the reset after 7 seconds
@@ -85,7 +87,7 @@ function initializeDerivWebSocket(server) {
                         }
                     }, 7000);
 
-                    return; 
+                    return;
                 }
 
                 if (!isHandlingCrash) {
