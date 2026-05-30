@@ -11,21 +11,21 @@ const RECONNECT_MIN_MS = 1000;
 const RECONNECT_MAX_MS = 30000;
 
 const KEYS = {
-  crashed: 'multiplierCrashed',
-  multiplier: 'multiplier',
-  maxMultiplier: 'maxMultiplier',
-  previousPrice: 'previousPrice',
-  roundId: 'round_id',
+    crashed: 'multiplierCrashed',
+    multiplier: 'multiplier',
+    maxMultiplier: 'maxMultiplier',
+    previousPrice: 'previousPrice',
+    roundId: 'round_id',
 };
 
 function requiredEnv(name) {
-  const value = process.env[name];
+    const value = process.env[name];
 
-  if (!value) {
-    throw new Error(`Missing required environment variable: ${name}`);
-  }
+    if (!value) {
+        throw new Error(`Missing required environment variable: ${name}`);
+    }
 
-  return value;
+    return value;
 }
 
 const SOCKET_URL = requiredEnv('SOCKET_URL');
@@ -33,311 +33,361 @@ const DERIV_ID = requiredEnv('DERIV_ID');
 const TOKEN = requiredEnv('TOKEN');
 
 function formatMultiplier(value) {
-  return Number(value || INITIAL_MULTIPLIER).toFixed(2);
+    return Number(value || INITIAL_MULTIPLIER).toFixed(2);
 }
 
 function parseNumber(value, fallback = null) {
-  const number = Number(value);
-  return Number.isFinite(number) ? number : fallback;
+    const number = Number(value);
+    return Number.isFinite(number) ? number : fallback;
 }
 
 function wait(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
+    return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 function emit(io, event, payload) {
-  if (io && typeof io.emit === 'function') {
-    io.emit(event, payload);
-  }
+    if (io && typeof io.emit === 'function') {
+        io.emit(event, payload);
+    }
 }
 
 function sendJson(ws, payload) {
-  if (ws.readyState === WebSocket.OPEN) {
-    ws.send(JSON.stringify(payload));
-  }
+    if (ws.readyState === WebSocket.OPEN) {
+        ws.send(JSON.stringify(payload));
+    }
 }
 
 function initializeDerivWebSocket(io) {
-  let ws = null;
-  let pingTimer = null;
-  let reconnectTimer = null;
-  let reconnectAttempt = 0;
-  let isHandlingCrash = false;
-  let stopped = false;
+    let ws = null;
+    let pingTimer = null;
+    let reconnectTimer = null;
+    let reconnectAttempt = 0;
+    let isHandlingCrash = false;
+    let stopped = false;
 
-  async function persistRound(multiplier) {
-    const appId = String(DERIV_ID);
-    const value = formatMultiplier(multiplier);
-    const roundId = await redisClient.get(KEYS.roundId);
+    async function persistRound(multiplier) {
+        const appId = String(DERIV_ID);
+        const value = formatMultiplier(multiplier);
+        const roundId = await redisClient.get(KEYS.roundId);
 
-    let currentRound = null;
+        let currentRound = null;
 
-    if (roundId) {
-      currentRound = await prisma.multiplier
-        .update({
-          where: { id: roundId },
-          data: { value },
-        })
-        .catch(() => null);
-    }
+        if (roundId) {
+            currentRound = await prisma.multiplier
+                .update({
+                    where: { id: roundId },
+                    data: { value },
+                })
+                .catch(() => null);
+        }
 
-    if (!currentRound) {
-      const latestRound = await prisma.multiplier.findFirst({
-        where: { appId },
-        orderBy: { createdAt: 'desc' },
-      });
+        if (!currentRound) {
+            const latestRound = await prisma.multiplier.findFirst({
+                where: { appId },
+                orderBy: { createdAt: 'desc' },
+            });
 
-      if (latestRound) {
-        currentRound = await prisma.multiplier.update({
-          where: { id: latestRound.id },
-          data: { value },
+            if (latestRound) {
+                currentRound = await prisma.multiplier.update({
+                    where: { id: latestRound.id },
+                    data: { value },
+                });
+            }
+        }
+
+        if (!currentRound) {
+            await prisma.multiplier.create({
+                data: { value, appId },
+            });
+        }
+
+        const nextRound = await prisma.multiplier.create({
+            data: { value: '', appId },
         });
-      }
+
+        await redisClient.set(KEYS.roundId, nextRound.id);
     }
 
-    if (!currentRound) {
-      await prisma.multiplier.create({
-        data: { value, appId },
-      });
+    async function finishCrashCooldown() {
+        if (isHandlingCrash) {
+            return;
+        }
+
+        isHandlingCrash = true;
+
+        try {
+            await wait(CRASH_DELAY_MS);
+
+            await Promise.all([
+                redisClient.set(KEYS.crashed, 'false'),
+                redisClient.set(KEYS.multiplier, formatMultiplier(INITIAL_MULTIPLIER)),
+                redisClient.set(KEYS.maxMultiplier, formatMultiplier(INITIAL_MULTIPLIER)),
+                redisClient.del(KEYS.previousPrice),
+            ]);
+        } catch (error) {
+            console.error('Crash cooldown failed:', error);
+        } finally {
+            isHandlingCrash = false;
+        }
     }
 
-    const nextRound = await prisma.multiplier.create({
-      data: { value: '', appId },
-    });
+    async function resetRoundState() {
+        const initialValue = formatMultiplier(INITIAL_MULTIPLIER);
 
-    await redisClient.set(KEYS.roundId, nextRound.id);
-  }
+        await Promise.all([
+            redisClient.set(KEYS.crashed, 'false'),
+            redisClient.set(KEYS.multiplier, initialValue),
+            redisClient.set(KEYS.maxMultiplier, initialValue),
+            redisClient.del(KEYS.previousPrice),
+        ]);
 
-  async function finishCrashCooldown() {
-    if (isHandlingCrash) {
-      return;
+        emit(io, 'crashed', { crashed: 'false' });
+        emit(io, 'multiplier', { multiplier: initialValue });
+
+        console.log('Multiplier reset to:', initialValue);
     }
 
-    isHandlingCrash = true;
+    async function handleCrash(multiplier) {
+        if (isHandlingCrash) {
+            return;
+        }
 
-    try {
-      await wait(CRASH_DELAY_MS);
+        isHandlingCrash = true;
 
-      await Promise.all([
-        redisClient.set(KEYS.crashed, 'false'),
-        redisClient.set(KEYS.multiplier, formatMultiplier(INITIAL_MULTIPLIER)),
-        redisClient.set(KEYS.maxMultiplier, formatMultiplier(INITIAL_MULTIPLIER)),
-        redisClient.del(KEYS.previousPrice),
-      ]);
-    } catch (error) {
-      console.error('Crash cooldown failed:', error);
-    } finally {
-      isHandlingCrash = false;
-    }
-  }
+        const maxMultiplier = formatMultiplier(multiplier);
 
-  async function handleCrash(multiplier) {
-    if (isHandlingCrash) {
-      return;
-    }
+        try {
+            await Promise.all([
+                redisClient.set(KEYS.crashed, 'true'),
+                redisClient.set(KEYS.maxMultiplier, maxMultiplier),
+                redisClient.set(KEYS.multiplier, formatMultiplier(INITIAL_MULTIPLIER)),
+                redisClient.del(KEYS.previousPrice),
+            ]);
 
-    isHandlingCrash = true;
+            emit(io, 'maxMultiplier', maxMultiplier);
 
-    const maxMultiplier = formatMultiplier(multiplier);
+            try {
+                await persistRound(maxMultiplier);
+            } catch (error) {
+                console.error('Failed to persist multiplier round:', error);
+            }
 
-    try {
-      await Promise.all([
-        redisClient.set(KEYS.crashed, 'true'),
-        redisClient.set(KEYS.maxMultiplier, maxMultiplier),
-        redisClient.set(KEYS.multiplier, formatMultiplier(INITIAL_MULTIPLIER)),
-        redisClient.del(KEYS.previousPrice),
-      ]);
+            await wait(CRASH_DELAY_MS);
 
-      emit(io, 'maxMultiplier', maxMultiplier);
-
-      try {
-        await persistRound(maxMultiplier);
-      } catch (error) {
-        console.error('Failed to persist multiplier round:', error);
-      }
-
-      await wait(CRASH_DELAY_MS);
-
-      await Promise.all([
-        redisClient.set(KEYS.crashed, 'false'),
-        redisClient.set(KEYS.multiplier, formatMultiplier(INITIAL_MULTIPLIER)),
-        redisClient.set(KEYS.maxMultiplier, formatMultiplier(INITIAL_MULTIPLIER)),
-      ]);
-    } catch (error) {
-      console.error('Failed to handle crash:', error);
-    } finally {
-      isHandlingCrash = false;
-    }
-  }
-
-  async function animateMultiplier(currentMultiplier, targetMultiplier) {
-    const start = parseNumber(currentMultiplier, INITIAL_MULTIPLIER);
-    const end = parseNumber(targetMultiplier, INITIAL_MULTIPLIER);
-    const step = 0.01;
-    const steps = Math.max(1, Math.round((end - start) / step));
-    const interval = Math.max(10, Math.round(1000 / steps));
-
-    let value = start;
-
-    for (let index = 0; index < steps; index += 1) {
-      value = Math.min(end, value + step);
-
-      const formatted = formatMultiplier(value);
-
-      await redisClient.set(KEYS.multiplier, formatted);
-      emit(io, 'multiplier', formatted);
-      await wait(interval);
+            await Promise.all([
+                redisClient.set(KEYS.crashed, 'false'),
+                redisClient.set(KEYS.multiplier, formatMultiplier(INITIAL_MULTIPLIER)),
+                redisClient.set(KEYS.maxMultiplier, formatMultiplier(INITIAL_MULTIPLIER)),
+            ]);
+        } catch (error) {
+            console.error('Failed to handle crash:', error);
+        } finally {
+            isHandlingCrash = false;
+        }
     }
 
-    await redisClient.set(KEYS.multiplier, formatMultiplier(end));
-    emit(io, 'multiplier', formatMultiplier(end));
-  }
+    async function animateMultiplier(currentMultiplier, targetMultiplier) {
+        const start = parseNumber(currentMultiplier, INITIAL_MULTIPLIER);
+        const end = parseNumber(targetMultiplier, INITIAL_MULTIPLIER);
+        const step = 0.01;
+        const steps = Math.max(1, Math.round((end - start) / step));
+        const interval = Math.max(10, Math.round(1000 / steps));
 
-  async function handleTick(message) {
-    if (message?.tick?.symbol !== DERIV_SYMBOL) {
-      return;
+        let value = start;
+
+        for (let index = 0; index < steps; index += 1) {
+            value = Math.min(end, value + step);
+
+            const formatted = formatMultiplier(value);
+
+            await redisClient.set(KEYS.multiplier, formatted);
+            emit(io, 'multiplier', formatted);
+            await wait(interval);
+        }
+
+        await redisClient.set(KEYS.multiplier, formatMultiplier(end));
+        emit(io, 'multiplier', formatMultiplier(end));
     }
 
-    const newPrice = parseNumber(message.tick.quote);
+    async function handleTick(message) {
+        if (message?.tick?.symbol !== DERIV_SYMBOL) {
+            console.log('Ignored symbol:', message?.tick?.symbol);
+            return;
+        }
 
-    if (!newPrice || newPrice <= 0) {
-      return;
+        const newPrice = parseNumber(message.tick.quote);
+
+        if (!newPrice || newPrice <= 0) {
+            console.log('Invalid tick price:', message.tick.quote);
+            return;
+        }
+
+        const [crashState, multiplierValue, previousPriceValue] = await Promise.all([
+            redisClient.get(KEYS.crashed),
+            redisClient.get(KEYS.multiplier),
+            redisClient.get(KEYS.previousPrice),
+        ]);
+
+        console.log('Tick state:', {
+            crashState,
+            multiplierValue,
+            previousPriceValue,
+            newPrice,
+        });
+
+        if (crashState === 'true' || isHandlingCrash) {
+            console.log('Tick skipped because crash is active');
+            return;
+        }
+
+        const multiplier = parseNumber(multiplierValue, INITIAL_MULTIPLIER);
+        const previousPrice = parseNumber(previousPriceValue);
+
+        if (!previousPrice || previousPrice <= 0) {
+            const initialValue = formatMultiplier(multiplier);
+
+            await redisClient.set(KEYS.previousPrice, String(newPrice));
+            await redisClient.set(KEYS.multiplier, initialValue);
+
+            emit(io, 'multiplier', { multiplier: initialValue });
+
+            console.log('First price stored. Multiplier emitted:', initialValue);
+            return;
+        }
+
+        const priceChangePercentage = ((newPrice - previousPrice) / previousPrice) * 100;
+
+        console.log('Price change:', priceChangePercentage);
+
+        if (Math.abs(priceChangePercentage) <= PRICE_CHANGE_THRESHOLD) {
+            const targetMultiplier = multiplier * 1.05;
+
+            console.log('Animating multiplier:', {
+                from: formatMultiplier(multiplier),
+                to: formatMultiplier(targetMultiplier),
+            });
+
+            await animateMultiplier(multiplier, targetMultiplier);
+            await redisClient.set(KEYS.previousPrice, String(newPrice));
+            return;
+        }
+
+        console.log('Crash triggered:', {
+            priceChangePercentage,
+            threshold: PRICE_CHANGE_THRESHOLD,
+        });
+
+        await handleCrash(multiplier);
     }
 
-    const [crashState, multiplierValue, previousPriceValue] = await Promise.all([
-      redisClient.get(KEYS.crashed),
-      redisClient.get(KEYS.multiplier),
-      redisClient.get(KEYS.previousPrice),
-    ]);
+    async function handleMessage(payload, socket) {
+        let message;
 
-    if (crashState === 'true') {
-      await finishCrashCooldown();
-      return;
+        try {
+            message = JSON.parse(payload.toString());
+        } catch (error) {
+            console.error('Invalid Deriv message:', error);
+            return;
+        }
+
+        if (message.error) {
+            console.error('Deriv API error:', message.error);
+            return;
+        }
+
+        if (message.msg_type === 'authorize') {
+            console.log('Deriv authorization successful');
+            return;
+        }
+
+        if (message.msg_type === 'tick') {
+            console.log('Deriv tick received:', message.tick.quote);
+        }
+
+        await handleTick(message);
     }
 
-    if (isHandlingCrash) {
-      return;
+    function clearPing() {
+        if (pingTimer) {
+            clearInterval(pingTimer);
+            pingTimer = null;
+        }
     }
 
-    const multiplier = parseNumber(multiplierValue, INITIAL_MULTIPLIER);
-    const previousPrice = parseNumber(previousPriceValue);
+    function scheduleReconnect() {
+        if (stopped) {
+            return;
+        }
 
-    if (!previousPrice || previousPrice <= 0) {
-      await redisClient.set(KEYS.previousPrice, String(newPrice));
-      return;
+        const delay = Math.min(RECONNECT_MIN_MS * 2 ** reconnectAttempt, RECONNECT_MAX_MS);
+
+        reconnectAttempt += 1;
+        reconnectTimer = setTimeout(connect, delay);
     }
 
-    const priceChangePercentage = ((newPrice - previousPrice) / previousPrice) * 100;
+    function connect() {
+        clearPing();
 
-    if (Math.abs(priceChangePercentage) <= PRICE_CHANGE_THRESHOLD) {
-      const targetMultiplier = multiplier * 1.05;
+        ws = new WebSocket(`${SOCKET_URL}?app_id=${DERIV_ID}`);
 
-      await animateMultiplier(multiplier, targetMultiplier);
-      await redisClient.set(KEYS.previousPrice, String(newPrice));
+        ws.on('open', () => {
+            reconnectAttempt = 0;
 
-      return;
+            console.log('Connected to Deriv WebSocket API');
+
+            sendJson(ws, {
+                authorize: TOKEN,
+            });
+
+            sendJson(ws, {
+                subscribe: 1,
+                ticks: DERIV_SYMBOL,
+            });
+
+            resetRoundState().catch((error) => {
+                console.error('Failed to reset round state:', error);
+            });
+
+            pingTimer = setInterval(() => {
+                sendJson(ws, { ping: 1 });
+            }, PING_INTERVAL_MS);
+        });
+
+        ws.on('message', (payload) => {
+            handleMessage(payload, ws).catch((error) => {
+                console.error('Failed to handle Deriv message:', error);
+            });
+        });
+
+        ws.on('error', (error) => {
+            console.error('Deriv WebSocket error:', error);
+        });
+
+        ws.on('close', () => {
+            clearPing();
+            scheduleReconnect();
+        });
     }
 
-    await handleCrash(multiplier);
-  }
+    function close() {
+        stopped = true;
 
-  async function handleMessage(payload, socket) {
-    let message;
+        clearPing();
 
-    try {
-      message = JSON.parse(payload.toString());
-    } catch (error) {
-      console.error('Invalid Deriv message:', error);
-      return;
+        if (reconnectTimer) {
+            clearTimeout(reconnectTimer);
+            reconnectTimer = null;
+        }
+
+        if (ws) {
+            ws.close();
+            ws = null;
+        }
     }
 
-    if (message.error) {
-      console.error('Deriv API error:', message.error);
-      return;
-    }
+    connect();
 
-    if (message.msg_type === 'authorize') {
-      sendJson(socket, {
-        subscribe: 1,
-        ticks: DERIV_SYMBOL,
-      });
-
-      return;
-    }
-
-    await handleTick(message);
-  }
-
-  function clearPing() {
-    if (pingTimer) {
-      clearInterval(pingTimer);
-      pingTimer = null;
-    }
-  }
-
-  function scheduleReconnect() {
-    if (stopped) {
-      return;
-    }
-
-    const delay = Math.min(RECONNECT_MIN_MS * 2 ** reconnectAttempt, RECONNECT_MAX_MS);
-
-    reconnectAttempt += 1;
-    reconnectTimer = setTimeout(connect, delay);
-  }
-
-  function connect() {
-    clearPing();
-
-    ws = new WebSocket(`${SOCKET_URL}?app_id=${DERIV_ID}`);
-
-    ws.on('open', () => {
-      reconnectAttempt = 0;
-
-      sendJson(ws, {
-        authorize: TOKEN,
-      });
-
-      pingTimer = setInterval(() => {
-        sendJson(ws, { ping: 1 });
-      }, PING_INTERVAL_MS);
-    });
-
-    ws.on('message', (payload) => {
-      handleMessage(payload, ws).catch((error) => {
-        console.error('Failed to handle Deriv message:', error);
-      });
-    });
-
-    ws.on('error', (error) => {
-      console.error('Deriv WebSocket error:', error);
-    });
-
-    ws.on('close', () => {
-      clearPing();
-      scheduleReconnect();
-    });
-  }
-
-  function close() {
-    stopped = true;
-
-    clearPing();
-
-    if (reconnectTimer) {
-      clearTimeout(reconnectTimer);
-      reconnectTimer = null;
-    }
-
-    if (ws) {
-      ws.close();
-      ws = null;
-    }
-  }
-
-  connect();
-
-  return { close };
+    return { close };
 }
 
 module.exports = initializeDerivWebSocket;

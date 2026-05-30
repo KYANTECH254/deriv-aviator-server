@@ -42,14 +42,17 @@ process.on('unhandledRejection', (reason, promise) => {
 });
 
 const PORT = process.env.PORT || 3001;
+
 const server = app.listen(PORT, () => {
-    console.log(`> Server running at PORT:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
 
-const wss = initializeDerivWebSocket();
 const io = initSocketServer(server);
+
+initializeDerivWebSocket(io);
 
 app.use((err, req, res, next) => {
     console.error(err.stack);
     res.status(500).send('Something went wrong!');
 });
+

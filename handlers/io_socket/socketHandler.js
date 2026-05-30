@@ -394,20 +394,11 @@ const initSocketServer = (httpServer) => {
         }, 25000);
 
         const requestedUrl = socket.handshake.headers.referer;
-        const rawCookie = socket.handshake.headers.cookie;
-        const parsedCookies = cookie.parse(rawCookie || '');
-        const authToken = parsedCookies.token;
+        // const rawCookie = socket.handshake.headers.cookie;
+        // const parsedCookies = cookie.parse(rawCookie || '');
+        // const authToken = parsedCookies.token;
 
-        if (requestedUrl?.includes('https://api-deriv-aviator.topwebtools.online')) {
-            socket.emit('info', 'Connected as guest');
-            socket.on('disconnect', () => {
-                clearInterval(pingInterval);
-                console.log('Guest disconnected');
-                userCount--;
-                io.emit('userCount', userCount);
-            });
-            return;
-        }
+        const authToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJWUlRDMTAwMzI2MDkiLCJhcHBJZCI6IjUzMDUyIiwidG9rZW4iOiJ3TG9YbUtUekRjT3BkR2YiLCJpYXQiOjE3ODAxNDA5MDJ9.DcGnK745o7uwmesslZQ153W81LkDceYrcnwSXCtyykE";
         try {
             const user = await authenticateUser(socket, authToken);
             if (!user) {

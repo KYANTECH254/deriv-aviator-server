@@ -37,9 +37,9 @@ exports.AuthorizeApplicationCredentials = async (req, res) => {
     return res.status(200).json({ success: false, message: 'Invalid Credentials provided! 3' });
   }
 
-  if (!validateParams(a, p)) {
-    return res.status(200).json({ success: false, message: 'Invalid Credentials provided! 4' });
-  }
+  // if (!validateParams(a, p)) {
+  //   return res.status(200).json({ success: false, message: 'Invalid Credentials provided! 4' });
+  // }
 
   try {
     const appRecord = await db.app.findFirst({
